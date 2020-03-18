@@ -26,6 +26,7 @@
 <p><span>4.先將下載下來的python3.8.2放置桌面，並且將y槽下的data新增加一個py382的資料夾方便之後可以做測試是否3.8.2之python可以正常的運行</span></p>
 <p><span>5.將剛剛下載之python3.8.2放置於剛剛創建的py382中切記不要將原先的py373刪除，若之後py382的執行產生錯誤才可以使用py373做返回原版本的動作</span></p>
 <p><span>6.更改執行檔start_mdecourse.bat</span></p>
+<p><strong><span style="color: #ff9900;">將底下py373處更改為自己下在python3.8.2所儲存的資料夾名稱</span></strong></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
 set Disk=y
 subst %Disk%: "data"
@@ -70,7 +71,10 @@ start /MIN cmd.exe
 
 Exit</pre>
 <p><span></span>7.重新啟動剛剛更新的執行檔</p>
-<p>8.執行python -m pip install <strong>flask flask-cors markdown lxml bs4 pelican leo</strong></p>
+<p>8.執行<strong><span style="color: #ff9900;">python get-pip.py</span></strong></p>
+<p>9..執行<strong><span style="color: #ff9900;">python -m pip install flask flask-cors markdown lxml bs4 pelican leo</span></strong></p>
+<p><span style="color: #ff0000;"><strong>影片教學:</strong></span></p>
+<p><span style="color: #ff0000;"><strong><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ft4s-DvMk_M" width="560"></iframe></strong></span></p>
 <hr/>
 <p><span style="color: #0000ff;"><strong>git pull request操作說明:</strong></span></p>
 <p><span style="color: #000000;">1.以自己github之帳號fork老師的倉儲也就是<span style="color: #ff0000;">fork</span>:<a href="https://github.com/mdecourse/cd2020">https://github.com/mdecourse/cd2020</a></span></p>
@@ -91,8 +95,7 @@ Exit</pre>
 <p><span style="color: #ff0000;"><strong><span color="#000000">直播進程影片:</span></strong></span></p>
 <p><strong><span style="color: #0000ff;"><span color="#000000" style="color: #000000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HXS95dlMSv8" width="560"></iframe></span></span></strong></p>
 <hr/>
-<p></p>
-<h2>week6-9</h2>
+<p></p><h2>week6-9</h2>
 <h2>week10-14</h2>
 <h2>week15-18</h2>
 <h1>About</h1>

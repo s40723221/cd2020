@@ -154,8 +154,17 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">week10-14 << <a href='week10-14.html'>Previous</a> <a href='Q&A.html'>Next</a> >> Q&A<br /><h1>week15-18</h1>
-<br />week10-14 << <a href='week10-14.html'>Previous</a> <a href='Q&A.html'>Next</a> >> Q&A</div>
+    <div id="tipue_search_content">assignment1 << <a href='assignment1.html'>Previous</a> <a href='Portable system.html'>Next</a> >> Portable system<br /><h1>Random grouping</h1>
+<p><span lang="en" style="color: #0000ff;">資料提供及統整:40723221 </span></p>
+<p><span lang="en">1.如何從網站中抓取所需之資料(如名單)?</span></p>
+<p><span lang="en"> 2.順利抓取名單後如何運用於程式中並使其能夠正確的讀取?</span></p>
+<p><span lang="en"> 3.如何在上述皆達成後順利達到分組的效果? <br/> <br/>我們必須要了解 import 的 request、ast、random 是甚麼模組。</span></p>
+<p><span lang="en"> (1) Request 為能夠下載網頁的一項 python 中的模組，我們能夠使用 request.get(加入網址)的方式來達到擷取網頁資料的目的。 </span></p>
+<p><span lang="en"><span style="color: #ff0000;">參考連結</span>: <a href="https://blog.gtwang.org/programming/python-requests-module-tutorial/">https://blog.gtwang.org/programming/python-requests-module-tutorial/ </a><br/>(2) ast 中的 literal_eval 可以將剛剛擷取下來的網頁資料(僅允許為字符串，字 <br/>節對象(bytes)，數值，元組，列表，字典，集合，布爾值和 None)才可以進<br/>行轉換。 <br/></span></p>
+<p><span lang="en"><span style="color: #ff0000;">參考連結</span>: <a href="https://docs.python.org/zh-cn/3/library/ast.html">https://docs.python.org/zh-cn/3/library/ast.html</a></span></p>
+<p><span lang="en"> (3) random 中有許多不同的用法，在每周抽點中我們使用的是 shuffle 的用法， 此 用法會將給定的元素隨機打亂，以達到亂數的目的。</span></p>
+<p><span lang="en"><span style="color: #ff0000;"> 參考連結</span>: <a href="https://ithelp.ithome.com.tw/articles/10207483">https://ithelp.ithome.com.tw/articles/10207483 </a></span></p>
+<p><span lang="en">最後我們可以經由 for 迴圈對剛剛打亂的元素進行我們所想要的分法已達到 亂數分組中的分組的目的。 <br/> <br/><span style="color: #ff0000;">亂數分組及每周抽點程式比較</span>:亂數分組必須要從 index.html 中去抓取網址， 如在 html 中不存在網址才會從主程式 evenGrouping.dart 中抓取網址，而每 周抽點的程式中則是採用 Request 的方式去產生擷取網站資料的目的，在亂 數分組中可以以 dart 的方式去 run 就會達到分組的目的，也可以使用 scite 進 行 python 指令的運行，這樣也可以對每周抽點進行抽點運行。 </span></p><br />assignment1 << <a href='assignment1.html'>Previous</a> <a href='Portable system.html'>Next</a> >> Portable system</div>
         
     <!-- footer -->
       <div class="container">

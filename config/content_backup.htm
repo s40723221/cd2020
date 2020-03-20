@@ -95,7 +95,9 @@ Exit</pre>
 <p><span style="color: #ff0000;"><strong><span color="#000000">直播進程影片:</span></strong></span></p>
 <p><strong><span style="color: #0000ff;"><span color="#000000" style="color: #000000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HXS95dlMSv8" width="560"></iframe></span></span></strong></p>
 <hr/>
-<p></p>
+<h4><strong><span style="color: #0000ff;">week3</span></strong></h4>
+<p><strong><span style="color: #0000ff;">本周報告影片:</span></strong></p>
+<p><strong><span style="color: #0000ff;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/uDAZ07xBHMs" width="560"></iframe></span></strong></p>
 <h2>week6-9</h2>
 <h2>week10-14</h2>
 <h2>week15-18</h2>
@@ -103,7 +105,163 @@ Exit</pre>
 <p>PY3.8.2更新後出現之LEO無法開啟問題與解決方法。</p>
 <p><img alt="" height="221" src="/images/LEO.png" width="292"/></p>
 <p>拿之前home_mdecourse/.leo裡面的.leoID.txt放到home裡面就正常了。</p>
-<h1>About</h1>
+<h1>assignments</h1>
+<h2>assignment1</h2>
+<p><a href="https://github.com/s40723221/cd2020/blob/master/downloads/Collaborative%20product%20design%20processes%20of%20industrial%20design%20and%20engineering%20design%20in%20consumer%20product%20companies%E7%BF%BB%E8%AD%AF.pdf">Collaborative product design processes of industrial design and engineering design in consumer product companies</a></p>
+<p>1. Describe how to do an efficient random grouping for this course or do the roll calling randomly?</p>
+<p>2. Describe how to prepare a portable Python programming system for Windows 10 64bit system to allow one the maintain<span> </span><a href="https://github.com/mdecourse/cmsimde">CMSiMDE</a><span> </span>website,<span> </span><a href="https://github.com/getpelican/pelican">Pelican blog</a><span> </span>and<span> </span><a href="https://github.com/hakimel/reveal.js/">Reveal.js</a><span> </span>presentation on<span> </span><a href="https://github.com/">Github</a>?</p>
+<p>3. What do you need to know from <a href="http://www.coppeliarobotics.com/helpFiles/index.html">http://www.coppeliarobotics.com/helpFiles/index.html</a> to implement a four-wheeled robot?</p><h3>Random grouping</h3>
+<p><span lang="en" style="color: #0000ff;">資料提供及統整:40723221 </span></p>
+<p><span lang="en">1.如何從網站中抓取所需之資料(如名單)?</span></p>
+<p><span lang="en"> 2.順利抓取名單後如何運用於程式中並使其能夠正確的讀取?</span></p>
+<p><span lang="en"> 3.如何在上述皆達成後順利達到分組的效果? <br/> <br/>我們必須要了解 import 的 request、ast、random 是甚麼模組。</span></p>
+<p><span lang="en"> (1) Request 為能夠下載網頁的一項 python 中的模組，我們能夠使用 request.get(加入網址)的方式來達到擷取網頁資料的目的。 </span></p>
+<p><span lang="en"><span style="color: #ff0000;">參考連結</span>: <a href="https://blog.gtwang.org/programming/python-requests-module-tutorial/">https://blog.gtwang.org/programming/python-requests-module-tutorial/ </a><br/>(2) ast 中的 literal_eval 可以將剛剛擷取下來的網頁資料(僅允許為字符串，字 <br/>節對象(bytes)，數值，元組，列表，字典，集合，布爾值和 None)才可以進<br/>行轉換。 <br/></span></p>
+<p><span lang="en"><span style="color: #ff0000;">參考連結</span>: <a href="https://docs.python.org/zh-cn/3/library/ast.html">https://docs.python.org/zh-cn/3/library/ast.html</a></span></p>
+<p><span lang="en"> (3) random 中有許多不同的用法，在每周抽點中我們使用的是 shuffle 的用法， 此 用法會將給定的元素隨機打亂，以達到亂數的目的。</span></p>
+<p><span lang="en"><span style="color: #ff0000;"> 參考連結</span>: <a href="https://ithelp.ithome.com.tw/articles/10207483">https://ithelp.ithome.com.tw/articles/10207483 </a></span></p>
+<p><span lang="en">最後我們可以經由 for 迴圈對剛剛打亂的元素進行我們所想要的分法已達到 亂數分組中的分組的目的。 <br/> <br/><span style="color: #ff0000;">亂數分組及每周抽點程式比較</span>:亂數分組必須要從 index.html 中去抓取網址， 如在 html 中不存在網址才會從主程式 evenGrouping.dart 中抓取網址，而每 周抽點的程式中則是採用 Request 的方式去產生擷取網站資料的目的，在亂 數分組中可以以 dart 的方式去 run 就會達到分組的目的，也可以使用 scite 進 行 python 指令的運行，這樣也可以對每周抽點進行抽點運行。 </span></p><h3>Portable system</h3>
+<p><span style="color: #0000ff;">資料提供及資料統整:40723221、40723237、 40723249 、40723244 </span></p>
+<p><span lang="en">問題:如何對現有的可攜進行更新 python 至 3.8.2 的動作，可攜系統的完整安裝流程，及 python3.8.2 的運行需要做哪一些更動? <br/> <br/><span style="color: #ff0000;">(1)直接對舊有可攜進行更新 </span></span><span lang="en"><span style="color: #ff0000;">將可攜系統下的 python 3.7.3 系統更新至 python 3.8.2</span> <br/></span></p>
+<p><span lang="en">1.進入 <a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a> <br/>2.往下滑到最底，下載 Windows x86-64 executable installer(上下兩者分別為 Windows x86-64 embeddable zip file 和 Windows x86-64 web-based installer 這兩者是嵌入式64位元python的可執行壓縮檔案和64位元網際端的可執行檔 案)在本次可攜的更新中不會使用到 <br/>3.接著開始下載切記不要勾選 pip 選項，接著按下 next <br/>4.先將下載下來的python3.8.2放置桌面，並且將y槽下的data新增加一個py382 的資料夾方便之後可以做測試是否 3.8.2 之 python 可以正常的運行 <br/>5.將剛剛下載之 python3.8.2 放置於剛剛創建的 py382 中切記不要將原先的 py373刪除，若之後 py382 的執行產生錯誤才可以使用 py373 做返回原版本的 動作 <br/>6.更改執行檔 start_mdecourse.bat 將底下 py373 處更改為自己下在 python3.8.2 所儲存的資料夾名稱 <br/></span></p>
+<p><span lang="en"><img alt="" height="746" src="/images/LEO問題.PNG" width="1061"/><br/>[start 開啟檔的修改] </span></p>
+<p><span lang="en">7.重新啟動剛剛更新的執行檔 <br/>8.執行 python get-pip.py <br/>9..執行 python -m pip install flask flask-cors markdown lxml bs4 pelican leo <br/><span style="color: #ff0000;">影片教學網址 :</span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ft4s-DvMk_M" width="560"></iframe><br/> <br/><span style="color: #ff0000;">(2)從頭對創建 python3.8.2 的可攜 </span></span></p>
+<p><span lang="en">1.往下滑到最底，下載 Windows x86-64 executable installer</span></p>
+<p><span lang="en"> 2.SciTE：到 https://www.scintilla.org/SciTEDownload.html，下載 ” full 64-bit download” 把檔案 ”wscite432” 搬移至 data 目錄底下，在到data下的wscite432 下的 wscite 目錄下執行”scite.exe” </span></p>
+<p><span lang="en">3. MSYS2：https://www.msys2.org/ 下載 msys2-x86_64-20190524.exe 並執行</span></p>
+<p><span lang="en"> 4. PortableGit：https://git-scm.com/download/win 下載 64-bit Git for Windows Portable 安裝在 data 目錄下 </span></p>
+<p><span lang="en">5.安裝pip為以更新的方式更新可攜或者是以從頭開始的方式更新可攜都必須要 安裝指令為 python get-pip.py 6. 指令為 pip install flask bs4 lxml pelican markdown flask_cors 也必須要安裝這些模組 <br/> <br/>兩者的比較差異:更新舊有的可攜需要的主要為 python get-pip.py 與下載模 組 pip install flask bs4 lxml pelican markdown flask_cors 並且對 開啟檔 start_mdecourse.bat 進行內容的更動及可，從頭開始執行可攜的更新則 比較麻煩需要下載的模組較多，必須對 SciTE、MSYS2、PortableGit、Tiny C Compiler、Jupyterlab、Fossil SCM 有需要甚至可以將 webots、v-rep 及其他如sharex 等軟體載入可攜系統中。 </span></p><h3>four wheel car</h3>
+<p><span style="color: #0000ff;">本資料由40723222提供</span></p>
+<p><a href="https://www.coppeliarobotics.com/helpFiles/en/bubbleRobTutorial.htm"><strong>BubbleRob tutorial</strong></a><strong>:</strong>在此教程中可以透過我們自行設置的BubbleRob機器人進行初步的模擬，在上學期中我們有實際的以v-rep操作過這個教程，在這個教程中有含括了很多包括如何建造模型(機器人本體、輪子、後方支撐滑塊、障礙物)，並且經由設定好的距離傳感器去感知並且避開我們所設立的障礙物，其中很重要的要點是如何去設計指令使輪胎兩側的傳動器依照我們所想要的方式去做運動，且當距離感測器接近我們所設立的障礙物時，他必須要做出相對應的反應部會使其碰到障礙物，另外還必須要考慮到視覺辨識系統，使機器人在移動時我們能夠觀測到機器人前方之狀況，此教程能夠使我們更加有效率的使用v-rep這套模擬軟體。</p>
+<p>影片教學網址:<span> <a href="https://www.youtube.com/watch?v=CXGJmwHt81g&amp;t=59s">https://www.youtube.com/watch?v=CXGJmwHt81g&amp;t=59s</a></span></p>
+<p><span style="color: #0000ff;">本資料由40723243</span></p>
+<p><a href="https://www.coppeliarobotics.com/helpFiles/en/lineFollowingBubbleRobTutorial.htm"><strong>Line following BubbleRob tutorial</strong></a><strong>:</strong>在此模擬教程中我們銜接上面的BubbleRob教程，我們想要使其能夠按照我們所規劃的路徑移動，在四輪車的方面這樣的功能能夠使我們有效的規劃四輪車的行走路徑，以達到更好去控制四輪的目的，在無外部控制器或者是想要直接在模擬器的環境中直接模擬可以採用該方法達到比較好的效率。</p>
+<p><span style="color: #0000ff;">本資料由40723240提供</span></p>
+<p><a href="https://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm"><strong>External controller tutorial</strong></a><strong>:</strong>遠端控制器教程中，當我們想要從遠端電腦的方式控制我們在模擬中的物件例如:四輪車或機器人時我們就會需要一項遠程控制的控制器，我們可以參考<a href="https://www.coppeliarobotics.com/helpFiles/en/ros1Tutorial.htm">ROS tutorial</a>及<a href="https://www.coppeliarobotics.com/helpFiles/en/ros2Tutorial.htm">ROS 2 tutorial</a>來達到我們想做控制的想法，<span>ROS</span>主要比較像是對於機器人的中間控制系統，他能夠藉由傳感器來指引機器人該往哪個方向移動，如下圖所示，就是<span>ROS</span>較好的解釋。</p>
+<p>ROS:比較像是在負責為機器人的各個元件進行溝通與操作的一個框架，以機器人的行走為例，要讓機器人走路需要控制其底下的馬達、還有一些感測器以進行避開障礙物的功能等等，ROS內就有這種類型的函式可以讓控制馬達的程式得以與接收感測器的程式溝通。</p>
+<p><img alt="" height="194" src="/images/ros.png" width="434"/></p>
+<p><span style="color: #0000ff;">本資料由40723221提供</span></p>
+<p><a href="https://www.coppeliarobotics.com/helpFiles/en/simulation.htm"><strong>Simulation</strong></a><strong>:</strong>這裡主要是在描述模擬是如何建立的，在模擬中我們雖然比較不會受到的限制很少，但是因為硬體的關係我們必須要適度調整好例如:模擬的速度快慢、非主要物件的加入或移除，我們也可以從這裡看到系統是如何調整速度運行的快慢和機制。</p>
+<p><span style="color: #0000ff;">本資料由40723221提供</span></p>
+<p><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm"><strong>Simulation settings dialog</strong></a><strong>:</strong></p>
+<p>這篇教程主要在幫助我們理解如何設定模擬時所需要設定的視窗要如何操控，並且講解當我們導入實際的時間運行時，模擬會產生怎樣的變化，但當我們使用加速或減慢時模擬的變化又會怎樣，在一般的情況下模擬的時間步長如果太快會造成模擬的結果及過程不精確甚至會有偵數漏掉的問題，如果太慢雖然會有較精確的結果和過程但會使得模擬時的總時長太久，在某些結構較符雜的模擬之下，模擬在運行到較為複雜的動作或者較難去運算的動作時會使得模擬的時間跟不上實際的時間，這時v-rep內建有寫入能夠補正此bug的方式，他可以藉由進行其他較為簡單的運動模擬時加速已達到與原先時長同步的效果。</p>
+<p><span style="color: #ff0000;">總結</span>:完成四輪車的模擬必須要有對於模擬軟體的熟悉、馬達的設立、外部控制器的連結、模型的組立、結構的評估(過於複雜的結構可以經由省略內部某些部份零件或者是外觀零件的方式達到簡化)、內部攝像頭的設立、如何以程式(如:python)去所存於模擬中的物件並且對外部控制器做連結，若要進行只單單在模擬軟體中的模擬而不依靠外部控制器去控制作動，則必須要設定在內部模擬器中的感測器(如:距離感射器、視覺感測器等等……)並且布置如線條或者是障礙物的方式去使感測器運行，使物件達到想要的避讓或者是作動，而要達到這些都必須通過程式的設置來完成。</p>
+<p><span>ast</span>模組<span>:<a href="https://docs.python.org/zh-cn/3/library/ast.html">https://docs.python.org/zh-cn/3/library/ast.html</a></span></p>
+<p><span>Rendom</span>模組<span>:<a href="https://ithelp.ithome.com.tw/articles/10207483">https://ithelp.ithome.com.tw/articles/10207483</a></span></p>
+<p><span>Request:<a href="https://blog.gtwang.org/programming/python-requests-module-tutorial/">https://blog.gtwang.org/programming/python-requests-module-tutorial/</a></span></p>
+<p><span>mde.tw</span>中分組之程式<span>:<a href="http://mde.tw/cd2020/content/Grouping.html">http://mde.tw/cd2020/content/Grouping.html</a></span></p>
+<p>v-rep使用手冊: <span><a href="http://www.coppeliarobotics.com/helpFiles/index.html">http://www.coppeliarobotics.com/helpFiles/index.html</a></span> </p>
+<h4></h4>
+<h1>refer e-book</h1>
+<h2>Simulation</h2>
+<p><span style="color: #ff0000;"><strong>Simulation</strong></span></p>
+<p><strong>模擬</strong></p>
+<p><span style="color: #ff0000;">A simulation in CoppeliaSim can be started, paused and stopped with [Menu bar --&gt; Simulation --&gt; Start/Pause/Stop simulation] or through the related toolbar buttons:</span></p>
+<p>可以使用<span>[</span>菜單欄<span>-&gt;</span>模擬<span>-&gt;</span>開始<span>/</span>暫停<span>/</span>停止模擬<span>]</span>或通過相關的工具欄按鈕來啟動，暫停和停止<span>CoppeliaSim</span>中的模擬：</p>
+<p><img alt="" height="37" src="/images/button1.png" width="124"/></p>
+<p><span style="color: #ff0000;">[Simulation start/pause/stop toolbar buttons]</span></p>
+<p><span>[</span>模擬開始<span>/</span>暫停<span>/</span>停止工具欄按鈕<span>]</span></p>
+<p><span style="color: #ff0000;">Internally, the simulator will use additional intermediate states in order to correctly inform scripts or programs about what will happen next. Following state diagram illustrates the simulator's internal states:</span></p>
+<p>在模擬內，模擬器將使用其他中間狀態，以正確告知腳本或程序接下來將發生的情況。以下狀態圖說明了模擬器的內部狀態：</p>
+<p><span style="color: #ff0000;">[Simulation state diagram]</span></p>
+<p><span>[</span>模擬狀態圖<span>]</span></p>
+<p><span><img alt="" height="489" src="/images/simulation state diagram.png" width="640"/></span></p>
+<p><span style="color: #ff0000;">Scripts and programs should alwaysreact according to the current system call function and possibly the simulation state in order to behave correctly. It is good practice to divide each control code into at least 4 system call functions (e.g. for non-threaded child scripts):</span></p>
+<p>腳本和程序應始終根據當前系統調用功能以及可能的模擬狀態進行反應，以便正確運行。優良作法是將每個控制代碼至少分為<span>4</span>個系統調用函數（例如，用於非線程子腳本）：</p>
+<p><span style="color: #ff0000;">1.Initialization function: sysCall_init: the function is called only when the script is initialized.</span></p>
+<p><span style="color: #ff0000;">2.Actuation function: sysCall_actuation: the function is called when actuation should happen.</span></p>
+<p><span style="color: #ff0000;">3.Sensing function: sysCall_sensing: this function is called when sensing should happen.</span></p>
+<p><span style="color: #ff0000;">4.Clean-up function: sysCall_cleanup: the function is called just before the script is de-initialized (e.g. at simulation end, or when the script is destroyed)</span></p>
+<p><span style="color: #626262;">1.Initialization</span><span style="color: #626262;">函數：</span><span style="color: #626262;">sysCall_init</span><span style="color: #626262;">：僅在腳本初始化時調用該函數。</span></p>
+<p><span>2.actuation</span>函數：<span>sysCall_actuation</span>：應在發生<span>actuation</span>時調用該函數。</p>
+<p><span>3.Sensing</span>函數：<span>sysCall_sensing</span>：當應該進行檢測時調用此函數。</p>
+<p><span>4.Clean-up</span>函數：<span>sysCall_cleanup</span>：該函數在腳本未初始化之前被調用（例如在模擬結束時或腳本被銷毀時）</p>
+<p><span> </span></p>
+<p><span style="color: #ff0000;">For examples on how to arrange a typical script, refer to the main script, the child scripts and customization scripts pages.</span></p>
+<p>有關如何安排典型腳本的示例，請參閱主腳本，子腳本和自定義腳本頁面。</p>
+<p><span style="color: #ff0000;">The simulator operates by advancing the simulation time at constant time steps. Following figure illustrates the main simulation loop</span></p>
+<p>模擬器通過以恆定的時間步長推進模擬時間來進行操作。下圖說明了主要的模擬循環</p>
+<p><span style="color: #ff0000;">Simulation loop</span></p>
+<p><span style="color: #ff0000;"><img alt="" height="196" src="/images/simulation loop.png" width="450"/></span></p>
+<p><span style="color: #ff0000;">[Main simulation loop]</span></p>
+<p><span>[</span>主要模擬路徑參考圖<span>]</span></p>
+<p><span style="color: #ff0000;">Real-time simulation is supported by trying to keep the simulation time synchronized with the real time:</span></p>
+<p>通過嘗試使模擬時間與實時保持同步來支持實時模擬：</p>
+<p><img alt="" height="293" src="/images/main simulation loop.png" width="450"/></p>
+<p><span style="color: #ff0000;">[Real-time simulation loop]</span></p>
+<p><span>[</span>加入真實時間後的模擬參考圖<span>]</span></p>
+<p><span style="color: #ff0000;">Following represents a very simplified main client application (messaging, plugin handling and other details have been omitted for clarity purpose):</span></p>
+<p>以下是一個非常簡單的主客戶端應用程序（為清晰起見，已省略了消息，插件處理和其他詳細信息）：</p>
+<p>void initializationCallback<br/> {<br/>     // do some initialization here</p>
+<p>}</p>
+<p> </p>
+<p>void loopCallback<br/> {<br/>     if ( (simGetSimulationState()&amp;sim_simulation_advancing)!=0 )<br/>     {<br/>         if ( (simGetRealTimeSimulation()!=1)||(simIsRealTimeSimulationStepNeeded()==1) )<br/>         {<br/>             if ((simHandleMainScript()&amp;sim_script_main_script_not_called)==0)<br/>                 simAdvanceSimulationByOneStep();<br/>         }<br/>     }<br/> }</p>
+<p> </p>
+<p>void deinitializationCallback<br/> {<br/>     // do some clean-up here</p>
+<p>}</p>
+<p><span style="color: #ff0000;">Depending on the simulation complexity, performance of the computer and simulation settings, real-time simulation might not always be possible.</span></p>
+<p>取決於模擬的複雜性，電腦的性能和模擬設置，實時模擬並不總是完美的。</p>
+<p><span style="color: #ff0000;">In non real-time simulations, the simulation speed (i.e. the perceived speed) is mainly dependent on two factors: the simulation time step and the number of simulation passes for one rendering pass (see the simulation dialog for more details). In the case of a real-time simulation, the simulation speed mainly depends on the real-time multiplication coefficient, but also to a certain degree of the simulation time step (a too small simulation time step might not be compatible with the real-time character of a simulation because of the limited calculation power of the computer). During simulation, the simulation speed can be adjusted with following toolbar buttons</span></p>
+<p>在非實時模擬中，模擬速度（即感知速度）主要取決於兩個因素：模擬時間步長和一個渲染通道的模擬通道數量（有關更多詳細信息，請參見模擬對話框）。在實時模擬的情況下，模擬速度主要取決於實時乘法係數，而且在一定程度上取決於模擬時間步長（太小的模擬時間步長可能與實時時間不兼容）。由於計算機的計算能力有限，因此無法進行模擬。在模擬過程中，可以通過以下工具欄按鈕來調節模擬速度</p>
+<p><span style="color: #ff0000;">Simulation speed</span></p>
+<p><span style="color: #ff0000;"><img alt="" height="37" src="/images/simulation speed.png" width="81"/></span></p>
+<p><span style="color: #ff0000;">[Simulation speed adjustment toolbar buttons]</span></p>
+<p><span style="color: #ff0000;">The simulation speed is adjusted in a way so that the initial simulation time step is never increased (because this might have as consequence the breaking of a mechanism for example). Following two figures illustrate the simulation speed adjustment mechanisms</span></p>
+<p>以某種方式調整模擬速度，以使初始模擬時間的步長永遠不會增加（這可能因此而導致機制中斷）。下兩個圖說明了模擬速度調節機制</p>
+<p><img alt="" height="173" src="/images/i1.png" width="600"/></p>
+<p><span style="color: #ff0000;">[Simulation speed adjustment mechanism for non real-time simulations]</span><br/> [非實時模擬的模擬速度調整機制]</p>
+<p><img alt="" height="180" src="/images/i2.png" width="600"/></p>
+<p><span style="color: #ff0000;">[Simulation speed adjustment mechanism for real-time simulations]</span></p>
+<p>[實時模擬與調整機制]</p>
+<p><span style="color: #ff0000;">By default, each simulation cycle is composed by following sequential operations:</span></p>
+<p><span style="color: #ff0000;">1.Executing the main script</span></p>
+<p><span style="color: #ff0000;">2.Rendering the scen</span></p>
+<p>默認情況下，每個模擬週期由以下順序操作組成：</p>
+<p><span>1.</span>執行主腳本</p>
+<p><span>2.</span>渲染場景</p>
+<p><span style="color: #ff0000;">Threaded rendering</span></p>
+<p><span style="color: #ff0000;">The rendering operation will always increase the simulation cycle duration, thus also slowing down simulation speed. The number of main script executions per scene rendering can be defined (see further up), but this is not enough in some situations, because rendering will still slow down every xth simulation cycle (which can be handicapping with real-time requirements). For those situations, a threaded rendering mode can be activated via the user settings, or via the following toolbar button:</span><br/><span style="color: #ff0000;">When the threaded rendering mode is activated, a simulation cycle will only consist in execution of the main script, thus simulations will run at maximum speed. Rendering will happen via a different thread, and not slow down the simulation task. The drawbacks have however to be considered. When threaded rendering is activated, then:</span></p>
+<p><img alt="" height="34" src="/images/fire.png" width="35"/><br/>  <span style="color: #ff0000;">[Threaded rendering toolbar button]</span></p>
+<p><span style="color: #ff0000;">Rendering will happen asynchronously to the simulation loop, and visual glitches might appear</span></p>
+<p><span style="color: #ff0000;">The video recorder will not operate at constant speed (some frames might get skipped)</span></p>
+<p><span style="color: #ff0000;">The stability of the application might be reduced</span></p>
+<p><span style="color: #ff0000;">Some operations (e.g. erasing an object, etc.) require to wait for the rendering thread to finish work, before being able to execute, and vice-versa. In those situations, cycles could take more time than in the sequential rendering mode</span></p>
+<p>交互渲染</p>
+<p>渲染操作將始終增加模擬週期的持續時間，從而也降低了模擬速度。可以定義每個場景渲染的主腳本執行次數（請參閱後面的內容），但這在某些情況下還不夠，因為渲染仍然會減慢每個第<span>x</span>個模擬週期的時間（這可能會限制實時性）。在這種情況下，可以通過用戶設置或以下工具欄按鈕激活線程渲染模式：</p>
+<p><span> [</span>線程渲染工具欄按鈕<span>]</span></p>
+<p>激活線程渲染模式後，模擬週期將僅包含在執行主腳本中，因此模擬將以最大速度運行。渲染將通過不同的線程進行，並且不會減慢模擬任務的速度。然而，必須考慮缺點。激活線程渲染後，：</p>
+<p>渲染將與模擬循環不會同步進行，並且可能會出現視覺上的瑕疵</p>
+<p>錄影機將無法以恆定速度運行（可能會跳過某些幀數）</p>
+<p>應用程序的穩定性可能會降低</p>
+<p>某些操作（例如去除物件等）需要等待渲染得線程完成工作才能執行，反之亦然。在那些情況下，循環可能比有順序的渲染模式花費更多的時間。</p>
+<p><span style="color: #ff0000;"><strong>Simulation dialog</strong></span></p>
+<p><strong>模擬控制視窗</strong></p>
+<p><span style="color: #ff0000;">The simulation dialog can be accessed with [Menu bar --&gt; Simulation --&gt; Simulation settings] or by clicking following toolbar button:</span></p>
+<p>可以通過<span>[</span>菜單欄<span>-&gt;</span>模擬<span>-&gt;</span>模擬設置<span>]</span>或單擊以下工具欄按鈕來訪問模擬對話框：</p>
+<p><img alt="" height="37" src="/images/tool1.png" width="38"/></p>
+<p><span style="color: #ff0000;">[Simulation toolbar button]</span></p>
+<p><span>[</span>模擬工具欄按鈕<span>]</span></p>
+<p><span><img alt="" height="353" src="/images/toolbar.png" width="396"/></span></p>
+<p><span style="color: #ff0000;">[Simulation settings dialog]</span></p>
+<p>模擬設定視窗</p>
+<p><span style="color: #ff0000;">Time step: the simulation time step. Each time the main script was executed, the simulation time is incremented by the simulation time step. Using large time steps results in fast but inaccurate/unstable simulations. Small time steps on the other hand will (generally) lead to more precise simulations, but will take more time. It is highly recommended to keep a default time step.</span></p>
+<p><span style="color: #ff0000;">Simulation passes per frame (ppf): the number of simulation passes for one rendering pass. A value of 10 would mean that the main script is executed 10 times (10 simulation steps) before the screen is refreshed. If you have a slow graphic card, you can choose to display only one frame out of two for instance.</span></p>
+<p><span style="color: #ff0000;">Pause when simulation time higher than: allows specifying a simulation time at which the simulation will</span> <span style="color: #ff0000;">be paused (e.g. to be able to analyze some results at a specific simulation time).</span></p>
+<p><span style="color: #ff0000;">Pause on script error: if enabled, then a simulation will be paused when a script error occurs.</span></p>
+<p>時間步長：模擬時間步長。每次執行主腳本時，模擬時間都會增加模擬時間的步長。使用較大的時間步長會導致快速但不准確<span>/</span>不穩定的模擬。另一方面，較小的時間步長（通常）會有更精確的模擬，但是會花費更多時間。強烈建議保留默認的時間步長。</p>
+<p>每幀模擬次數（<span>ppf</span>）：一個渲染遍的模擬次數。其值為<span>10</span>表示刷新屏幕之前，主腳本已執行<span>10</span>次（<span>10</span>個模擬步驟）。如果您的顯示卡較慢，則可以選擇僅顯示兩幅中的一幅。</p>
+<p>當模擬時間高於以下時間時則會暫停：允許指定暫停模擬的模擬時間（例如，能夠在特定模擬時間分析某些結果）。</p>
+<p>腳本錯誤暫停：如果啟用，則在腳本錯誤發生時暫停模擬。</p>
+<p><span style="color: #ff0000;">Full screen at simulation start: if enabled, then simulation starts in full screen mode. Be aware that in full screen mode, dialogs and messages won't appear or won't be visible, and only the left mouse button will be active. For that reason that mode is only recommended once a scene is properly configured and final. Full screen mode can be left with the esc-key, and toggled via the boolean parameter sim_booparam_fullscreen during simulation. Unler Linux and MacOS the full-screen mode might only partially be supported, and switching back to normal mode might fail on certain systems.</span></p>
+<p>模擬開始時全屏：如果啟用，則模擬以全屏模式開始。請注意，在全屏模式下，設置視窗和消息將不會出現或不可見，只有鼠標左鍵處於活動狀態時才會出現。因此，僅在正確配置場景並最終確定場景後才建議使用該模式。可以使用<span>esc</span>鍵保留全屏模式，並在模擬過程中通過布爾參數<span>sim_booparam_fullscreen</span>進行切換。<span> Unler Linux</span>和<span>MacOS</span>可能僅部分支持全屏模式，並且在某些系統上切換回普通模式可能會失敗。</p>
+<p><span style="color: #ff0000;">Real-time simulation, multiplication factor: if selected, then the simulation time will try to follow the real-time. A multiplication factor of X would try to run a simulation X times faster than real-time.</span></p>
+<p>實際時間的模擬，倍增係數：如果選擇，則模擬時間將嘗試跟隨實際時間。<span> X</span>的乘數將使模擬運行比實時快<span>X</span>倍。</p>
+<p><span style="color: #ff0000;">Try catching up when behind: during real-time simulation, it can happen that the simulation time is not able to follow the real-time (e.g. because of some momentarily heavy calculations). In that case, if this check-box is selected, then the simulation time will try catching up the lost time (e.g. when the calculation load is again reduced), which results in an apparent speed-up.</span></p>
+<p>在落後時嘗試趕上：在實時模擬過程中，模擬時間可能無法實時跟踪（例如，由於某些瞬間繁重的計算）。在這種情況下，如果選中此複選框，則模擬時間將嘗試趕上不足的時間（例如，當計算負載再次減少時），從而明顯加快速度。</p>
+<p><span style="color: #ff0000;">Reset scene to initial state: when selected, then all objects will be reset to their initial state: this includes the object local position, local orientation and its parent (as long as the object wasn't modified otherwise (e.g. scaled)), joint and path intrinsic positions, floating view positions and sizes, etc. This means that the next simulation run will execute in a same way as previous one, unless heavy changes were undertaken (shape scaling, object removal, etc.). Some minor settings are ignored by this item.</span></p>
+<p>將場景重置為初始狀態：選中後，所有物件都將重置為其初始狀態：包括對象的局部位置，局部方向及其父對象（只要未進行其他修改（例如，縮放），以及路徑的固有位置，浮動視圖的位置和大小等。這意味著除非進行了重大更改（形狀縮放，對象移除等），否則下一次模擬運行將以與上一次相同的方式執行。此項目將忽略一些次要設置。</p>
+<p><span style="color: #ff0000;">Remove new objects: when selected, then scene objects added during a simulation run will be removed at the end of the simulation.</span></p>
+<p>刪除新對象：選中後，在模擬運行期間添加的場景對象將在模擬結束時被刪除。</p><h1>About</h1>
 <p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
 <h4>利用 cmsimde 建立靜態網誌方法:</h4>
 <p>1. 在 github 建立倉儲, git clone 到近端</p>

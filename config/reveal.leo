@@ -26,15 +26,15 @@
 </v>
 <v t="leo.20200404161545.1"><vh>assignment1</vh>
 <v t="leo.20200404161545.2"><vh>封面投影片內容</vh></v>
-<v t="leo.20200404162003.1"><vh>meeting1</vh>
-<v t="leo.20200404162003.2"><vh>封面投影片內容</vh></v>
-</v>
 </v>
 <v t="leo.20200404162209.1"><vh>protable video</vh>
 <v t="leo.20200404162209.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20200404162443.1"><vh>four wheel car</vh>
 <v t="leo.20200404162443.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200405164145.1"><vh>meeting1</vh>
+<v t="leo.20200405164145.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
@@ -360,18 +360,6 @@ vertical: body pane on the botton</t>
 * 2.[portable system](https://s40723221.github.io/cd2020/content/Portable%20system.html)
 
 * 3.[four wheel car](https://s40723221.github.io/cd2020/content/four%20wheel%20car.html)</t>
-<t tx="leo.20200404162003.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20200404162003.2">## meeting1 video
-
-&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/HXS95dlMSv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20200404162209.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -420,5 +408,17 @@ vertical: body pane on the botton</t>
 * week4:查詢資料並且開始進行assignment1之內容
 
 * week5:將所完成之assignment1之內容進行整理並完成pdf</t>
+<t tx="leo.20200405164145.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200405164145.2">## meeting1 video
+
+&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/HXS95dlMSv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 </tnodes>
 </leo_file>

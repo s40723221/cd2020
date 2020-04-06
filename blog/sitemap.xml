@@ -4,64 +4,71 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://s40723221.github.io/cd2020/blog/</loc>
-<lastmod>2020-04-03T19:11:39-00:00</lastmod>
+<loc>./</loc>
+<lastmod>2020-04-06T19:18:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://s40723221.github.io/cd2020/blog/archives.html</loc>
-<lastmod>2020-04-03T19:11:39-00:00</lastmod>
+<loc>./archives.html</loc>
+<lastmod>2020-04-06T19:18:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://s40723221.github.io/cd2020/blog/tags.html</loc>
-<lastmod>2020-04-03T19:11:39-00:00</lastmod>
+<loc>./tags.html</loc>
+<lastmod>2020-04-06T19:18:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://s40723221.github.io/cd2020/blog/categories.html</loc>
-<lastmod>2020-04-03T19:11:39-00:00</lastmod>
+<loc>./categories.html</loc>
+<lastmod>2020-04-06T19:18:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://s40723221.github.io/cd2020/blog/pages/about/</loc>
-<lastmod>2020-04-03T19:11:30+08:00</lastmod>
+<loc>./pages/about/</loc>
+<lastmod>2020-04-06T19:14:08+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://s40723221.github.io/cd2020/blog/week2 meeting.html</loc>
+<loc>./week6 meeting2.html</loc>
+<lastmod>2020-04-06T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./week2 meeting.html</loc>
 <lastmod>2020-03-16T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://s40723221.github.io/cd2020/blog/category/misc.html</loc>
-<lastmod>2020-03-16T00:00:00+08:06</lastmod>
+<loc>./category/misc.html</loc>
+<lastmod>2020-04-06T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://s40723221.github.io/cd2020/blog/tag/2018fallcp.html</loc>
-<lastmod>2020-03-16T00:00:00+08:06</lastmod>
+<loc>./tag/2018fallcp.html</loc>
+<lastmod>2020-04-06T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://s40723221.github.io/cd2020/blog/author/qiu-zheng-yu.html</loc>
-<lastmod>2020-03-16T00:00:00+08:06</lastmod>
+<loc>./author/qiu-zheng-yu.html</loc>
+<lastmod>2020-04-06T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

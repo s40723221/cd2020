@@ -36,6 +36,9 @@
 <v t="leo.20200405164145.1"><vh>meeting1</vh>
 <v t="leo.20200405164145.2"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200406182356.1"><vh>meeting2</vh>
+<v t="leo.20200406182356.2"><vh>封面投影片內容</vh></v>
+</v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
@@ -420,5 +423,17 @@ vertical: body pane on the botton</t>
 <t tx="leo.20200405164145.2">## meeting1 video
 
 &lt;iframe width="556" height="310" src="https://www.youtube.com/embed/HXS95dlMSv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200406182356.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200406182356.2">## meeting2 video
+
+&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/B6zwMXl1V3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 </tnodes>
 </leo_file>

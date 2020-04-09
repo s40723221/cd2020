@@ -1,214 +1,160 @@
-<h1>week</h1>
-<p><a href="https://s40723221.github.io/cd2020/content/week1-5.html">week1-week5</a></p>
-<p><a href="https://s40723221.github.io/cd2020/content/week6-9.html">week6-week9</a></p>
-<p><a href="https://s40723221.github.io/cd2020/content/week10-14.html">week10-week14</a></p>
-<p><a href="https://s40723221.github.io/cd2020/content/week15-18.html">week15-week18</a></p>
-<h2>week1-5</h2>
-<h4><strong><span style="color: #0000ff;">week1</span></strong></h4>
-<hr/>
-<p>1.登入自己的github帳戶，並且創建名為cd2020的個人倉儲。</p>
-<p>2.進入存放的資料夾例如;tmp</p>
-<p>3.在小黑窗上打上git clone https://github.com/s40723221/cd2020。</p>
-<p>4.git submodule add https://github.com/mdecourse/cmsimde.git。</p>
-<p>5.完成後使用cd cd2020 -&gt;cd cmsimde進入cmsimde的資料夾內。</p>
-<p>6.完成之後使用python wsgi.py進入靜態9443內編輯個人網站的資料。</p>
-<p>7.使用git add .  -&gt; commit -m ＂標題＂ -&gt; git push將剛剛編輯好的東西上傳。</p>
-<p>8.進入個人倉儲的setting中更改branch(分支)至master。</p>
-<p><strong><span style="color: #ff0000;">影片教學:</span></strong></p>
-<p><span style="color: #ff0000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/V7Njg-o9bm4" width="560"></iframe></span></p>
-<hr/>
-<h4><strong><span style="color: #0000ff;">week2</span></strong></h4>
-<p><strong><span style="color: #0000ff;">將可攜系統下的python 3.7.3系統更新至python 3.8.2</span></strong></p>
-<p><span>1.進入<a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></span></p>
-<p><span>2.往下滑到最底，下載<a href="https://www.python.org/ftp/python/3.8.2/python-3.8.2-amd64.exe">Windows x86-64 executable installer</a>(上下兩者分別為<a href="https://www.python.org/ftp/python/3.7.7/python-3.7.7-embed-amd64.zip">Windows x86-64 embeddable zip file</a>和<a href="https://www.python.org/ftp/python/3.7.7/python-3.7.7-amd64-webinstall.exe">Windows x86-64 web-based installer</a>這兩者是嵌入式64位元python的可執行壓縮檔案和64位元網際端的可執行檔案)在本次可熙的更新中不會使用到</span></p>
-<p><span><img alt="" height="104" src="/images/python 執行檔.PNG" width="409"/></span></p>
-<p><span>3.接著開始下載切記不要勾選pip選項，接著按下next</span></p>
-<p><span>4.先將下載下來的python3.8.2放置桌面，並且將y槽下的data新增加一個py382的資料夾方便之後可以做測試是否3.8.2之python可以正常的運行</span></p>
-<p><span>5.將剛剛下載之python3.8.2放置於剛剛創建的py382中切記不要將原先的py373刪除，若之後py382的執行產生錯誤才可以使用py373做返回原版本的動作</span></p>
-<p><span>6.更改執行檔start_mdecourse.bat</span></p>
-<p><strong><span style="color: #ff9900;">將底下py373處更改為自己下在python3.8.2所儲存的資料夾名稱</span></strong></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
-set Disk=y
-subst %Disk%: "data"
+<!DOCTYPE html><html>
+        <head>
+        <title>cd2020 s40723221</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
 
-%Disk%:
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
 
-set HomePath=%Disk%:\home_mdecourse
-set HomeDrive=%Disk%:\home_mdecourse
-set Home=%Disk%:\home_mdecourse
-set USERPROFILE=%Disk%:\home_mdecourse
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
-REM 將系統 Python 程式的 io 設為 utf-8
-set PYTHONIOENCODING="utf-8"
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
 
-set PYTHONPATH=%Disk%:\py373\DLLs;%Disk%:\py373\Lib;%Disk%:\py373\Lib\site-packages;
-set PYTHONHOME=%Disk%:\py373
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>s40723221 協同產品設計實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">s40723221 協同產品設計實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='week.html'>week</a><ul class='dropdown'><li><a href='week1-5.html'>week1-5</a><li><a href='week6-9.html'>week6-9</a><li><a href='week10-14.html'>week10-14</a><li><a href='week15-18.html'>week15-18</a></li></ul><li><a href='Q&A.html'>Q&A</a><li class='has-children'><a href='assignments.html'>assignments</a><ul class='dropdown'><li class='has-children'><a href='assignment1.html'>assignment1</a><ul class='dropdown'><li><a href='Random grouping.html'>Random grouping</a><li><a href='Portable system.html'>Portable system</a><li><a href='four wheel car.html'>four wheel car</a></li></ul><li class='has-children'><a href='assignment2.html'>assignment2</a><ul class='dropdown'><li><a href='Product design process.html'>Product design process</a></li></li></ul></ul><li class='has-children'><a href='refer e-book.html'>refer e-book</a><ul class='dropdown'><li><a href='Simulation.html'>Simulation</a><li><a href='line following bubblerob.html'>line following bubblerob</a><li><a href='External controller tutorial.html'>External controller tutorial</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
 
-set GIT_HOME=%Disk%:\portablegit\bin\
-set GIT_SSH=%Disk%:\putty\plink.exe
-
-set path_python=%Disk%:\py373;%Disk%:\py373\Scripts;
-set path_msys2=%Disk%:\msys64\mingw64\bin;
-REM coreutils is for compiling fossil scm
-set path_coreutils=%Disk%:\coreutils-5.3.0\bin;%Disk%:\depends22_x64;
-set path_tcc=%Disk%:\tcc;
-set path_cmake=%Disk%:\cmake-3.10.1-win64-x64\bin;
-set path_nodejs=Disk%:\nodejs;%Disk%:\nodejs\appdata\roaming\npm;
-set path_git=%Disk%:\portablegit\bin;
-set path_xming=%Disk%:\Xming;
-set path_latex=%%Disk%:\Pandoc;%Disk%:\TinyTeX\bin\win32;
-
-path=%Disk%:;%path_python%;%path_msys2%;%path_tcc%;%path_git%;%path_cmake%;%path_coreutils%;
-
-start /MIN %Disk%:\wscite415\wscite\SciTE.exe
-start /MIN %Disk%:\wscite415\wscite\SciTE.exe
-
-start /MIN cmd.exe
-start /MIN cmd.exe
-start /MIN cmd.exe
-start /MIN cmd.exe
-
-
-Exit</pre>
-<p><span></span>7.重新啟動剛剛更新的執行檔</p>
-<p>8.執行<strong><span style="color: #ff9900;">python get-pip.py</span></strong></p>
-<p>9..執行<strong><span style="color: #ff9900;">python -m pip install flask flask-cors markdown lxml bs4 pelican leo</span></strong></p>
-<p><span style="color: #ff0000;"><strong>影片教學:</strong></span></p>
-<p><span style="color: #ff0000;"><strong><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ft4s-DvMk_M" width="560"></iframe></strong></span></p>
-<hr/>
-<p><span style="color: #0000ff;"><strong>git pull request操作說明:</strong></span></p>
-<p><span style="color: #000000;">1.以自己github之帳號fork老師的倉儲也就是<span style="color: #ff0000;">fork</span>:<a href="https://github.com/mdecourse/cd2020">https://github.com/mdecourse/cd2020</a></span></p>
-<p><span style="color: #000000;">2.接下來到自己的倉儲中找到剛剛fork下來的老師倉儲並且複製網址</span></p>
-<p><span style="color: #000000;">3.利用git clone 自己帳號下老師的網址</span></p>
-<p><span style="color: #000000;">4.在執行git submodule add <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a></span></p>
-<p><span style="color: #000000;">5.進入到9443開始編輯自己帳號下老師的網站</span></p>
-<p><span style="color: #000000;">6.編輯完成後執行git add commit push三個步驟</span></p>
-<p><span style="color: #000000;">7.利用自己帳號下修改完成的老師倉儲建立新的pull request</span></p>
-<p><span style="color: #000000;"><img alt="" height="84" src="/images/new pull request.PNG" width="207"/></span></p>
-<p><span style="color: #000000;"><img alt="" height="97" src="/images/add commit pull request.PNG" width="1018"/></span></p>
-<p><span style="color: #000000;">8.按下提交之後等待老師接受並且merge即可完成此次的pull request</span></p>
-<p><span style="color: #0000ff;"><strong><span color="#000000">w2直播進程:</span></strong></span></p>
-<p><span style="color: #ff0000;"><strong><span color="#000000">分工內容:</span></strong></span></p>
-<p><span style="color: #000000;"><span color="#000000">40523253:亂數分組程式<br/>40623117:亂數分組程式<br/>40623252:4輪車 <br/>40723221 (group leader) :4輪車 <br/>40723222:4輪車 <br/>40723228:亂數分組程式<br/>40723236:4輪車 <br/>40723237:可攜系統<br/>40723240:4輪車 <br/>40723243:4輪車 <br/>40723244:可攜系統<br/>40723249:可攜系統 <br/>40732331:4輪車 </span></span></p>
-<p><span style="color: #ff0000;"><strong><span color="#000000">注意事項:</span></strong></span></p>
-<p><span style="color: #000000;"><span color="#000000">1.視課堂進度上傳影片<br/>2.不管會不會做每周都要push<br/>3.可以從gitter上面提問<br/>4.直播大家輪流主持，直播前半部分有教大家如何開直播了<br/>5.git pull request每個人都要會之後要更改東西比較方便<br/>6.不會做的可以去看我的網站我會盡可能提早更新，再不行就到gitter上面提問可以在這邊提問 gitter:https://gitter.im/mdecourse/cd2020<br/>7.2020年3月26日到期assignment 1的pdf繳交請在時間內上傳到自己倉儲的download上<br/>8.pdf上寫上進度，之後打分數依照pdf打分</span></span></p>
-<p><span style="color: #ff0000;"><strong><span color="#000000">直播進程影片:</span></strong></span></p>
-<p><strong><span style="color: #0000ff;"><span color="#000000" style="color: #000000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HXS95dlMSv8" width="560"></iframe></span></span></strong></p>
-<hr/>
-<h4><strong><span style="color: #0000ff;">week3</span></strong></h4>
-<p><strong><span style="color: #0000ff;">本周報告影片:</span></strong></p>
-<p><strong><span style="color: #0000ff;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/uDAZ07xBHMs" width="560"></iframe></span></strong></p>
-<h2>week6-9</h2>
-<hr/>
-<p><span style="color: #0000ff;"><strong><span color="#000000">w2直播進程:</span></strong></span></p>
-<p><span style="color: #ff0000;"><strong><span color="#000000">分工內容:</span></strong></span></p>
-<p><span style="color: #ff0000;">topic0:</span><br/>40723237<br/>40723221<br/>40723222<br/>40723228<br/>40723243<br/>40723244<br/>40723236<br/>40623117</p>
-<p><span style="color: #ff0000;">topic1:</span><br/>40723221<br/>40723222<br/>40623252<br/>40523253<br/>40723249<br/>40732331<br/>40723240<br/>40723237</p>
-<p><strong><span style="color: #ff0000;">直播進程影片:</span></strong></p>
-<p><span style="color: #ff0000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/B6zwMXl1V3Y" width="560"></iframe></span></p>
-<p><strong><span style="color: #ff0000;">4輪車參考影片:</span></strong></p>
-<p><span style="color: #000000;">四輪車馬達驅動設定影片:</span></p>
-<p><strong><span style="color: #ff0000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/kerPUu4UY1M" width="560"></iframe></span></strong></p>
-<p>V-REP <yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">tutorial 影片:</yt-formatted-string></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/CXGJmwHt81g" width="560"></iframe></p>
-<p><strong><span style="color: #ff0000;">將手機用做攝像頭</span></strong></p>
-<p><span style="color: #0000ff;"><a href="https://www.e2esoft.com/ivcam/" style="color: #0000ff;"><span style="color: #000000;">ivcam:</span>https://www.e2esoft.com/ivcam/</a></span></p>
-<p><img alt="" height="314" src="/images/ivcam.PNG" width="353"/></p>
-<p>obs:<a href="https://obsproject.com/">h<span style="color: #0000ff;">ttps://obsproject.com/</span></a></p>
-<p><span style="color: #0000ff;"><img alt="" height="244" src="/images/obs.PNG" width="246"/></span></p>
-<p><span style="color: #000000;">藉由obs之串流功能或者錄影功能即可使用錄影的方式進行線上教學及操作，若需要錄製操作者的臉或者是展示現場操作之步驟及方式亦可以使用ivcam對手機進行連結，並截油ivcam之功能達到與攝像頭相對應的功能。</span></p>
-<p><span color="#000000" style="color: #0000ff;">ivcam設定方式:</span></p>
-<p><span color="#000000" style="color: #000000;">1.安裝並且執行ivcam(手機電腦都需要安裝)</span></p>
-<p><span color="#000000" style="color: #000000;"><img alt="" height="218" src="/images/ivcam-1.PNG" width="371"/></span></p>
-<p><span color="#000000" style="color: #000000;">2.連接後到obs去設定攝像頭</span></p>
-<p><span color="#000000" style="color: #000000;"><img alt="" height="411" src="/images/obs cut.PNG" width="310"/></span></p>
-<p><span color="#000000" style="color: #000000;">3.結束後即可開始使用手機攝像頭</span></p>
-<h2>week10-14</h2>
-<h2>week15-18</h2>
-<h1>Q&amp;A</h1>
-<p><span style="color: #ff0000;">PY3.8.2更新後出現之LEO無法開啟問題與解決方法。</span></p>
-<p><img alt="" height="221" src="/images/LEO.png" width="292"/></p>
-<p>拿之前home_mdecourse/.leo裡面的.leoID.txt放到home裡面就正常了。</p>
-<p><span style="color: #ff0000;">將手機用做攝像頭</span></p>
-<p><span style="color: #0000ff;"><span style="color: #000000;">ivcam:</span><a href="https://www.e2esoft.com/ivcam/" style="color: #0000ff;">https://www.e2esoft.com/ivcam/</a></span></p>
-<p><img alt="" height="314" src="/images/ivcam.PNG" width="353"/></p>
-<p>obs:<a href="https://obsproject.com/">h<span style="color: #0000ff;">ttps://obsproject.com/</span></a></p>
-<p><span style="color: #0000ff;"><img alt="" height="244" src="/images/obs.PNG" width="246"/></span></p>
-<p><span style="color: #000000;">藉由obs之串流功能或者錄影功能即可使用錄影的方式進行線上教學及操作，若需要錄製操作者的臉或者是展示現場操作之步驟及方式亦可以使用ivcam對手機進行連結，並截油ivcam之功能達到與攝像頭相對應的功能。</span></p>
-<p><span color="#000000" style="color: #0000ff;">ivcam設定方式:</span></p>
-<p><span color="#000000" style="color: #000000;">1.安裝並且執行ivcam(手機電腦都需要安裝)</span></p>
-<p><span color="#000000" style="color: #000000;"><img alt="" height="218" src="/images/ivcam-1.PNG" width="371"/></span></p>
-<p><span color="#000000" style="color: #000000;">2.連接後到obs去設定攝像頭</span></p>
-<p><span color="#000000" style="color: #000000;"><img alt="" height="411" src="/images/obs cut.PNG" width="310"/></span></p>
-<p><span color="#000000" style="color: #000000;">3.結束後即可開始使用手機攝像頭</span></p>
-<h1>assignments</h1>
-<p>1.assignment1:<a href="/downloads/assignment1.pdf">pdf報告</a></p>
-<h2>assignment1</h2>
-<p><a href="/downloads/assignment1.pdf">assignment1pdf報告</a></p>
-<p><a href="https://github.com/s40723221/cd2020/blob/master/downloads/Collaborative%20product%20design%20processes%20of%20industrial%20design%20and%20engineering%20design%20in%20consumer%20product%20companies%E7%BF%BB%E8%AD%AF.pdf">Collaborative product design processes of industrial design and engineering design in consumer product companies</a>本書內容在講述為何要進行協同及協同對業界進行協同的實驗，以及講述協同的重要性，和對工業設計及機構設計工程師是如何在分工上取得平衡以至於不會產生衝突做講解。</p>
-<p>assignment1所要解決之項目:</p>
-<p>1. Describe how to do an efficient random grouping for this course or do the roll calling randomly?</p>
-<p>2. Describe how to prepare a portable Python programming system for Windows 10 64bit system to allow one the maintain<span> </span><a href="https://github.com/mdecourse/cmsimde">CMSiMDE</a><span> </span>website,<span> </span><a href="https://github.com/getpelican/pelican">Pelican blog</a><span> </span>and<span> </span><a href="https://github.com/hakimel/reveal.js/">Reveal.js</a><span> </span>presentation on<span> </span><a href="https://github.com/">Github</a>?</p>
-<p>3. What do you need to know from <a href="http://www.coppeliarobotics.com/helpFiles/index.html">http://www.coppeliarobotics.com/helpFiles/index.html</a> to implement a four-wheeled robot?</p>
-<h3>Random grouping</h3>
-<p><span lang="en" style="color: #0000ff;">資料提供及統整:40723221 </span></p>
-<p><span lang="en">1.如何從網站中抓取所需之資料(如名單)?</span></p>
-<p><span lang="en"> 2.順利抓取名單後如何運用於程式中並使其能夠正確的讀取?</span></p>
-<p><span lang="en"> 3.如何在上述皆達成後順利達到分組的效果? <br/> <br/>我們必須要了解 import 的 request、ast、random 是甚麼模組。</span></p>
-<p><span lang="en"> (1) Request 為能夠下載網頁的一項 python 中的模組，我們能夠使用 request.get(加入網址)的方式來達到擷取網頁資料的目的。 </span></p>
-<p><span lang="en"><span style="color: #ff0000;">參考連結</span>: <a href="https://blog.gtwang.org/programming/python-requests-module-tutorial/">https://blog.gtwang.org/programming/python-requests-module-tutorial/ </a><br/>(2) ast 中的 literal_eval 可以將剛剛擷取下來的網頁資料(僅允許為字符串，字 <br/>節對象(bytes)，數值，元組，列表，字典，集合，布爾值和 None)才可以進<br/>行轉換。 <br/></span></p>
-<p><span lang="en"><span style="color: #ff0000;">參考連結</span>: <a href="https://docs.python.org/zh-cn/3/library/ast.html">https://docs.python.org/zh-cn/3/library/ast.html</a></span></p>
-<p><span lang="en"> (3) random 中有許多不同的用法，在每周抽點中我們使用的是 shuffle 的用法， 此 用法會將給定的元素隨機打亂，以達到亂數的目的。</span></p>
-<p><span lang="en"><span style="color: #ff0000;"> 參考連結</span>: <a href="https://ithelp.ithome.com.tw/articles/10207483">https://ithelp.ithome.com.tw/articles/10207483 </a></span></p>
-<p><span lang="en">最後我們可以經由 for 迴圈對剛剛打亂的元素進行我們所想要的分法已達到 亂數分組中的分組的目的。 <br/> <br/><span style="color: #ff0000;">亂數分組及每周抽點程式比較</span>:亂數分組必須要從 index.html 中去抓取網址， 如在 html 中不存在網址才會從主程式 evenGrouping.dart 中抓取網址，而每 周抽點的程式中則是採用 Request 的方式去產生擷取網站資料的目的，在亂 數分組中可以以 dart 的方式去 run 就會達到分組的目的，也可以使用 scite 進 行 python 指令的運行，這樣也可以對每周抽點進行抽點運行。 </span></p>
-<h3>Portable system</h3>
-<p><span style="color: #0000ff;">資料提供及資料統整:40723221、40723237、 40723249 、40723244 </span></p>
-<p><span lang="en">問題:如何對現有的可攜進行更新 python 至 3.8.2 的動作，可攜系統的完整安裝流程，及 python3.8.2 的運行需要做哪一些更動? <br/> <br/><span style="color: #ff0000;">(1)直接對舊有可攜進行更新 </span></span><span lang="en"><span style="color: #ff0000;">將可攜系統下的 python 3.7.3 系統更新至 python 3.8.2</span> <br/></span></p>
-<p><span lang="en">1.進入 <a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a> <br/>2.往下滑到最底，下載 Windows x86-64 executable installer(上下兩者分別為 Windows x86-64 embeddable zip file 和 Windows x86-64 web-based installer 這兩者是嵌入式64位元python的可執行壓縮檔案和64位元網際端的可執行檔 案)在本次可攜的更新中不會使用到 <br/>3.接著開始下載切記不要勾選 pip 選項，接著按下 next <br/>4.先將下載下來的python3.8.2放置桌面，並且將y槽下的data新增加一個py382 的資料夾方便之後可以做測試是否 3.8.2 之 python 可以正常的運行 <br/>5.將剛剛下載之 python3.8.2 放置於剛剛創建的 py382 中切記不要將原先的 py373刪除，若之後 py382 的執行產生錯誤才可以使用 py373 做返回原版本的 動作 <br/>6.更改執行檔 start_mdecourse.bat 將底下 py373 處更改為自己下在 python3.8.2 所儲存的資料夾名稱 <br/></span></p>
-<p><span lang="en"><img alt="" height="746" src="/images/LEO問題.PNG" width="1061"/><br/>[start 開啟檔的修改] </span></p>
-<p><span lang="en">7.重新啟動剛剛更新的執行檔 <br/>8.執行 python get-pip.py <br/>9..執行 python -m pip install flask flask-cors markdown lxml bs4 pelican leo <br/><span style="color: #ff0000;">影片教學網址 :</span></span></p>
-<p><span lang="en"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ft4s-DvMk_M" width="560"></iframe><br/> <br/><span style="color: #ff0000;">(2)從頭對創建 python3.8.2 的可攜 </span></span></p>
-<p><span lang="en">1.往下滑到最底，下載 Windows x86-64 executable installer</span></p>
-<p><span lang="en"> 2.SciTE：到 https://www.scintilla.org/SciTEDownload.html，下載 ” full 64-bit download” 把檔案 ”wscite432” 搬移至 data 目錄底下，在到data下的wscite432 下的 wscite 目錄下執行”scite.exe” </span></p>
-<p><span lang="en">3. MSYS2：https://www.msys2.org/ 下載 msys2-x86_64-20190524.exe 並執行</span></p>
-<p><span lang="en"> 4. PortableGit：https://git-scm.com/download/win 下載 64-bit Git for Windows Portable 安裝在 data 目錄下 </span></p>
-<p><span lang="en">5.安裝pip為以更新的方式更新可攜或者是以從頭開始的方式更新可攜都必須要 安裝指令為 python get-pip.py 6. 指令為 pip install flask bs4 lxml pelican markdown flask_cors 也必須要安裝這些模組 <br/> <br/>兩者的比較差異:更新舊有的可攜需要的主要為 python get-pip.py 與下載模 組 pip install flask bs4 lxml pelican markdown flask_cors 並且對 開啟檔 start_mdecourse.bat 進行內容的更動及可，從頭開始執行可攜的更新則 比較麻煩需要下載的模組較多，必須對 SciTE、MSYS2、PortableGit、Tiny C Compiler、Jupyterlab、Fossil SCM 有需要甚至可以將 webots、v-rep 及其他如sharex 等軟體載入可攜系統中。 </span></p>
-<h3>four wheel car</h3>
-<p><span style="color: #0000ff;">參考書籍翻譯</span></p>
-<p><a href="https://github.com/s40723221/cd2020/blob/master/downloads/(%E4%BB%A5%E5%82%B3%E6%84%9F%E5%99%A8%E4%BD%BF%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%B2%BF%E8%B7%AF%E7%B7%9A%E7%A7%BB%E5%8B%95)Line%20following%20BubbleRob%20tutorial.pdf"><strong class="final-path">Line following BubbleRob tutorial</strong></a></p>
-<p><strong class="final-path"><a class="js-navigation-open" href="https://github.com/s40723221/cd2020/blob/master/downloads/(%E6%A8%A1%E6%93%AC%E5%9F%BA%E7%A4%8E)simulation.pdf" id="8c91444ed7dad560fbb4780b6830baef-86d92afc11805b200d8ffa746d33fcfcbbf992a3" title="(模擬基礎)simulation.pdf">simulation</a></strong></p>
-<p><strong class="final-path"><a class="js-navigation-open" href="https://github.com/s40723221/cd2020/blob/master/downloads/(%E6%A9%9F%E5%99%A8%E4%BA%BA%E7%9A%84%E5%A4%96%E9%83%A8%E6%8E%A7%E5%88%B6%E5%99%A8)External%20controller%20tutorial.pdf" id="8ae679fc5874c2177040957e882b0a00-30904f0fbffd9733952ca51e317ac9a8ed97113f" title="(機器人的外部控制器)External controller tutorial.pdf">External controller tutorial</a></strong></p>
-<p><strong class="final-path"><a class="js-navigation-open" href="https://github.com/s40723221/cd2020/blob/master/downloads/(%E7%B0%A1%E6%98%93%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E7%A8%8B)BubbleRob%20tutorial.pdf" id="5a94b0f486a99e1088ad96436611948a-983a86df441a2410ebdc72bf70b832b5798b6a70" title="(簡易機器人教程)BubbleRob tutorial.pdf">BubbleRob tutorial</a></strong></p>
-<p><strong class="final-path"><a class="js-navigation-open" href="https://github.com/s40723221/cd2020/blob/master/downloads/simulation%20dialog.pdf" id="f08bfaa0f4138808304725168b9fad75-a160c4aa59a7e52aeb43d5c36192cb726ff1679f" title="simulation dialog.pdf">simulation dialog</a></strong></p>
-<p><span style="color: #3366ff;">試設定動力至車v-rep模型連結</span></p>
-<p><span style="color: #0000ff;"><a class="js-navigation-open" href="https://github.com/s40723221/cd2020/blob/master/downloads/car%20easy%20setting%20for%20motor%20and%20model.ttt" id="14658a2b39c0313740832f69012ab2d9-c9e25afbb32ff146b7d600200015d8564ca34898" style="color: #0000ff;" title="car easy setting for motor and model.ttt">car easy setting for motor and model.ttt</a></span></p>
-<p><span style="color: #0000ff;">本資料由40723222提供</span></p>
-<p><a href="https://www.coppeliarobotics.com/helpFiles/en/bubbleRobTutorial.htm"><strong>BubbleRob tutorial</strong></a><strong>:</strong>在此教程中可以透過我們自行設置的BubbleRob機器人進行初步的模擬，在上學期中我們有實際的以v-rep操作過這個教程，在這個教程中有含括了很多包括如何建造模型(機器人本體、輪子、後方支撐滑塊、障礙物)，並且經由設定好的距離傳感器去感知並且避開我們所設立的障礙物，其中很重要的要點是如何去設計指令使輪胎兩側的傳動器依照我們所想要的方式去做運動，且當距離感測器接近我們所設立的障礙物時，他必須要做出相對應的反應部會使其碰到障礙物，另外還必須要考慮到視覺辨識系統，使機器人在移動時我們能夠觀測到機器人前方之狀況，此教程能夠使我們更加有效率的使用v-rep這套模擬軟體。</p>
-<p>影片教學網址:<span> <a href="https://www.youtube.com/watch?v=CXGJmwHt81g&amp;t=59s">https://www.youtube.com/watch?v=CXGJmwHt81g&amp;t=59s</a></span></p>
-<p><span style="color: #0000ff;">本資料由40723243</span></p>
-<p><a href="https://www.coppeliarobotics.com/helpFiles/en/lineFollowingBubbleRobTutorial.htm"><strong>Line following BubbleRob tutorial</strong></a><strong>:</strong>在此模擬教程中我們銜接上面的BubbleRob教程，我們想要使其能夠按照我們所規劃的路徑移動，在四輪車的方面這樣的功能能夠使我們有效的規劃四輪車的行走路徑，以達到更好去控制四輪的目的，在無外部控制器或者是想要直接在模擬器的環境中直接模擬可以採用該方法達到比較好的效率。</p>
-<p><span style="color: #0000ff;">本資料由40723240提供</span></p>
-<p><a href="https://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm"><strong>External controller tutorial</strong></a><strong>:</strong>遠端控制器教程中，當我們想要從遠端電腦的方式控制我們在模擬中的物件例如:四輪車或機器人時我們就會需要一項遠程控制的控制器，我們可以參考<a href="https://www.coppeliarobotics.com/helpFiles/en/ros1Tutorial.htm">ROS tutorial</a>及<a href="https://www.coppeliarobotics.com/helpFiles/en/ros2Tutorial.htm">ROS 2 tutorial</a>來達到我們想做控制的想法，<span>ROS</span>主要比較像是對於機器人的中間控制系統，他能夠藉由傳感器來指引機器人該往哪個方向移動，如下圖所示，就是<span>ROS</span>較好的解釋。</p>
-<p>ROS:比較像是在負責為機器人的各個元件進行溝通與操作的一個框架，以機器人的行走為例，要讓機器人走路需要控制其底下的馬達、還有一些感測器以進行避開障礙物的功能等等，ROS內就有這種類型的函式可以讓控制馬達的程式得以與接收感測器的程式溝通。</p>
-<p><img alt="" height="194" src="/images/ros.png" width="434"/></p>
-<p><span style="color: #0000ff;">本資料由40723221提供</span></p>
-<p><a href="https://www.coppeliarobotics.com/helpFiles/en/simulation.htm"><strong>Simulation</strong></a><strong>:</strong>這裡主要是在描述模擬是如何建立的，在模擬中我們雖然比較不會受到的限制很少，但是因為硬體的關係我們必須要適度調整好例如:模擬的速度快慢、非主要物件的加入或移除，我們也可以從這裡看到系統是如何調整速度運行的快慢和機制。</p>
-<p><span style="color: #0000ff;">本資料由40723221提供</span></p>
-<p><a href="https://www.coppeliarobotics.com/helpFiles/en/simulationPropertiesDialog.htm"><strong>Simulation settings dialog</strong></a><strong>:</strong></p>
-<p>這篇教程主要在幫助我們理解如何設定模擬時所需要設定的視窗要如何操控，並且講解當我們導入實際的時間運行時，模擬會產生怎樣的變化，但當我們使用加速或減慢時模擬的變化又會怎樣，在一般的情況下模擬的時間步長如果太快會造成模擬的結果及過程不精確甚至會有偵數漏掉的問題，如果太慢雖然會有較精確的結果和過程但會使得模擬時的總時長太久，在某些結構較符雜的模擬之下，模擬在運行到較為複雜的動作或者較難去運算的動作時會使得模擬的時間跟不上實際的時間，這時v-rep內建有寫入能夠補正此bug的方式，他可以藉由進行其他較為簡單的運動模擬時加速已達到與原先時長同步的效果。</p>
-<p><span style="color: #ff0000;">四輪車初步馬達及本體和輪胎設置影片:</span></p>
-<p><span style="color: #ff0000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/kerPUu4UY1M" width="560"></iframe></span></p>
-<p><span style="color: #ff0000;">總結</span>:完成四輪車的模擬必須要有對於模擬軟體的熟悉、馬達的設立、外部控制器的連結、模型的組立、結構的評估(過於複雜的結構可以經由省略內部某些部份零件或者是外觀零件的方式達到簡化)、內部攝像頭的設立、如何以程式(如:python)去所存於模擬中的物件並且對外部控制器做連結，若要進行只單單在模擬軟體中的模擬而不依靠外部控制器去控制作動，則必須要設定在內部模擬器中的感測器(如:距離感射器、視覺感測器等等……)並且布置如線條或者是障礙物的方式去使感測器運行，使物件達到想要的避讓或者是作動，而要達到這些都必須通過程式的設置來完成。</p>
-<p><span>ast</span>模組<span>:<a href="https://docs.python.org/zh-cn/3/library/ast.html">https://docs.python.org/zh-cn/3/library/ast.html</a></span></p>
-<p><span>Rendom</span>模組<span>:<a href="https://ithelp.ithome.com.tw/articles/10207483">https://ithelp.ithome.com.tw/articles/10207483</a></span></p>
-<p><span>Request:<a href="https://blog.gtwang.org/programming/python-requests-module-tutorial/">https://blog.gtwang.org/programming/python-requests-module-tutorial/</a></span></p>
-<p><span>mde.tw</span>中分組之程式<span>:<a href="http://mde.tw/cd2020/content/Grouping.html">http://mde.tw/cd2020/content/Grouping.html</a></span></p>
-<p>v-rep使用手冊: <span><a href="http://www.coppeliarobotics.com/helpFiles/index.html">http://www.coppeliarobotics.com/helpFiles/index.html</a></span> </p>
-<p><span>v-rep車輛建模設置</span><span>1</span><a href="https://blog.csdn.net/abcvincent/article/details/104030418"><span>:</span>https://blog.csdn.net/abcvincent/article/details/104030418</a></p>
-<p><br/>v-rep車輛建模設置2:<a href="https://blog.csdn.net/abcvincent/article/details/104031159">https://blog.csdn.net/abcvincent/article/details/104031159</a></p>
-<p><br/>V-REP車輛建模:<a href="https://zhuanlan.zhihu.com/p/105091011">https://zhuanlan.zhihu.com/p/105091011</a></p>
-<h2>assignment2</h2>
-<h3 class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="en">Product design process</span></h3>
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">assignment2 << <a href='assignment2.html'>Previous</a> <a href='refer e-book.html'>Next</a> >> refer e-book<br /><h1>Product design process</h1>
 <p><span style="color: #ff0000;"><strong>Collaborative product design processes of industrial design and engineering design in consumer product companies</strong></span></p>
 <p><strong>產品公司中的工業設計和工程設計的協作產品設計過程</strong></p>
 <p><span style="color: #ff0000;">This study aims to elucidate how industrial designers and engineering designers collaborate, and how such an alliance reflects in the design process. We conducted in-depth interviews about actual product design projects with 34 industrial and engineering designers from six consumer product manufacturers. We firstly identified individual design processes from the interview data. Secondly, we then compared and merged the design processes into collaborative processes using a mosaic method. We finally simplified the collaborative processes to create representative process models. As a result, we discovered four types of typical collaborative product design processes and their characteristics e Type 1: ID-led Concept-driven Process, Type 2: ID-led Combined Outside-inside Process, Type 3: ED-led Inside-first Process, and Type 4: ID&amp;ED Synergetic Process. </span></p>
@@ -235,7 +181,7 @@ Exit</pre>
 <p>我們首先對個別設計師進行了深入採訪，並收集了他們關於設計項目的事例。為避免追溯性帳戶的不可靠性或準確性所造成的可能的失真（Ackroyd＆Hughes，1981），我們採用了三個標準來選擇研究目標：（1）相似產品領域中的多家公司； （2）工程和工業設計部門的多個參與者； （3）在整個產品開發週期中已經完成的項目。我們設置了第一個標準來提高研究結果的適用性。對項目環境的理解和分析提高了設計過程和方法的適用性（Gericke＆Blessing，2012）。因此，對具有相似項目環境的多家公司進行調查可能會提供更好的機會來應用研究結果。使用第二個標準，來自具有不同觀點的多個受試者的數據將相互補充，以抵消任何潛在的偏見（Miller，Cardinal和Glick，1997）。最後，在回顧性訪談中，可以通過收集和分析整個產品開發週期中已經完成的設計項目的事例來確定設計過程（Berends等，2011）。</p>
 <p><span style="color: #ff0000;">In order to reconstruct product design processes based on transcribed inter- view data, we firstly identified ‘process elements’ and then drew out partial design processes that individual designers practiced. Next, we combined all partial processes in each company into collaborative product design processes using the ‘mosaic method.’ After constructing all detailed collaborative prod- uct design processes, we simplified them with ‘process chunks’ to identify the types of typical design processes. Finally, we visualized them as design process models. Figure 1 shows the research procedure.</span></p>
 <p>為了基於轉錄的訪談數據重建產品設計過程，我們首先確定“過程元素”，然後繪製出各個設計師實踐的部分設計過程。接下來，我們使用“‘mosaic method”將每個公司的所有部分流程組合為協同產品設計流程。在構建了所有詳細的協同產品設計流程之後，我們使用“流程塊”對其進行了簡化，以識別典型設計流程的類型。最後，我們將它們可視化為設計過程模型。圖1顯示了研究過程。</p>
-<p>圖1:<img alt="" height="375" src="/images/c1.png" width="828"/></p>
+<p>圖1:<img alt="" height="375" src="./../images/c1.png" width="828"/></p>
 <p><span style="color: #ff0000;">Actual design processes and their characteristics in reference to the context can be determined from actual design projects, which may be different from the documented design processes of the companies. Comparing both will provide insight. However, we could not collect them, because they are considered as confidential to the outside. Instead, we asked the interviewees whether their company has a documented standard design process and whether it is different from actual design processes.</span></p>
 <p>可以根據實際設計項目確定實際設計過程及其相對於上下文的特徵，這可能與公司記錄的設計過程不同。比較兩者將提供洞察力。但是，我們無法收集它們，因為它們被視為對外部機密。取而代之的是，我們詢問受訪者他們的公司是否有書面的標准設計流程，以及它是否與實際設計流程不同。</p>
 <p> </p>
@@ -257,7 +203,7 @@ Exit</pre>
 <p>我們根據以上標準選擇了案例公司。我們首先將第一和第三項標準應用於從2006年至2010年連續獲得“韓國優秀設計獎”的公司（關於GD，2011年）。 “韓國優秀設計獎”在韓國許多市場領先的製造商中很受歡迎。結果，我們獲得了16個公司名稱。然後，我們與獲獎公司列表中的聯繫方式聯繫了每家公司，並詢問主管是否具有獨立的ID和ED部門（第二標準）以及他們是否願意參加研究。最後，我們選擇了六家公司（表1）。</p>
 <p><span style="color: #ff0000;">1.1.2 Selection of interviewees</span></p>
 <p><span style="color: #ff0000;">We selected interviewees with purposive and snowball sampling methods (Berg, 1988). The gatekeeper of each company suggested their designers who in turn suggested their co-workers. While doing so, we selected interviewees satisfying the three criteria below:</span></p>
-<p>表1:<img alt="" height="202" src="/images/c2.png" width="818"/></p>
+<p>表1:<img alt="" height="202" src="./../images/c2.png" width="818"/></p>
 <p>1.1.2選擇受訪者</p>
 <p>我們選擇了具有目的性和滾雪球式抽樣方法的受訪者（Berg，1988）。每個公司的主管都建議他們的設計師，而後者又建議他們的同事。在這樣做的同時，我們選擇了滿足以下三個條件的受訪者：</p>
 <p><span style="color: #ff0000;">（1) More than two years of experience in the company</span></p>
@@ -315,7 +261,7 @@ Exit</pre>
 <p>交互：發生任務或事件時，兩組經常交互。例如，當工業設計師檢查是否可以修改內部空間時，工程設計師通過提供相關信息為他們提供建議。在這種情況下，會發生激烈的互動，而工程設計人員會充當“顧問”的角色。 ‘他們解釋說‘應該放在這裡，應該放在那裡。’然後，我們修改尺寸和位置，然後再次詢問他們是否可以減小2毫米的間隙。如果他們說“是”，我們會將一個部分與另一個部分拼合。”我們將其編碼為“ ED到ID的顧問角色”。</p>
 <p><span style="color: #ff0000;">We identified process elements from every piece of transcribed interview data. We labelled them with the participant’s own word as far as possible. We used the field notes as a supplementary data source. While doing so, we arranged and connected the encoded elements in a flowchart format chronologically to construct partial design processes. This method is widely adopted to visu- alize process models in industry (Vergidis, Tiwari, &amp; Majeed, 2008). We also determined the project types and goals involved in the design processes from the interview data. Two researchers executed the whole procedures. One researcher firstly constructed partial design processes, and the other researcher examined them by inspecting the interview data. As a result, we obtained 45 partial design processes with 7-9 from each company (see the second row in Table 2).</span></p>
 <p>我們從每個轉錄的訪談數據中識別出流程要素。我們盡可能用參與者自己的話語標記他們。我們將現場說明用作補充數據源。在此過程中，我們按時間順序排列並連接了編碼元素，以構建部分設計過程。該方法被廣泛採用以可視化行業中的過程模型（Vergidis，Tiwari和＆Majeed，2008年）。我們還根據訪談數據確定了設計過程中涉及的項目類型和目標。兩名研究人員執行了整個程序。一位研究人員首先構建了部分設計流程，另一位研究人員通過檢查訪談數據對其進行了檢查。結果，我們從每個公司用7-9獲得了45個局部設計過程（請參見表2中的第二行）。</p>
-<p>表2:<img alt="" height="148" src="/images/c3.png" width="828"/></p>
+<p>表2:<img alt="" height="148" src="./../images/c3.png" width="828"/></p>
 <p><span style="color: #ff0000;">1.2.2 Identifying collaborative product design processes</span></p>
 <p><span style="color: #ff0000;">The next stage was to combine each company’s design processes into collabora- tive design processes via a ‘mosaic method.’ We firstly collected partial design processes from a particular project in a company. This was easily done because designers in a company described shared experiences in the same projects, whereby the individual partial design processes overlapped and supplemented each other. After that, we combined the partial processes by comparing and merging process elements. The partial processes extracted from industrial de- signers’ interview data provided rich information on industrial design activities, including interactive behaviours with engineering designers but less information on pure engineering design activities. This was also the case for engineering design. We merged partial processes from industrial designers in a company to rebuild the design processes around industrial design activities. At the same time, we used the information provided by engineering designers to supplement and strengthen the design activity flows from the engineering design side. We rebuilt the design processes around engineering design activities in the same way. We finally merged the two design processes into one collaborative product design process. In the mosaic method, combining the crosschecked partial pro- cesses is beneficial for higher reliability and commonality. This significantly reduced the likelihood of constructing a process with incomplete information by offsetting each other’s information. Thus, the ‘mosaic method’ decreased the possibility of constructing an inaccurate process.</span></p>
 <p>1.2.2確定協作產品設計流程</p>
@@ -324,7 +270,7 @@ Exit</pre>
 <p>在比較部分設計過程時，我們發現產品計劃團隊參與了一些設計過程元素。因此，我們包括了它的作用。這意味著產品規劃團隊在工業設計和工程設計的協同設計項目中扮演著一定的角色。我們還標準化了一些表示相同任務或事件的術語。但是，它們的編碼方式不同，因為受訪者使用它們的方式略有不同。例如:我們發現一個會議在一個局部設計過程中被編碼為“產品計劃會議”，而在另一個局部設計過程中被編碼為“產品開發會議”。因此，我們將它們統一為“產品計劃會議”。也有人將工業設計結果稱為“模型”，“設計模型”或“模型製造”。我們將它們統一為“設計模型”。我們還將“模擬評估事件”和“模擬選擇”標準化為“模擬評估事件”。這項工作是通過對每個公司的面試數據進行交叉檢查，同時評估了評估的意義和環境來完成的。具體條款。實際上，設計師似乎了解每家公司定義了標準術語的文件化設計過程，但並沒有特別意識到這一點。他們似乎忽略了標準化流程，因為市場形勢迫使他們迅速採取行動。語言差異也是造成術語差異的可能原因。在產品設計領域，韓國語中的母語和借來的單詞混合使用。例如，我們同時使用借用詞和用英語表示“設計”的母語。此外，兩支球隊的文化和位置上的差異很可能會導致期限上的差異。除F公司外，這兩個部門分別位於不同的物理空間，至少位於不同的樓層。</p>
 <p><span style="color: #ff0000;">Finally, we defined stages in a design process by merging stage elements (input, task, event, and output) into a box, and named them with related tasks (See Figure 2). For example, industrial designers start drawing various idea sketches based on research results of the previous stage. Then, they select a few best sketches through evaluation. According to the selection result, they decide to go to the next stage or repeat the current one. Therefore, the ‘idea sketch’ stage is composed of ‘research results (input),’ ‘idea sketch (task),’ ‘eval- uation (event),’ and ‘best sketches (output).’</span></p>
 <p>最後，我們通過將階段元素（輸入，任務，事件和輸出）合併到一個框中並在其中將它們與相關任務進行命名，來定義設計過程中的階段（參見圖2）。例如，工業設計師開始根據前一階段的研究結果繪製各種構想草圖。然後，他們通過評估選擇一些最佳草圖。根據選擇的結果，他們決定進入下一階段或重複當前階段。因此，“想法草圖”階段由“研究結果（輸入），”想法草圖（任務），“評估（事件）”和“最佳草圖（輸出）”組成</p>
-<p>圖2:<img alt="" height="379" src="/images/c4.png" width="828"/></p>
+<p>圖2:<img alt="" height="379" src="./../images/c4.png" width="828"/></p>
 <p><span style="color: #ff0000;">As a result, we obtained 12 collaborative product design processes from all companies; one to three from each company (see the third row in Table 2). We sent them to the informants of each company to check our interpreta- tion of their processes. There were minor changes made in this process. Figure 3 shows a collaborative product design process of Company A. It shows two parallel processes on either side: an industrial design process on the left and an engineering design process on the right, with the interac- tion between the two illustrated in the middle. A ‘product planning meeting’ in the middle is an event hosted by the ‘product planning team,’ where they make a decision, if they move forward to commercialize the concept or re- jected it. The text boxes are stages composed of input-task-event-output. Text boxes with dotted lines are not stages. They do not have all four- stage elements. For example, ‘inspection’ is a kind of decision. There is no input and output. The vertical arrows indicate the progress of the flow. It also shows the direction of information flow, where the output of the former stage becomes the input of the next stage. The horizontal arrows show the direction of ‘information flow’ or ‘interaction.’ The circular arrows represent repeated and strong interaction within the phases. Colours in Figures 3 and 5 show their connectivity. These are later categorized as phases and ex- plained in the next section.</span></p>
 <p>結果，我們從所有公司獲得了12個協同產品設計流程；每個公司一到三個（請參閱表2中的第三行）。我們將它們發送給每個公司的受訪者，以檢查我們對其流程的解釋。在此過程中進行了較小的更改。圖3顯示了公司A的協作產品設計過程。它在兩側顯示了兩個並行的過程：左側是工業設計過程，右側是工程設計過程，中間示出了兩者之間的相互作用。中間的“產品規劃會議”是由“產品規劃小組”主持的活動，由他們決定是否繼續將概念商業化或拒絕。文本框是由輸入任務事件輸出組成的階段。帶有虛線的文本框不是階段。它們沒有所有四個階段的元素。例如，“檢查”是一種決定。沒有輸入和輸出。垂直箭頭指示流程的進度。它還顯示了信息流的方向，前一級的輸出變成了下一級的輸入。水平箭頭表示“信息流”或“交互”的方向。圓形箭頭表示各階段中反复且強烈的交互。圖3和5中的顏色顯示了它們的連通性。稍後將這些分類為階段，並在下一部分中進行說明。</p>
 <p><span style="color: #ff0000;">1.2.3 Simplifying the processes</span></p>
@@ -341,9 +287,9 @@ Exit</pre>
 <p>我們通過其主要工作來命名流程塊。在命名這些過程塊時，我們發現“概念設計”一詞在工程設計和工業設計中的用法有所不同。工程設計中的概念設計是與技術概念有關的技術概念，該技術概念通過開發對工作結構和功能的廣泛解決方案來與產品的工作方式相關（Haik＆Shahin，2010; Kroll，Condoor，＆Jansson，2001; Ullman，2009）。但是，工業設計師在概念設計階段決定產品樣式和交互作用的方向，這由概念關鍵字，情緒板，想法草圖和用戶場景來表示（Press＆Cooper，2003； Tovey＆Harris，1999；Vredenburg，Isensee， Righi和＆Design，2001年）。因此，我們標記了這個概念工業設計師的設計活動稱為“ Concept Design-I”，而工程設計師的設計活動稱為“ Concept Design-E”。</p>
 <p><span style="color: #ff0000;">Figure 5 is the simplified version of Figure 3. The coloured boxes in Figure 3 are simplified with the same coloured blocks in Figure 5. The blue block in Figure 3 becomes ‘Concept Design-I.’ ‘Product Planning Meeting’ in Figure 3 is defined as ‘Product Planning’ and visualized with an elongated hexagon. It is determined as a single phase as it is a separated and distinctive design activity. Inside the red block, there are two parallel process chunks; ‘Concept Design-E’ on right side (the small red box), that is the ‘main process chunk,’ and ‘Shape Modification’ on the left-hand side (yellow), a ‘correspond- ing chunk.’ These two chunks are not deemed separate phases because they are coupled with the start to the end inside the big red block. As such, interaction between the two designer groups is strong. To differentiate two parallel chunks, we represented the main chunk with thick solid lines and the corre- sponding chunk with light solid lines. In the green blocks, as there was a little difference in the design activities between all 12 processes, we combined the two sequential process chunks of detail design and testing and production into one. As such, we treated them as a single phase in this study. When the design process in the green block proceeds, industrial designers react from time to time based on engineering designers’ requests or their own purpose for design inspection. They usually called these activities as ‘Follow-up’ differ- entiating from their major tasks. These kinds of activities apparently existed but do not belong to a process chunk. They are discrete process elements as shown in Figure 3, and thus represented with dotted lines. To help visual un- derstanding, solid arrows, a double directional wide arrow, and a single direc- tional wide arrow represent process flow, mutual interaction, and one-way interaction respectively.</span></p>
 <p>圖5是圖3的簡化版本。圖3中的彩色框使用圖5中的相同彩色框進行了簡化。圖3中的藍色框變為“概念設計-I”。圖3中的“產品計劃會議”為定義為“產品計劃”，並以細長的六邊形可視化。由於它是一個單獨且獨特的設計活動，因此被確定為單個階段。在紅色塊內部，有兩個並行的處理塊；右邊的“ Concept Design-E”（紅色的小方框）是“主流程塊”，左邊的是“形狀修改”（黃色），是“對應的塊”。塊並不能視為單獨的階段，因為它們與大紅色塊內的開始到結束相結合。這樣，兩個設計師團隊之間的互動就很強。為了區分兩個平行的塊，我們用粗實線表示主塊，並用淺實線表示相應的塊。在綠色塊中，由於所有12個流程之間的設計活動都沒有什麼區別，因此我們將詳細設計，測試和生產的兩個順序流程塊合併為一個。因此，在本研究中我們將它們視為一個階段。當綠色方框中的設計過程繼續進行時，工業設計師會根據工程設計師的要求或他們自己的設計檢查目的不時做出反應。他們通常將這些活動稱為“後續活動”，與主要任務有所不同。這些活動顯然存在，但不屬於流程塊。它們是如圖3所示的離散過程元素，因此用虛線表示。為了幫助視覺理解，實心箭頭，雙向寬箭頭和單個方向寬箭頭分別表示過程流，相互交互和單向交互。</p>
-<p>圖3:<img alt="" height="1153" src="/images/c5.png" width="828"/></p>
-<p>圖4:<img alt="" height="458" src="/images/c6.png" width="609"/></p>
-<p>圖5:<img alt="" height="1178" src="/images/c7.png" width="828"/></p>
+<p>圖3:<img alt="" height="1153" src="./../images/c5.png" width="828"/></p>
+<p>圖4:<img alt="" height="458" src="./../images/c6.png" width="609"/></p>
+<p>圖5:<img alt="" height="1178" src="./../images/c7.png" width="828"/></p>
 <p> </p>
 <p><span style="color: #ff0000;">1.2.4 Determining types of collaborative design processes</span></p>
 <p><span style="color: #ff0000;">We compared and categorized the 12 simplified collaborative product design processes based on similarities in their process structure, input and outcomes of process chunks and phases, and interaction between industrial designers and engineering designers. We first compared every process chunk and phase with corresponding process chunks and phases from the other 11 processes in terms of structure. Then, we compared inputs and outcomes of every corre- sponding phase across the 12 processes. For example, the ‘Concept Design-I’ phase in Figure 5 has no input, but produces ‘design mock-up’ as an output. Some ‘Concept Design-I’ phases in other processes started with the receipt of the preliminary layout from the engineering design teams. Therefore, examining the types of inputs and outcomes of phases give a clue to determine how the over- all process flows. Finally, we evaluated the interaction between industrial de- signers and engineering designers within a phase. There is no interaction between the two groups in the blue block. However, in the red blocks, there are strong interactions between them. As a result, we grouped the 12 collabora- tive product design processes into four types of representative processes.</span></p>
@@ -363,7 +309,7 @@ Exit</pre>
 <p><span lang="en">第一階段（概念設計-I）：工業設計師獨立開發產品的概念，而不受其他部門的干擾。他們主要關注與美學外觀和用戶體驗有關的方面。他們很少考慮內部零件，這給了他們很多自由。他們為外部和高質量渲染圖像生成3D CAD數據以測試該概念。最終確定外觀形式後，他們會生成一個“設計模型”，一個無功能的原型，以驗證該概念。最後，在“設計評估會議”上選擇最佳設計。此階段的最終結果是外形的3D CAD數據和設計模型。工程設計師在此階段不採取任何行動。通常，他們甚至不知道工業設計師在設計什麼。</span></p>
 <p><span style="color: #ff0000;">2nd phase (ProductPlanning): The product planningdepartmentdecides onthe commercialization of the selected design as well as on the target market, target price and material cost of the design. Finally, they prepare a product-planning document and establish a speciﬁc direction for commercialization of the design.</span></p>
 <p><span lang="en">第二階段（產品計劃）：產品計劃部門決定所選設計的商業化以及目標市場，設計的目標價格和材料成本。最後，他們準備一份產品計劃文件，並確定設計商業化的具體方向。 </span></p>
-<p>圖6:<img alt="" height="406" src="/images/c8.png" width="714"/></p>
+<p>圖6:<img alt="" height="406" src="./../images/c8.png" width="714"/></p>
 <p><span style="color: #ff0000;">3rd phase (Concept Design-E/Shape Modiﬁcation): The product planning document from the previous phase and the ﬁnal 3D CAD data developed by industrial designers are the initial inputs given to the engineering designers. Engineering designers review the feasibility of the design concept proposed by the industrial designers due to which engineering designers gather relevant technologies and arrange inner parts in the 3D CAD data to test if all indispensable internal functional parts can be ﬁxed inside the exterior form. Sometimes, engineering designers produce experimental prototypes to test if the desired performance can be implemented with the pre-set exterior form. As industrial designers did not consider the internal parts in deﬁning the exterior form, engineering designers have trouble in arranging the inner parts within the given form. Thus, modifying the exterior form is somehow unavoidable. Therefore, there is a corresponding process to Concept Design-E: ‘Shape Modiﬁcation’ by industrial designers. Industrial designers use the layout data received from engineering designers to modify the exterior form. At this point, two goals collide with each other. Industrial designers try to maintain the original form, while engineering designers demand the modiﬁcation to ensure functionality and performance. In this process, a very close interaction takes place. The outcome is 3D CAD data about the exterior form and interior part layout.</span></p>
 <p><span lang="en">第三階段（概念設計-E /形狀修改）：前一階段的產品規劃文檔和由工業設計師開發的最終3D CAD數據是向工程設計師提供的初始輸入。工程設計人員回顧了工業設計人員提出的設計概念的可行性，因為工程設計人員收集了相關技術並在3D CAD數據中佈置了內部零件，以測試是否可以將所有必不可少的內部功能零件固定在外部表格中。有時，工程設計人員會生成實驗性原型，以測試是否可以通過預設的外觀形式實現所需的性能。由於工業設計師在定義外觀形式時未考慮內部零件，因此工程設計師在將內部零件佈置在給定的形式中時遇到了麻煩。因此，以某種方式不可避免地要改變外觀。因此，Concept Design-E有一個相應的過程：工業設計師的“形狀修改”。工業設計師使用從工程設計師那裡收到的佈局數據來修改外觀形式。此時，兩個目標相互碰撞。工業設計人員嘗試保持原始形式，而工程設計人員要求進行修改以確保功能和性能。在這個過程中，發生了非常緊密的交互。結果是有關外部形狀和內部零件佈局的3D CAD數據。</span></p>
 <p><span style="color: #ff0000;">4th phase (Detail design  testing &amp; production/Follow-up): From this phase, engineering designers lead the process in all parts. Engineering designers decide on individual parts’ geometry and compositional structure based on the 3D CAD data determined at the previous phase. Due to the consideration of mass production or reliability testing, they sometimes ask industrial designers to make minor modiﬁcations of the exterior design. Upon completion of the detailed design, working prototypes called ‘engineering samples’ are produced to check the form and functionality. At this point, industrial designers evaluate to what extent the exterior form has been produced in compliance with their design concept. Then, engineering designers decide on suppliers, produce moulds, and test ‘pre-production prototypes’ through multiple event processes to improve the reliability of performance and the durability of the product.</span></p>
@@ -400,7 +346,7 @@ Exit</pre>
 <p><span style="color: #ff0000;">Type 4 took place not by oﬃcial proposal but individual designers’ eﬀorts in the early phases. In many cases, engineering designers involved in developing line-up models tend to reject novel design concepts proposed by industrial designers, because of feasibility issues within the limited time. To implement the concepts, industrial designers work with engineering designers who are freer. Therefore, this process makes it possible to continue with novel design concepts that were rejected. In addition, industrial designers and engineering designers make synergic eﬀorts. Breaking away from the conventional separated approach, they handle a design concept in an integrated way considering many design variables concurrently. The detailed phases of this process are as follows):</span></p>
 <p><span lang="en">2.4類型4：ID＆ED協同過程類型4並非是根據官方提議而發生的，而是各個設計師在早期階段的嘗試。在許多情況下，由於在有限的時間內存在可行性問題，參與開發陣容模型的工程設計師往往會拒絕工業設計師提出的新穎設計概念。為了實施這些概念，工業設計師與自由設計師合作。因此，此過程使繼續拒絕的新穎設計概念成為可能。此外，工業設計師和工程設計師也可以協同工作。與傳統的分離方法不同，它們以集成方式處理設計概念，同時考慮了許多設計變量。此過程的詳細階段如下）： </span></p>
 <p>圖8:</p>
-<p><img alt="" height="427" src="/images/c9.png" width="386"/></p>
+<p><img alt="" height="427" src="./../images/c9.png" width="386"/></p>
 <p><span style="color: #ff0000;">1st phase (Concept Incubation): As in Figure 9, industrial designers conceive of a new design independently. They mostly build it from the design ideas that were excluded from proceeding projects despite their innovativeness.</span></p>
 <p><span lang="en">第一階段（產生概念）：如圖9所示，工業設計師獨立地構思新設計。他們大都是根據僅有創新性但仍未開始進行的設計構想來構建它。</span></p>
 <p><span lang="en"><span style="color: #ff0000;">2nd phase (Concept Design): This phase starts when industrial designers seek engineering designers who can work with them. When an engineering designer agrees to join the industrial designer for implementing the design concept, they work closely throughout this phase. The engineering designer provides stateof-the-art technology for the industrial designer to sharpen the design concept. The ﬁrst level of inside layout is developed based on the outer shape that is being developed. The outcomes of this phase are the 3D CAD data about the exterior form and interior layout.</span></span></p>
@@ -455,166 +401,46 @@ Exit</pre>
 <p><span lang="en">根據研究方法，我們展示瞭如何從設計師的深入訪談數據中建立協作設計過程。我們確定了過程元素，並使用它們構造了部分過程，並使用鑲嵌方法建立了詳細的協作設計過程。我們還引入了“過程塊”，並定義了一個或兩個交互塊作為一個階段。我們認為這種方法有利於確定最佳水平的實際設計過程。我們認為該方法適用於發現其他設計過程。我們的過程模型的形式可與其他基於階段的模型相比較（例如French，1998； Pahl等，2007）。我們從模型中發現，在階段之間很少發生反向迭代或反饋。這與現有的基於階段的工程設計過程模型的描述不同。在理想情況下，我們認為雙向迭代是可能的，但是實際上由於激烈的市場競爭，我們認為這種情況很少發生。</span></p>
 <p><span style="color: #ff0000;">Further studies with this method are required especially toward other project cases in other product domains. The companies in this study were all manufacturers of electronic products. Therefore, the result is limited to this product category. We need to test how the four collaborative design processes are applied in other companies. Conversely, it is worth studying cases of innovative product development and the processes applied.</span></p>
 <p><span lang="en">特別是針對其他產品領域中的其他項目案例，需要對該方法進行進一步的研究。本研究中的公司均為電子產品製造商。因此，結果僅限於此產品類別。我們需要測試這四個協作設計過程如何在其他公司中應用。相反，值得研究創新產品開發和應用過程的案例。</span></p>
-<h1>refer e-book</h1>
-<h2>Simulation</h2>
-<p><span style="color: #ff0000;"><strong>Simulation</strong></span></p>
-<p><strong>模擬</strong></p>
-<p><span style="color: #ff0000;">A simulation in CoppeliaSim can be started, paused and stopped with [Menu bar --&gt; Simulation --&gt; Start/Pause/Stop simulation] or through the related toolbar buttons:</span></p>
-<p>可以使用<span>[</span>菜單欄<span>-&gt;</span>模擬<span>-&gt;</span>開始<span>/</span>暫停<span>/</span>停止模擬<span>]</span>或通過相關的工具欄按鈕來啟動，暫停和停止<span>CoppeliaSim</span>中的模擬：</p>
-<p><img alt="" height="37" src="/images/button1.png" width="124"/></p>
-<p><span style="color: #ff0000;">[Simulation start/pause/stop toolbar buttons]</span></p>
-<p><span>[</span>模擬開始<span>/</span>暫停<span>/</span>停止工具欄按鈕<span>]</span></p>
-<p><span style="color: #ff0000;">Internally, the simulator will use additional intermediate states in order to correctly inform scripts or programs about what will happen next. Following state diagram illustrates the simulator's internal states:</span></p>
-<p>在模擬內，模擬器將使用其他中間狀態，以正確告知腳本或程序接下來將發生的情況。以下狀態圖說明了模擬器的內部狀態：</p>
-<p><span style="color: #ff0000;">[Simulation state diagram]</span></p>
-<p><span>[</span>模擬狀態圖<span>]</span></p>
-<p><span><img alt="" height="489" src="/images/simulation state diagram.png" width="640"/></span></p>
-<p><span style="color: #ff0000;">Scripts and programs should alwaysreact according to the current system call function and possibly the simulation state in order to behave correctly. It is good practice to divide each control code into at least 4 system call functions (e.g. for non-threaded child scripts):</span></p>
-<p>腳本和程序應始終根據當前系統調用功能以及可能的模擬狀態進行反應，以便正確運行。優良作法是將每個控制代碼至少分為<span>4</span>個系統調用函數（例如，用於非線程子腳本）：</p>
-<p><span style="color: #ff0000;">1.Initialization function: sysCall_init: the function is called only when the script is initialized.</span></p>
-<p><span style="color: #ff0000;">2.Actuation function: sysCall_actuation: the function is called when actuation should happen.</span></p>
-<p><span style="color: #ff0000;">3.Sensing function: sysCall_sensing: this function is called when sensing should happen.</span></p>
-<p><span style="color: #ff0000;">4.Clean-up function: sysCall_cleanup: the function is called just before the script is de-initialized (e.g. at simulation end, or when the script is destroyed)</span></p>
-<p><span style="color: #626262;">1.Initialization</span><span style="color: #626262;">函數：</span><span style="color: #626262;">sysCall_init</span><span style="color: #626262;">：僅在腳本初始化時調用該函數。</span></p>
-<p><span>2.actuation</span>函數：<span>sysCall_actuation</span>：應在發生<span>actuation</span>時調用該函數。</p>
-<p><span>3.Sensing</span>函數：<span>sysCall_sensing</span>：當應該進行檢測時調用此函數。</p>
-<p><span>4.Clean-up</span>函數：<span>sysCall_cleanup</span>：該函數在腳本未初始化之前被調用（例如在模擬結束時或腳本被銷毀時）</p>
-<p><span> </span></p>
-<p><span style="color: #ff0000;">For examples on how to arrange a typical script, refer to the main script, the child scripts and customization scripts pages.</span></p>
-<p>有關如何安排典型腳本的示例，請參閱主腳本，子腳本和自定義腳本頁面。</p>
-<p><span style="color: #ff0000;">The simulator operates by advancing the simulation time at constant time steps. Following figure illustrates the main simulation loop</span></p>
-<p>模擬器通過以恆定的時間步長推進模擬時間來進行操作。下圖說明了主要的模擬循環</p>
-<p><span style="color: #ff0000;">Simulation loop</span></p>
-<p><span style="color: #ff0000;"><img alt="" height="196" src="/images/simulation loop.png" width="450"/></span></p>
-<p><span style="color: #ff0000;">[Main simulation loop]</span></p>
-<p><span>[</span>主要模擬路徑參考圖<span>]</span></p>
-<p><span style="color: #ff0000;">Real-time simulation is supported by trying to keep the simulation time synchronized with the real time:</span></p>
-<p>通過嘗試使模擬時間與實時保持同步來支持實時模擬：</p>
-<p><img alt="" height="293" src="/images/main simulation loop.png" width="450"/></p>
-<p><span style="color: #ff0000;">[Real-time simulation loop]</span></p>
-<p><span>[</span>加入真實時間後的模擬參考圖<span>]</span></p>
-<p><span style="color: #ff0000;">Following represents a very simplified main client application (messaging, plugin handling and other details have been omitted for clarity purpose):</span></p>
-<p>以下是一個非常簡單的主客戶端應用程序（為清晰起見，已省略了消息，插件處理和其他詳細信息）：</p>
-<p>void initializationCallback<br/> {<br/>     // do some initialization here</p>
-<p>}</p>
-<p> </p>
-<p>void loopCallback<br/> {<br/>     if ( (simGetSimulationState()&amp;sim_simulation_advancing)!=0 )<br/>     {<br/>         if ( (simGetRealTimeSimulation()!=1)||(simIsRealTimeSimulationStepNeeded()==1) )<br/>         {<br/>             if ((simHandleMainScript()&amp;sim_script_main_script_not_called)==0)<br/>                 simAdvanceSimulationByOneStep();<br/>         }<br/>     }<br/> }</p>
-<p> </p>
-<p>void deinitializationCallback<br/> {<br/>     // do some clean-up here</p>
-<p>}</p>
-<p><span style="color: #ff0000;">Depending on the simulation complexity, performance of the computer and simulation settings, real-time simulation might not always be possible.</span></p>
-<p>取決於模擬的複雜性，電腦的性能和模擬設置，實時模擬並不總是完美的。</p>
-<p><span style="color: #ff0000;">In non real-time simulations, the simulation speed (i.e. the perceived speed) is mainly dependent on two factors: the simulation time step and the number of simulation passes for one rendering pass (see the simulation dialog for more details). In the case of a real-time simulation, the simulation speed mainly depends on the real-time multiplication coefficient, but also to a certain degree of the simulation time step (a too small simulation time step might not be compatible with the real-time character of a simulation because of the limited calculation power of the computer). During simulation, the simulation speed can be adjusted with following toolbar buttons</span></p>
-<p>在非實時模擬中，模擬速度（即感知速度）主要取決於兩個因素：模擬時間步長和一個渲染通道的模擬通道數量（有關更多詳細信息，請參見模擬對話框）。在實時模擬的情況下，模擬速度主要取決於實時乘法係數，而且在一定程度上取決於模擬時間步長（太小的模擬時間步長可能與實時時間不兼容）。由於計算機的計算能力有限，因此無法進行模擬。在模擬過程中，可以通過以下工具欄按鈕來調節模擬速度</p>
-<p><span style="color: #ff0000;">Simulation speed</span></p>
-<p><span style="color: #ff0000;"><img alt="" height="37" src="/images/simulation speed.png" width="81"/></span></p>
-<p><span style="color: #ff0000;">[Simulation speed adjustment toolbar buttons]</span></p>
-<p><span style="color: #ff0000;">The simulation speed is adjusted in a way so that the initial simulation time step is never increased (because this might have as consequence the breaking of a mechanism for example). Following two figures illustrate the simulation speed adjustment mechanisms</span></p>
-<p>以某種方式調整模擬速度，以使初始模擬時間的步長永遠不會增加（這可能因此而導致機制中斷）。下兩個圖說明了模擬速度調節機制</p>
-<p><img alt="" height="173" src="/images/i1.png" width="600"/></p>
-<p><span style="color: #ff0000;">[Simulation speed adjustment mechanism for non real-time simulations]</span><br/> [非實時模擬的模擬速度調整機制]</p>
-<p><img alt="" height="180" src="/images/i2.png" width="600"/></p>
-<p><span style="color: #ff0000;">[Simulation speed adjustment mechanism for real-time simulations]</span></p>
-<p>[實時模擬與調整機制]</p>
-<p><span style="color: #ff0000;">By default, each simulation cycle is composed by following sequential operations:</span></p>
-<p><span style="color: #ff0000;">1.Executing the main script</span></p>
-<p><span style="color: #ff0000;">2.Rendering the scen</span></p>
-<p>默認情況下，每個模擬週期由以下順序操作組成：</p>
-<p><span>1.</span>執行主腳本</p>
-<p><span>2.</span>渲染場景</p>
-<p><span style="color: #ff0000;">Threaded rendering</span></p>
-<p><span style="color: #ff0000;">The rendering operation will always increase the simulation cycle duration, thus also slowing down simulation speed. The number of main script executions per scene rendering can be defined (see further up), but this is not enough in some situations, because rendering will still slow down every xth simulation cycle (which can be handicapping with real-time requirements). For those situations, a threaded rendering mode can be activated via the user settings, or via the following toolbar button:</span><br/><span style="color: #ff0000;">When the threaded rendering mode is activated, a simulation cycle will only consist in execution of the main script, thus simulations will run at maximum speed. Rendering will happen via a different thread, and not slow down the simulation task. The drawbacks have however to be considered. When threaded rendering is activated, then:</span></p>
-<p><img alt="" height="34" src="/images/fire.png" width="35"/><br/>  <span style="color: #ff0000;">[Threaded rendering toolbar button]</span></p>
-<p><span style="color: #ff0000;">Rendering will happen asynchronously to the simulation loop, and visual glitches might appear</span></p>
-<p><span style="color: #ff0000;">The video recorder will not operate at constant speed (some frames might get skipped)</span></p>
-<p><span style="color: #ff0000;">The stability of the application might be reduced</span></p>
-<p><span style="color: #ff0000;">Some operations (e.g. erasing an object, etc.) require to wait for the rendering thread to finish work, before being able to execute, and vice-versa. In those situations, cycles could take more time than in the sequential rendering mode</span></p>
-<p>交互渲染</p>
-<p>渲染操作將始終增加模擬週期的持續時間，從而也降低了模擬速度。可以定義每個場景渲染的主腳本執行次數（請參閱後面的內容），但這在某些情況下還不夠，因為渲染仍然會減慢每個第<span>x</span>個模擬週期的時間（這可能會限制實時性）。在這種情況下，可以通過用戶設置或以下工具欄按鈕激活線程渲染模式：</p>
-<p><span> [</span>線程渲染工具欄按鈕<span>]</span></p>
-<p>激活線程渲染模式後，模擬週期將僅包含在執行主腳本中，因此模擬將以最大速度運行。渲染將通過不同的線程進行，並且不會減慢模擬任務的速度。然而，必須考慮缺點。激活線程渲染後，：</p>
-<p>渲染將與模擬循環不會同步進行，並且可能會出現視覺上的瑕疵</p>
-<p>錄影機將無法以恆定速度運行（可能會跳過某些幀數）</p>
-<p>應用程序的穩定性可能會降低</p>
-<p>某些操作（例如去除物件等）需要等待渲染得線程完成工作才能執行，反之亦然。在那些情況下，循環可能比有順序的渲染模式花費更多的時間。</p>
-<p><span style="color: #ff0000;"><strong>Simulation dialog</strong></span></p>
-<p><strong>模擬控制視窗</strong></p>
-<p><span style="color: #ff0000;">The simulation dialog can be accessed with [Menu bar --&gt; Simulation --&gt; Simulation settings] or by clicking following toolbar button:</span></p>
-<p>可以通過<span>[</span>菜單欄<span>-&gt;</span>模擬<span>-&gt;</span>模擬設置<span>]</span>或單擊以下工具欄按鈕來訪問模擬對話框：</p>
-<p><img alt="" height="37" src="/images/tool1.png" width="38"/></p>
-<p><span style="color: #ff0000;">[Simulation toolbar button]</span></p>
-<p><span>[</span>模擬工具欄按鈕<span>]</span></p>
-<p><span><img alt="" height="353" src="/images/toolbar.png" width="396"/></span></p>
-<p><span style="color: #ff0000;">[Simulation settings dialog]</span></p>
-<p>模擬設定視窗</p>
-<p><span style="color: #ff0000;">Time step: the simulation time step. Each time the main script was executed, the simulation time is incremented by the simulation time step. Using large time steps results in fast but inaccurate/unstable simulations. Small time steps on the other hand will (generally) lead to more precise simulations, but will take more time. It is highly recommended to keep a default time step.</span></p>
-<p><span style="color: #ff0000;">Simulation passes per frame (ppf): the number of simulation passes for one rendering pass. A value of 10 would mean that the main script is executed 10 times (10 simulation steps) before the screen is refreshed. If you have a slow graphic card, you can choose to display only one frame out of two for instance.</span></p>
-<p><span style="color: #ff0000;">Pause when simulation time higher than: allows specifying a simulation time at which the simulation will</span> <span style="color: #ff0000;">be paused (e.g. to be able to analyze some results at a specific simulation time).</span></p>
-<p><span style="color: #ff0000;">Pause on script error: if enabled, then a simulation will be paused when a script error occurs.</span></p>
-<p>時間步長：模擬時間步長。每次執行主腳本時，模擬時間都會增加模擬時間的步長。使用較大的時間步長會導致快速但不准確<span>/</span>不穩定的模擬。另一方面，較小的時間步長（通常）會有更精確的模擬，但是會花費更多時間。強烈建議保留默認的時間步長。</p>
-<p>每幀模擬次數（<span>ppf</span>）：一個渲染遍的模擬次數。其值為<span>10</span>表示刷新屏幕之前，主腳本已執行<span>10</span>次（<span>10</span>個模擬步驟）。如果您的顯示卡較慢，則可以選擇僅顯示兩幅中的一幅。</p>
-<p>當模擬時間高於以下時間時則會暫停：允許指定暫停模擬的模擬時間（例如，能夠在特定模擬時間分析某些結果）。</p>
-<p>腳本錯誤暫停：如果啟用，則在腳本錯誤發生時暫停模擬。</p>
-<p><span style="color: #ff0000;">Full screen at simulation start: if enabled, then simulation starts in full screen mode. Be aware that in full screen mode, dialogs and messages won't appear or won't be visible, and only the left mouse button will be active. For that reason that mode is only recommended once a scene is properly configured and final. Full screen mode can be left with the esc-key, and toggled via the boolean parameter sim_booparam_fullscreen during simulation. Unler Linux and MacOS the full-screen mode might only partially be supported, and switching back to normal mode might fail on certain systems.</span></p>
-<p>模擬開始時全屏：如果啟用，則模擬以全屏模式開始。請注意，在全屏模式下，設置視窗和消息將不會出現或不可見，只有鼠標左鍵處於活動狀態時才會出現。因此，僅在正確配置場景並最終確定場景後才建議使用該模式。可以使用<span>esc</span>鍵保留全屏模式，並在模擬過程中通過布爾參數<span>sim_booparam_fullscreen</span>進行切換。<span> Unler Linux</span>和<span>MacOS</span>可能僅部分支持全屏模式，並且在某些系統上切換回普通模式可能會失敗。</p>
-<p><span style="color: #ff0000;">Real-time simulation, multiplication factor: if selected, then the simulation time will try to follow the real-time. A multiplication factor of X would try to run a simulation X times faster than real-time.</span></p>
-<p>實際時間的模擬，倍增係數：如果選擇，則模擬時間將嘗試跟隨實際時間。<span> X</span>的乘數將使模擬運行比實時快<span>X</span>倍。</p>
-<p><span style="color: #ff0000;">Try catching up when behind: during real-time simulation, it can happen that the simulation time is not able to follow the real-time (e.g. because of some momentarily heavy calculations). In that case, if this check-box is selected, then the simulation time will try catching up the lost time (e.g. when the calculation load is again reduced), which results in an apparent speed-up.</span></p>
-<p>在落後時嘗試趕上：在實時模擬過程中，模擬時間可能無法實時跟踪（例如，由於某些瞬間繁重的計算）。在這種情況下，如果選中此複選框，則模擬時間將嘗試趕上不足的時間（例如，當計算負載再次減少時），從而明顯加快速度。</p>
-<p><span style="color: #ff0000;">Reset scene to initial state: when selected, then all objects will be reset to their initial state: this includes the object local position, local orientation and its parent (as long as the object wasn't modified otherwise (e.g. scaled)), joint and path intrinsic positions, floating view positions and sizes, etc. This means that the next simulation run will execute in a same way as previous one, unless heavy changes were undertaken (shape scaling, object removal, etc.). Some minor settings are ignored by this item.</span></p>
-<p>將場景重置為初始狀態：選中後，所有物件都將重置為其初始狀態：包括對象的局部位置，局部方向及其父對象（只要未進行其他修改（例如，縮放），以及路徑的固有位置，浮動視圖的位置和大小等。這意味著除非進行了重大更改（形狀縮放，對象移除等），否則下一次模擬運行將以與上一次相同的方式執行。此項目將忽略一些次要設置。</p>
-<p><span style="color: #ff0000;">Remove new objects: when selected, then scene objects added during a simulation run will be removed at the end of the simulation.</span></p>
-<p>刪除新對象：選中後，在模擬運行期間添加的場景對象將在模擬結束時被刪除。</p>
-<h2>line following bubblerob</h2>
-<p><span class="fontstyle0">使 </span><span class="fontstyle2">BubbleRob </span><span class="fontstyle0">沿著線性的教程</span></p>
-<p><span class="fontstyle0"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">In this tutorial we aim at extending the functionality of BubbleRob to let him/her<br/>follow a line on the ground. Make sure you have fully read and understood the </span><span class="fontstyle3">first<br/>BubbleRob tutorial</span></span><span class="fontstyle3"><span style="color: #ff0000;">. This tutorial is courtesy of Eric Rohmer.</span></span></p>
-<p><span class="fontstyle3"><br/></span><span class="fontstyle0">在本教程中，我們要擴展 </span><span class="fontstyle3">BubbleRob </span><span class="fontstyle0">的功能，以使他遵循地面上的軌跡。確保您已經<br/>閱讀並理解了第一個 </span><span class="fontstyle3">BubbleRob </span><span class="fontstyle0">教程。本教程由 </span><span class="fontstyle3">Eric Rohmer </span><span class="fontstyle0">提供。</span></p>
-<p><span class="fontstyle0"><br/></span><span class="fontstyle4"><span style="color: #ff0000;">Load the scene of the first BubbleRob tutorial located in CoppeliaSim's installation folder, in</span><br/><span style="color: #ff0000;">tutorials/BubbleRob. The scene file related to this tutorial is located in</span><br/><span style="color: #ff0000;">tutorials/LineFollowingBubbleRob. Following figure illustrates the simulation scene that we</span><br/><span style="color: #ff0000;">will design:</span></span></p>
-<p><span class="fontstyle4"><br/></span><span class="fontstyle0">在 </span><span class="fontstyle4">CoppeliaSim </span><span class="fontstyle0">的安裝文件夾中的 </span><span class="fontstyle4">tutorials / BubbleRob </span><span class="fontstyle0">中加載第一個 </span><span class="fontstyle4">BubbleRob </span><span class="fontstyle0">教程<br/>的場景。與本教程相關的場景文件位於 </span><span class="fontstyle4">tutorials / LineFollowing BubbleRob </span><span class="fontstyle0">中。下圖說<br/>明了我們將設計的仿真場景：</span></p>
-<p><span class="fontstyle0"><img alt="" height="485" src="/images/line rob body.PNG" width="740"/></span></p>
-<p><br/><span style="color: #ff0000;"><span class="fontstyle3">We first create the first of 3 </span><span class="fontstyle3">vision sensors </span><span class="fontstyle3">that we will attach to<br/>the </span><span class="fontstyle3">bubbleRob </span><span class="fontstyle3">object. Select [Menu bar --&gt; Add --&gt; Vision sensor --&gt; Orthographic<br/>type]. Edit its properties, by double-clicking on the newly created vision sensor icon<br/>in the </span><span class="fontstyle3">scene hierarchy</span></span><span class="fontstyle3"><span style="color: #ff0000;">, and change the parameters to reflect following dialog:</span></span></p>
-<p><span class="fontstyle3"><br/></span><span class="fontstyle0">我們首先創建三個視覺傳感器中的第一個，並將其附加到 </span><span class="fontstyle4">bubbleRob </span><span class="fontstyle0">物件中。選擇<br/></span><span class="fontstyle4">[</span><span class="fontstyle3">Menu bar </span><span class="fontstyle4">-&gt; </span><span class="fontstyle3">Add </span><span class="fontstyle4">-&gt; </span><span class="fontstyle3">Vision sensor </span><span class="fontstyle4">-&gt; </span><span class="fontstyle3">Orthographic type</span><span class="fontstyle4">]</span><span class="fontstyle0">。通過雙擊場景中新創建的覺傳感器圖標來編輯其屬性，並更改參數以反映以下對話框：</span></p>
-<p><span class="fontstyle0"><img alt="" height="593" src="/images/line rob in tool.PNG" width="393"/></span></p>
-<p><span class="fontstyle0"><br/></span><span class="fontstyle4"><span style="color: #ff0000;">The vision sensor has to be facing the ground, so select it, and in the orientation dialog, on</span><br/><span style="color: #ff0000;">the orientation tab, set [180;0;0] for the Alpha-Beta-Gamma items.</span></span></p>
-<p><span class="fontstyle4"><br/></span><span class="fontstyle0">視覺傳感器必須面向地面，因此選擇它，然後在“</span><span class="fontstyle4">orientation</span><span class="fontstyle0">”對話框中的<br/>“</span><span class="fontstyle4">orientation</span><span class="fontstyle0">”選項上，將“ </span><span class="fontstyle5">Alpha-Beta-Gamma</span><span class="fontstyle0">”項設置為</span><span class="fontstyle5">[180; 0; 0]</span><span class="fontstyle0">。</span></p>
-<p><br/><span class="fontstyle4"><span style="color: #ff0000;">We have several possibilities to read a vision sensor. Since our vision sensor has just one</span><br/><span style="color: #ff0000;">pixel and operates in an easy way, we will simply query the average intensity value of the</span><br/><span style="color: #ff0000;">image read by our vision sensor. For more complex cases, we could have set-up a vision</span><br/><span style="color: #ff0000;">callback function. Now copy and paste the vision sensor twice, and adjust its names to</span><br/><span style="color: #ff0000;">leftSensor, middleSensor and rightSensor. Make bubbleRob their parent (i.e. attach them to</span><br/><span style="color: #ff0000;">the bubbleRob object). Your sensors should now look like this in the scene hierarchy:</span></span></p>
-<p><span class="fontstyle4"><br/></span><span class="fontstyle0">我們有幾種可能可以讀取視覺傳感器的方式。由於我們的視覺傳感器只有一個像素，<br/>並且操作簡單，因此我們只需查詢視覺傳感器讀取的圖像的平均強度值即可。對於更<br/>複雜的情況，我們可以設置視覺回調函數。現在，複製並貼上視覺傳感器兩次，並將<br/>其名稱調整為 </span><span class="fontstyle4">leftSensor</span><span class="fontstyle0">， </span><span class="fontstyle4">middleSensor </span><span class="fontstyle0">和 </span><span class="fontstyle4">rightSensor</span><span class="fontstyle0">。將 </span><span class="fontstyle4">bubbleRob </span><span class="fontstyle0">設置為其父級<br/>（即，將其附加到 </span><span class="fontstyle4">bubbleRob </span><span class="fontstyle0">對象）。現在，您的傳感器在場景層次中應如下所示：</span></p>
-<p><span class="fontstyle0"><img alt="" height="260" src="/images/tool for linerob.PNG" width="248"/><br/></span><span class="fontstyle4"><span style="color: #ff0000;">Let's position the sensors correctly. For that use the position dialog, on the position tab, and</span><br/><span style="color: #ff0000;">set following absolute coordinates:</span></span></p>
-<p><span class="fontstyle4"><br/></span><span class="fontstyle0">讓我們正確放置傳感器。為此，使用位置對話框，在位置選項上，並設置以下絕對坐<br/>標：<br/></span><span class="fontstyle0">左傳感器： </span><span class="fontstyle4">[0.2; 0.042; 0.018]<br/></span><span class="fontstyle0">中間傳感器： </span><span class="fontstyle4">[0.2; 0; 0.018]<br/></span><span class="fontstyle0">右傳感器： </span><span class="fontstyle4">[0.2; -0.042; 0.018]</span></p>
-<p><span class="fontstyle4"><img alt="" height="110" src="/images/sensor for line rob.PNG" width="417"/><br/><span style="color: #ff0000;">Now let's modify the environment. We can remove a few cylinders in front of BubbleRob.</span><br/><span style="color: #ff0000;">Next, we will build the path that the robot will try to follow. It is probaby better to switch to</span><br/><span style="color: #ff0000;">a top view from now on: select page 4 via the page selector toolbar button. Then click</span><br/><span style="color: #ff0000;">[Menu bar --&gt; Add --&gt; Path --&gt; Circle type]. Enable the object movement with the mouse.</span><br/><span style="color: #ff0000;">You have two possibilities to adjust the shape of the path:</span></span></p>
-<p><br/><span class="fontstyle0">現在我們可以修改環境。我們可以移去 </span><span class="fontstyle4">BubbleRob </span><span class="fontstyle0">前面的幾個圓柱體。接下來，我們將構建機器人將嘗試使機器人遵循的路徑。從現在開始最好切換到頂視圖：通過頁面選擇器工具欄按鈕選擇頁面 </span><span class="fontstyle4">4</span><span class="fontstyle0">。然後單擊</span><span class="fontstyle4">[</span><span class="fontstyle0">菜單欄</span><span class="fontstyle4">-&gt;</span><span class="fontstyle0">添加</span><span class="fontstyle4">-&gt;</span><span class="fontstyle0">路徑</span><span class="fontstyle4">-&gt;</span><span class="fontstyle0">圓圈類型</span><span class="fontstyle4">]</span><span class="fontstyle0">。使用鼠標啟用對象移動。您可以通過兩種方式調整路徑的形狀：</span></p>
-<p><span class="fontstyle0"><img alt="" height="57" src="/images/the line rob 1.PNG" width="880"/><br/></span><span class="fontstyle4">1. </span><span class="fontstyle0">選擇路徑（並且只有路徑）後，按住 </span><span class="fontstyle4">Ctrl </span><span class="fontstyle0">並單擊其控制點之一。然後可以將它們<br/>拖動到正確的位置。<br/></span><span class="fontstyle4">2. </span><span class="fontstyle0">選擇路徑後，進入路徑編輯模式。在那裡，您可以自由地調整各個路徑控制點。</span></p>
-<p><span class="fontstyle0"><br/></span><span class="fontstyle4"><span style="color: #ff0000;">Once you are satisfied with the geometry of the path (you can always modify it at a later</span><br/><span style="color: #ff0000;">stage), select it, and uncheck Show orientation of points, Show path line and Show current</span><br/><span style="color: #ff0000;">position on path in the path properties. Then click Show path shaping dialog. This opens the</span><br/><span style="color: #ff0000;">path shaping dialog. Click Path shaping enabled, set the type to horizontal segment, and</span><br/><span style="color: #ff0000;">Scaling factor to 4.0. Finally adjust the color to black. There is a last important adjustment</span><br/><span style="color: #ff0000;">we have to make to the path: currently, the z-position of the path coincides with the zposition of the floor. The consequence is that sometimes we see the path, sometimes the</span><br/><span style="color: #ff0000;">floor (this effect is known as z-fighting in the openGl jargon). This not only affects what we</span><br/><span style="color: #ff0000;">see, but also what the vision sensors see. In order to avoid problems linked to z-fighting,</span><br/><span style="color: #ff0000;">just move the position of the path object up by 0.5 mm.</span></span></p>
-<p><span class="fontstyle4"><br/></span><span class="fontstyle0">一旦對路徑的幾何形狀滿意（您隨時可以在以後的階段對其進行修改），請選擇它，然後在路徑屬性中取消“</span><span class="fontstyle4">Show orientation of points </span><span class="fontstyle0">顯示點的方向”，“</span><span class="fontstyle4">Show path line</span><span class="fontstyle0">顯示路徑線”和“</span><span class="fontstyle4">Show current position on path in the path properties </span><span class="fontstyle0">顯示路徑上的當前位置”。然後單擊顯示路徑外型的對話框。這將打開路徑外型對話框。單擊啟用路徑外型，將類型設置為水平線段，並將縮放因子設置為 </span><span class="fontstyle4">4.0</span><span class="fontstyle0">。最後將顏色調整為黑<br/>色。我們必須對路徑進行最後一個重要的調整：當前， 路徑的 </span><span class="fontstyle4">z </span><span class="fontstyle0">位置與地板的 </span><span class="fontstyle4">z </span><span class="fontstyle0">位置重合。結果是有時我們會看到路徑，有時會看到地板（這種效果在 </span><span class="fontstyle4">openGl </span><span class="fontstyle0">中被稱為</span><span class="fontstyle0">“</span><span class="fontstyle4">z-fighting</span><span class="fontstyle0">”）。這不僅影響我們所看到的，而且還會影響視覺傳感器所看到的。為了避免與 </span><span class="fontstyle4">z-fighting </span><span class="fontstyle0">有關的問題，只需將路徑對象的位置向上移動 </span><span class="fontstyle4">0.5 </span><span class="fontstyle0">毫米</span></p>
-<p><span class="fontstyle0"><br/></span><span class="fontstyle4"><span style="color: #ff0000;">The last step is to adjust the controller of BubbleRob, so that it will also follow the black</span><br/><span style="color: #ff0000;">path. Open the child script attached to bubbleRob, and replace it with following code:</span></span></p>
-<p><span class="fontstyle4"><br/></span><span class="fontstyle0">最後一步是調整 </span><span class="fontstyle4">BubbleRob </span><span class="fontstyle0">的控制器，使其也將遵循黑色路徑。打開附加到<br/></span><span class="fontstyle4">bubbleRob </span><span class="fontstyle0">的子腳本，並將其替換為以下代碼：</span></p>
-<p><span class="fontstyle0"><img alt="" height="952" src="/images/the line rob code.PNG" width="818"/></span></p>
-<p><br/><span class="fontstyle3"><span style="color: #ff0000;">You can easily debug your line following vision sensors: select one, then in the</span><br/><span style="color: #ff0000;">scene view select [Right-click --&gt; Add --&gt; Floating view], then in the newly added</span><br/><span style="color: #ff0000;">floating view select [Right click --&gt; View --&gt; Associate view with selected vision</span><br/><span style="color: #ff0000;">sensor].</span></span></p>
-<p><span class="fontstyle3"><br/></span><span class="fontstyle0">您可以輕鬆地調試以下視覺傳感器的線：選擇一個，然後在場景視圖中選擇</span><span class="fontstyle4">[</span><span class="fontstyle0">右鍵</span><span class="fontstyle4">-&gt;</span><span class="fontstyle0">添加</span><span class="fontstyle4">-&gt;</span><span class="fontstyle0">浮動視圖</span><span class="fontstyle4">]</span><span class="fontstyle0">，然後在新添加的浮動視圖中選擇</span><span class="fontstyle4">[</span><span class="fontstyle0">右鍵</span><span class="fontstyle4">-&gt;</span><span class="fontstyle0">視圖</span><span class="fontstyle4">- -&gt;</span><span class="fontstyle0">將視圖與選定的視覺傳感器關聯</span><span class="fontstyle4">]</span><span class="fontstyle0">。</span></p>
-<p><span class="fontstyle0"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">Finally, remove the auxiliary items that were added in the </span><span class="fontstyle3">first BubbleRob tutorial</span><span class="fontstyle3">:<br/>remove the image processing vision sensor, its associated floating view, the floating<br/>view representing the obstacle clearance. Remove also the distance calculation<br/>object via the </span><span class="fontstyle3">distance dialog</span></span><span class="fontstyle3"><span style="color: #ff0000;">. That's it!</span></span></p>
-<p><span class="fontstyle3"><br/></span><span class="fontstyle0">最後，刪除在第一個 </span><span class="fontstyle4">BubbleRob </span><span class="fontstyle0">教程中添加的輔助項：刪除圖像處理視覺傳感器，其關聯的浮動視圖，該浮動視圖表示障礙物的清除。通過距離對話框也刪除距離計算對象。</span></p>
-<h2>External controller tutorial</h2>
-<p><span class="fontstyle0"><span class="fontstyle2">外部控制器教程</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle2"><br/></span><span class="fontstyle3" style="color: #ff0000;">There are several ways one can control a robot or simulation in<br/>CoppeliaSim:</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle2">在 </span><span class="fontstyle4">CoppeliaSim </span><span class="fontstyle2">中，有幾種方法可以控制機器人或使其模擬更加仿<br/>真：</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle2"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">The most convenient way is to write a </span><span class="fontstyle3">child script </span><span class="fontstyle3">that will handle the<br/>behaviour of a given robot or </span><span class="fontstyle3">model</span><span class="fontstyle3">. It is the most convenient way,<br/>because child scripts are directly attached to </span><span class="fontstyle3">scene objects</span><span class="fontstyle3">, they will<br/>be duplicated together with their associated scene objects, they do<br/>not need any compilation with an external tool, they can run<br/>in </span><span class="fontstyle3">threaded </span><span class="fontstyle3">or </span><span class="fontstyle3">non-threaded </span><span class="fontstyle3">mode, they can be extended via </span><span class="fontstyle3">custom<br/>Lua function </span><span class="fontstyle3">or via a </span><span class="fontstyle3">Lua extension library</span><span class="fontstyle3">. Another major advantage<br/>in using child scripts: there is no communication lag as with the last<br/>3 methods mentioned in this section (i.e. the </span><span class="fontstyle3">regular API </span><span class="fontstyle3">is used),<br/>and child scripts are part of the application main thread (inherent<br/>synchronous operation). There are several drawback to writing<br/>scripts however: you don't have the choice of the programming<br/>language, you can't have the fastest code, and you can't directly<br/>access external function libraries, except the Lua extension libraries.</span></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle2">最方便的方法是編寫一段指令來處理給定機器人或模型的動作。這<br/>是最方便的方法，因為指令直接附加到物件上，它們將與相關的物<br/>件一起復制，它們不需要使用外部工具進行任何編譯，它們可以在<br/>線性或非線性模式下運行，它們可以通過自定義 </span><span class="fontstyle4">Lua </span><span class="fontstyle2">函數或 </span><span class="fontstyle4">Lua </span><span class="fontstyle2">擴<br/>展庫進行擴展。使用指令的另一個主要優點是：與本節中提到的後<br/></span><span class="fontstyle4">3 </span><span class="fontstyle2">種方法（即使用常規 </span><span class="fontstyle4">API</span><span class="fontstyle2">）一樣，沒有通信延遲，並且指令是應用</span><br/><span class="fontstyle2">程序主線程的一部分（固有的同步操作）。但是，編寫指令有幾個缺<br/>點：您無法選擇編程語言，不能擁有最快的代碼，並且除了 </span><span class="fontstyle4">Lua </span><span class="fontstyle2">擴<br/>展庫之外，您無法直接訪問外部函數庫。</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle2"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">Another way one can control a robot or a simulation is by writing<br/>a </span><span class="fontstyle3">plugin</span><span class="fontstyle3">. The plugin mechanism allows for callback<br/>mechanisms, </span><span class="fontstyle3">custom Lua function registration</span><span class="fontstyle3">, and of course access<br/>to external function libraries. A plugin is often used in conjunction<br/>with child scripts (e.g. the plugin registers custom Lua functions,<br/>that, when called from a child script, will call back a specific plugin<br/>function). A major advantage in using plugins is also that there is no<br/>communication lag as with the last 3 methods mentioned in this<br/>section (i.e. the </span><span class="fontstyle3">regular API </span><span class="fontstyle3">is used), and that a plugin is part of the<br/>application main thread (inherent synchronous operation). The<br/>drawbacks with plugins are: they are more complicated to program,<br/>and they need to be compiled with an external too. Refer also to<br/>the </span><span class="fontstyle3">plugin tutorial</span><span class="fontstyle3">.</span></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle2">可以控制機器人或模擬的另一種方法是編寫插件。插件機制允許使<br/>用回調機制，自定義 </span><span class="fontstyle4">Lua </span><span class="fontstyle2">函數註冊，當然還可以訪問外部函數庫。<br/>插件通常與指令結合使用（例如，插件註冊自定義的 </span><span class="fontstyle4">Lua </span><span class="fontstyle2">函數，當<br/>從指令中調用時，該 </span><span class="fontstyle4">Lua </span><span class="fontstyle2">函數將回調特定的插件函數）。使用插件的<br/>主要優勢還在於，與本節中提到的後 </span><span class="fontstyle4">3 </span><span class="fontstyle2">種方法（即使用常規 </span><span class="fontstyle4">API</span><span class="fontstyle2">）一<br/>樣，沒有通信延遲，並且插件是應用程序主線程的一部分（固有的<br/>同步操作）。插件的缺點是：它們的編程更加複雜，並且也需要使用<br/>外部編譯。另請參閱插件教程。</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle2"><br/></span><span class="fontstyle4" style="color: #ff0000;">A third and forth way one can control a robot or a simulation is by</span><br/><span class="fontstyle4" style="color: #ff0000;">writing an external client application that relies on the remote API. This<br/>is a very convenient and easy way, if you need to run the control code<br/>from an external application, from a robot or from another computer.<br/>This also allows you to control a simulation or a model (e.g. a virtual<br/>robot) with the exact same code as the one that runs the real robot. The<br/>remote API comes in two versions: the B0-based remote API, and the<br/>legacy remote API.</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle4"><br/></span><span class="fontstyle2">控制機器人或模擬的第三種方法是編寫依賴於遠程 </span><span class="fontstyle4">API </span><span class="fontstyle2">的外部客戶<br/>端應用程序。如果您需要從外部應用程序，機器人或另一台電腦運<br/>行控制代碼，這是一種非常便捷的方法。這也使您可以使用與運行<br/>真實機器人完全相同的代碼來控制仿真機器人或模型（例如虛擬機<br/>器人）。遠程 </span><span class="fontstyle4">API </span><span class="fontstyle2">有兩個版本：基於 </span><span class="fontstyle4">B0 </span><span class="fontstyle2">的遠程 </span><span class="fontstyle4">API </span><span class="fontstyle2">和舊版遠程 </span><span class="fontstyle4">API</span><span class="fontstyle2">。</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle2"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">A fifth way to control a robot or a simulation is via a </span><span class="fontstyle3">ROS </span><span class="fontstyle3">node. In a<br/>similar way as the </span><span class="fontstyle3">remote API</span><span class="fontstyle3">, ROS is a convenient way to have<br/>several distributed processes communicate with each other. While the<br/>remote API is very lightweight and fast, it allows only communication<br/>with CoppeliaSim. ROS on the other hand allows connecting virtually<br/>any number of processes with each other, and a large amount of<br/>compatible libraries are available. It is however heavier and more<br/>complicated than the remote API. Refer to the </span><span class="fontstyle3">ROS interfaces </span><span class="fontstyle3">for<br/>details.</span></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle2">控制機器人或仿真的第五種方法是通過 </span><span class="fontstyle4">ROS </span><span class="fontstyle2">節點。 </span><span class="fontstyle4">ROS </span><span class="fontstyle2">與遠程 </span><span class="fontstyle4">API<br/></span><span class="fontstyle2">相似，是使多個分佈式進程相互通信的便捷方法。儘管遠程 </span><span class="fontstyle4">API </span><span class="fontstyle2">非<br/>常輕巧且快速，但它僅允許與 </span><span class="fontstyle4">CoppeliaSim </span><span class="fontstyle2">通信。另一方面， </span><span class="fontstyle4">ROS </span><span class="fontstyle2">允<br/>許幾乎將任意數量的進程相互連接，並且提供了大量兼容的庫。但<br/>是，它比遠程 </span><span class="fontstyle4">API </span><span class="fontstyle2">多並且更複雜。有關詳細信息，請參閱 </span><span class="fontstyle4">ROS </span><span class="fontstyle2">接<br/>口。</span></span></p>
-<p><span class="fontstyle0"><br/><span style="color: #ff0000;"><span class="fontstyle3">A sixth way to control a robot or a simulation is via a </span><span class="fontstyle3">BlueZero </span><span class="fontstyle3">(BØ )<br/>node. In a similar way as ROS, BlueZero is a convenient way to have<br/>several distributed processes communicate with each other, and is a<br/>lightweight and cross-platform solution. Refer to the </span><span class="fontstyle3">BlueZero<br/>interface </span><span class="fontstyle3">for details.</span></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle2">控制機器人或模擬的第六種方法是通過 </span><span class="fontstyle4">BlueZero</span><span class="fontstyle2">（ </span><span class="fontstyle4">BØ </span><span class="fontstyle2">）節點。與<br/></span><span class="fontstyle4">ROS </span><span class="fontstyle2">類似， </span><span class="fontstyle4">BlueZero </span><span class="fontstyle2">是使多個分佈式進程相互通信的一種便捷方<br/>法，並且是一種輕量的跨平台解決方案。有關詳細信息，請參考<br/></span><span class="fontstyle4">BlueZero </span><span class="fontstyle2">界面。</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle2"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">A seventh way to control a robot or a simulation is by writing an<br/>external application that communicates via various means (e.g.<br/>pipes, sockets, serial port, etc.) with a CoppeliaSim plugin or<br/>CoppeliaSim script. Two major advantages are the choice of<br/>programming language, which can be just any language, and the<br/>flexibility. Here also, the control code can run on a robot, or a<br/>different computer. This way of controlling a simulation or a model is<br/>however more tedious that the methods with the </span><span class="fontstyle3">remote API</span><span class="fontstyle3">.</span></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle2">控制機器人或模擬的第七種方法是編寫一個外部應用程序，該應用<br/>程序通過各種方式（例如管道，套接字，串行端口等）與<br/></span><span class="fontstyle4">CoppeliaSim </span><span class="fontstyle2">插件或 </span><span class="fontstyle4">CoppeliaSim </span><span class="fontstyle2">腳本進行通信。選擇編程語言（可<br/>以是任何一種語言）和靈活性是兩個主要優點。同樣，控制代碼也<br/>可以在機器人或其他電腦上運行。但是，與使用遠程 </span><span class="fontstyle4">API </span><span class="fontstyle2">的方法相<br/>比，這種控制仿真或模型的方法更加乏味。</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle2"><br/></span><span class="fontstyle3" style="color: #ff0000;">There are 8 scene files related to this tutorial:</span><br/><span style="color: #ff0000;"><span class="fontstyle3">scenes/controlTypeExamples/controlledViaScript</span><span class="fontstyle3">: one robot is<br/>controlled via a </span><span class="fontstyle3">non-threaded child script</span><span class="fontstyle3">, the other is controlled via<br/>a </span><span class="fontstyle3">threaded child script</span><span class="fontstyle3">.<br/></span><span class="fontstyle3">scenes/controlTypeExamples/controlledViaPlugin</span><span class="fontstyle3">: the robot is<br/>controlled via a </span><span class="fontstyle3">plugin</span><span class="fontstyle3">.<br/></span><span class="fontstyle3">scenes/controlTypeExamples/controlledViaB0RemoteApi</span><span class="fontstyle3">: the robot is<br/>controlled via the </span><span class="fontstyle3">B0-based remote API</span><span class="fontstyle3">.<br/></span><span class="fontstyle3">scenes/controlTypeExamples/controlledViaLegacyRemoteApi</span><span class="fontstyle3">: the<br/>robot is controlled via the </span><span class="fontstyle3">legacy remote API</span><span class="fontstyle3">.<br/></span><span class="fontstyle3">scenes/controlTypeExamples/controlledViaB0</span><span class="fontstyle3">: the robot is controlled<br/>via the </span><span class="fontstyle3">BlueZero interface</span><span class="fontstyle3">.<br/></span><span class="fontstyle3">scenes/controlTypeExamples/controlledViaRos</span><span class="fontstyle3">: the robot is controlled<br/>via the </span><span class="fontstyle3">ROS interface</span><span class="fontstyle3">.<br/></span><span class="fontstyle3">scenes/controlTypeExamples/controlledViaRos2</span><span class="fontstyle3">: the robot is<br/>controlled via the </span><span class="fontstyle3">ROS2 interface</span><span class="fontstyle3">.<br/></span><span class="fontstyle3">scenes/controlTypeExamples/controlledViaTcp</span><span class="fontstyle3">: the robot is controlled<br/>via </span><span class="fontstyle3">LuaSocket </span><span class="fontstyle3">and TCP.</span></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle5">有 </span><span class="fontstyle3">8 </span><span class="fontstyle5">個與本教程相關的場景文件： </span><span class="fontstyle3">scenes / controlTypeExamples /</span><span class="fontstyle5">受<br/>控 </span><span class="fontstyle3">ViaScript</span><span class="fontstyle5">：一個機器人是通過非線程子腳本控制的，另一個是通過<br/>線程子腳本控制的。 </span><span class="fontstyle3">scenes / controlTypeExamples /</span><span class="fontstyle5">受控<br/></span><span class="fontstyle3">ViaPlugin</span><span class="fontstyle5">：機器人是通過插件控制的。 </span><span class="fontstyle3">scenes /<br/>controlTypeExamples / controlViaB0RemoteApi</span><span class="fontstyle5">：通過基於 </span><span class="fontstyle3">B0 </span><span class="fontstyle5">的遠程<br/></span><span class="fontstyle3">API </span><span class="fontstyle5">來控制機器人。 </span><span class="fontstyle3">scenes / controlTypeExamples /</span><span class="fontstyle5">受控<br/></span><span class="fontstyle3">ViaLegacyRemoteApi</span><span class="fontstyle5">：通過舊版遠程 </span><span class="fontstyle3">API </span><span class="fontstyle5">控制機器人。 </span><span class="fontstyle3">scenes /<br/>controlTypeExamples / controlViaB0</span><span class="fontstyle5">：通過 </span><span class="fontstyle3">BlueZero </span><span class="fontstyle5">界面控制機器<br/>人。 </span><span class="fontstyle3">scenes / controlTypeExamples /</span><span class="fontstyle5">受控 </span><span class="fontstyle3">ViaRos</span><span class="fontstyle5">：通過 </span><span class="fontstyle3">ROS </span><span class="fontstyle5">接口控<br/>制機器人。 </span><span class="fontstyle3">scenes / controlTypeExamples / controlViaRos2</span><span class="fontstyle5">：通過<br/></span><span class="fontstyle3">ROS2 </span><span class="fontstyle5">接口控制機器人。 </span><span class="fontstyle3">scenes / controlTypeExamples /</span><span class="fontstyle5">受控</span><br/><span class="fontstyle3">ViaTcp</span><span class="fontstyle5">：通過 </span><span class="fontstyle3">LuaSocket </span><span class="fontstyle5">和 </span><span class="fontstyle3">TCP </span><span class="fontstyle5">控制機器人。</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle5"><img alt="" height="442" src="/images/control.PNG" width="570"/></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle5"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">In all 8 cases, </span><span class="fontstyle3">child scripts </span><span class="fontstyle3">are used, mainly to make the<br/>link with the outside world (e.g. launch the correct client<br/>application, and pass the correct object handles to it).<br/>There are two other ways one can control a robot, a<br/>simulation, or the simulator itself: by using </span><span class="fontstyle3">customization<br/>scripts</span><span class="fontstyle3">, or </span><span class="fontstyle3">add-ons</span><span class="fontstyle3">. They are however not recommended<br/>for control and should be rather used to handle<br/>functionality while simulation is not running.<br/>As an example, the child script linked to the robot in<br/>scene </span><span class="fontstyle3">controlledViaB0RemoteApi.ttt </span><span class="fontstyle3">has following main<br/>task:</span></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle5">在所有 8 種情況下， 都使用子腳本，主要是為了與外界建立鏈接<br/>（例如，啟動正確的客戶端應用程序，並將正確的對象句柄傳遞給</span><br/><span class="fontstyle5">它）。有兩種其他方法可以控制機器人，模擬或模擬器本身：使用自<br/>定義腳本或附加組件。但是，不建議將它們用於控制，而應在不運<br/>行模擬時將其用於處理功能。例如，鏈接到場景控制的<br/>ViaB0RemoteApi.ttt 中的機器人的子腳本具有以下主要任務：</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle5"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">Launch the controller application (</span><span class="fontstyle3">bubbleRobClient_b0RemoteApi</span><span class="fontstyle3">) with some<br/>object handles as arguments. The server functionality of the B0-based remote<br/>API is provided by object </span><span class="fontstyle3">b0RemoteApiServer</span><span class="fontstyle3">.<br/></span><span class="fontstyle3">As another example, the child script linked to the robot in<br/>scene </span><span class="fontstyle3">controlledViaRos.ttt </span><span class="fontstyle3">has following main tasks:<br/></span><span class="fontstyle3">Check if the </span><span class="fontstyle3">ROS Interface </span><span class="fontstyle3">for CoppeliaSim was loaded<br/>Launch the controller application (</span><span class="fontstyle3">rosBubbleRob</span><span class="fontstyle3">) with some topic names or<br/>object handles as arguments</span></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle5">使用某些對象作為參數啟動控制器應用程序<br/>（ </span><span class="fontstyle3">bubbleRobClient_b0RemoteApi</span><span class="fontstyle5">）。基於對象 </span><span class="fontstyle3">B0 </span><span class="fontstyle5">的遠程 </span><span class="fontstyle3">API </span><span class="fontstyle5">的服<br/>務器功能由對象 </span><span class="fontstyle3">b0RemoteApiServer </span><span class="fontstyle5">提供。作為另一個示例，鏈接<br/>到場景控制的 </span><span class="fontstyle3">ViaRos.ttt </span><span class="fontstyle5">中的機器人的子腳本具有以下主要任務：<br/>檢查是否已加載 </span><span class="fontstyle3">CoppeliaSim </span><span class="fontstyle5">的 </span><span class="fontstyle3">ROS </span><span class="fontstyle5">接口使用某些主題名稱或對象<br/>作為參數啟動控制器應用程序（ </span><span class="fontstyle3">rosBubbleRob</span><span class="fontstyle5">）</span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle5"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">Yet, as another example, the child script linked to the<br/>robot in scene </span><span class="fontstyle3">controlledViaTcp.ttt </span><span class="fontstyle3">has following main<br/>tasks:<br/></span><span class="fontstyle3">Search for a free socket connection port</span></span><br/><span style="color: #ff0000;"><span class="fontstyle3">Launch the controller application (</span><span class="fontstyle3">bubbleRobServer</span><span class="fontstyle3">) with the<br/>chosen connection port as argument<br/>Locally connect to the controller application<br/>At each simulation pass, send the sensor values to the controller,<br/>and read the desired motor values from the controller<br/>At each simulation pass, apply the desired motor values to the<br/>robot's joints </span><span class="fontstyle3">Run the simulations, and copy-and-paste the robot: you<br/>will see that the duplicated robots will directly be operational, since their attached child scripts are in charge of launching new instances of their respective external applications, or calling the appropriate plugin functions.</span></span></span></p>
-<p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle5">然而，作為另一個示例，鏈接到場景控制的 </span><span class="fontstyle3">ViaTcp.ttt </span><span class="fontstyle5">中的機器人的<br/>子腳本具有以下主要任務：搜索空閒的套接字連接端口使用所選的<br/>連接端口作為參數啟動控制器應用程序（ </span><span class="fontstyle3">bubbleRobServer</span><span class="fontstyle5">）本地連<br/>接到控制器應用程序在每次仿真過程中，將傳感器值發送到控制<br/>器，並從控制器讀取所需的電機值在每次模擬過程中，將所需的電<br/>機值應用於機器人的關節運行模擬，然後復制並粘貼機器人：您將<br/>看到重複的機器人將直接運行，因為它們附加的子腳本負責啟動各<br/>自外部應用程序的新實例或調用適當的插件功能。</span> <br/> </span></p>
+<br />assignment2 << <a href='assignment2.html'>Previous</a> <a href='refer e-book.html'>Next</a> >> refer e-book</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

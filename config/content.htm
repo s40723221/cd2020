@@ -100,13 +100,15 @@ Exit</pre>
 <p><strong><span style="color: #0000ff;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/uDAZ07xBHMs" width="560"></iframe></span></strong></p>
 <h2>week6-9</h2>
 <hr/>
-<p><span style="color: #0000ff;"><strong><span color="#000000">w2直播進程:</span></strong></span></p>
+<h4><span style="color: #0000ff;"><strong><span color="#000000">week6</span></strong></span></h4>
+<p><span style="color: #0000ff;"><strong><span color="#000000">w6直播進程:</span></strong></span></p>
 <p><span style="color: #ff0000;"><strong><span color="#000000">分工內容:</span></strong></span></p>
 <p><span style="color: #ff0000;">topic0:</span><br/>40723237<br/>40723221<br/>40723222<br/>40723228<br/>40723243<br/>40723244<br/>40723236<br/>40623117</p>
 <p><span style="color: #ff0000;">topic1:</span><br/>40723221<br/>40723222<br/>40623252<br/>40523253<br/>40723249<br/>40732331<br/>40723240<br/>40723237</p>
 <p><strong><span style="color: #ff0000;">直播進程影片:</span></strong></p>
 <p><span style="color: #ff0000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/B6zwMXl1V3Y" width="560"></iframe></span></p>
 <p><strong><span style="color: #ff0000;">4輪車參考影片:</span></strong></p>
+<p><span style="color: #0000ff;"><span style="color: #ff0000;">v-rep檔案:</span><a href="/downloads/car easy setting for motor and model.ttt" style="color: #0000ff;">car easy setting for motor and model</a></span></p>
 <p><span style="color: #000000;">四輪車馬達驅動設定影片:</span></p>
 <p><strong><span style="color: #ff0000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/kerPUu4UY1M" width="560"></iframe></span></strong></p>
 <p>V-REP <yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">tutorial 影片:</yt-formatted-string></p>
@@ -123,7 +125,99 @@ Exit</pre>
 <p><span color="#000000" style="color: #000000;">2.連接後到obs去設定攝像頭</span></p>
 <p><span color="#000000" style="color: #000000;"><img alt="" height="411" src="/images/obs cut.PNG" width="310"/></span></p>
 <p><span color="#000000" style="color: #000000;">3.結束後即可開始使用手機攝像頭</span></p>
-<h2>week10-14</h2>
+<p><span color="#000000" style="color: #000000;"><span style="color: #ff0000;">obs和youtube串流教學可以參考</span>:<a href="https://bearteach.com/bearman/3919">https://bearteach.com/bearman/3919</a></span></p>
+<hr/>
+<h4><span style="color: #0000ff;"><strong><span color="#000000">week7</span></strong></span></h4>
+<p><span style="color: #ff0000;"><strong><span color="#000000">四輪車馬達設定及鍵盤控制加速及轉彎</span></strong></span></p>
+<p><span style="color: #0000ff;"><a href="/downloads/four wheel car setting to contorl turn right or left.ttt" style="color: #0000ff;"><span style="color: #ff0000;">v-rep檔案:</span>four wheel car setting to contorl turn right or left</a></span></p>
+<p><span style="color: #000000;"><span color="#000000">1.將上面已經能夠直線運行的四輪車給導入v-rep，導入後左方工作列因該會呈現下方的樣態。</span></span></p>
+<p><span style="color: #000000;"><span color="#000000"><img alt="" height="172" src="/images/tool1.png" width="278"/></span></span></p>
+<p><span style="color: #000000;"><span color="#000000">2.接下來我們回顧一下之前馬達設定的地方，我們必須要把電機開啟(</span></span>點擊子視窗下的<span>show dynamic properties dialog</span>，可以藉由勾選<span>motor properties</span>以啟動馬達，並可以藉由調整轉動速度和力矩達到所想要馬達轉動之效果，底下的<span>lock motor when target velocity is zero</span><span style="color: #000000;"><span color="#000000">則可以使馬達速度為零時鎖定住馬達)。</span></span></p>
+<p><span style="color: #000000;"><span color="#000000"><img alt="" height="207" src="/images/tool2.png" width="297"/></span></span></p>
+<p><span style="color: #000000;"><span color="#000000">3.物件的動力學設定也必須要設定好，如下方所示物體的碰撞和物體的動態都必須打開，才能使剛剛設定好的馬達進行對輪胎的帶動。</span></span></p>
+<p><span style="color: #000000;"><span color="#000000"><img alt="" height="260" src="/images/tool3.png" width="382"/></span></span></p>
+<p><span style="color: #000000;"><span color="#000000">4.貼上撰寫好的鍵盤控制轉彎程式。</span></span></p>
+<p><span style="color: #000000;"><span color="#000000"><img alt="" height="418" src="/images/tool4.png" width="893"/></span></span></p>
+<p><span style="color: #ff0000;"><strong><span color="#000000">操作影片:</span></strong></span></p>
+<p><span style="color: #0000ff;"><strong><span color="#000000"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/oBbIP0TYf8E" width="560"></iframe></span></strong></span></p>
+<p><strong><span style="color: #ff0000;">轉彎程式碼:</span></strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init() 
+    left_front_handle= sim.getObjectHandle('left_m')
+    left_back_handle= sim.getObjectHandle('left_m')
+    right_back_handle= sim.getObjectHandle('right_m')
+    right_front_handle= sim.getObjectHandle('right_m')
+    MaxVel=2
+    leftvelocity=0
+    rightvelocity=0
+    dVel=0.5;
+    --sim.setJointTargetVelocity(left_front_handle,leftvelocity)
+    sim.setJointTargetVelocity(left_back_handle,leftvelocity)
+    sim.setJointTargetVelocity(right_back_handle,rightvelocity)
+    --sim.setJointTargetVelocity(right_front_handle,rightvelocity)
+end
+
+function sysCall_actuation() 
+    message,auxiliaryData=sim.getSimulatorMessage()
+    while message~=-1 do
+        if (message==sim.message_keypress) then
+            if (auxiliaryData[1]==32) then
+                -- right key
+                leftvelocity=0
+                rightvelocity=0
+                sim.setJointForce(left_front_handle, 0)
+                sim.setJointForce(left_back_handle, 0)
+                sim.setJointForce(right_back_handle, 0)
+                sim.setJointForce(right_front_handle, 0)
+                break
+            else
+                --sim.setJointForce(left_front_handle, 10000)
+                sim.setJointForce(left_back_handle, 10000)
+                sim.setJointForce(right_back_handle, 10000)
+                --sim.setJointForce(right_front_handle, 10000)
+            end
+            if (auxiliaryData[1]==2007) then
+                -- up key
+                leftvelocity=(leftvelocity+rightvelocity)/2
+                rightvelocity=leftvelocity
+                leftvelocity=leftvelocity+dVel
+                rightvelocity=rightvelocity+dVel
+            end
+            if (auxiliaryData[1]==2008) then
+                -- down key
+                leftvelocity=(leftvelocity+rightvelocity)/2
+                rightvelocity=leftvelocity
+                leftvelocity=leftvelocity-dVel
+                rightvelocity=rightvelocity-dVel
+            end
+            if (auxiliaryData[1]==2009) then
+                -- left key
+                leftvelocity=leftvelocity-dVel
+                rightvelocity=rightvelocity+dVel
+            end
+            if (auxiliaryData[1]==2010) then
+                -- right key
+                leftvelocity=leftvelocity+dVel
+                rightvelocity=rightvelocity-dVel
+            end
+        end
+        message,auxiliaryData=sim.getSimulatorMessage()
+    end
+    
+    if leftvelocity&gt;MaxVel then
+        leftvelocity=MaxVel
+    end
+    if leftvelocity&lt;-maxvel then="" leftvelocity="-MaxVel" end="" if="" rightvelocity=""&gt;MaxVel then
+                rightvelocity=MaxVel
+    end
+
+    --sim.setJointTargetVelocity(left_front_handle,leftvelocity)
+    sim.setJointTargetVelocity(left_back_handle,leftvelocity)
+    sim.setJointTargetVelocity(right_back_handle,rightvelocity)
+    --sim.setJointTargetVelocity(right_front_handle,rightvelocity)
+
+end</pre>
+<p><span style="color: #ff0000; background-color: #ffff00;">結論:</span></p>
+<p><span style="background-color: #ffffff; color: #000000;">在這邊我們已經通過了前面的馬達設定、動力學設定、v-rep內部簡易物件組立完成了一輛能夠直行的四輪車，在這邊我們更透過指令碼的方式增加了四輪車可以通過鍵盤達成左轉右轉及向前加速和減速的功能，雖然依舊會有輪胎打滑的問題存在，但是通過之後藉由機構之設計及模擬因該能夠解決此一問題。</span></p><h2>week10-14</h2>
 <h2>week15-18</h2>
 <h1>Q&amp;A</h1>
 <p><span style="color: #ff0000;">PY3.8.2更新後出現之LEO無法開啟問題與解決方法。</span></p>
@@ -208,7 +302,7 @@ Exit</pre>
 <p><br/>v-rep車輛建模設置2:<a href="https://blog.csdn.net/abcvincent/article/details/104031159">https://blog.csdn.net/abcvincent/article/details/104031159</a></p>
 <p><br/>V-REP車輛建模:<a href="https://zhuanlan.zhihu.com/p/105091011">https://zhuanlan.zhihu.com/p/105091011</a></p>
 <h2>assignment2</h2>
-<h3 class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="en">Product design process</span></h3>
+<h3>Product design process</h3>
 <p><span style="color: #ff0000;"><strong>Collaborative product design processes of industrial design and engineering design in consumer product companies</strong></span></p>
 <p><strong>產品公司中的工業設計和工程設計的協作產品設計過程</strong></p>
 <p><span style="color: #ff0000;">This study aims to elucidate how industrial designers and engineering designers collaborate, and how such an alliance reflects in the design process. We conducted in-depth interviews about actual product design projects with 34 industrial and engineering designers from six consumer product manufacturers. We firstly identified individual design processes from the interview data. Secondly, we then compared and merged the design processes into collaborative processes using a mosaic method. We finally simplified the collaborative processes to create representative process models. As a result, we discovered four types of typical collaborative product design processes and their characteristics e Type 1: ID-led Concept-driven Process, Type 2: ID-led Combined Outside-inside Process, Type 3: ED-led Inside-first Process, and Type 4: ID&amp;ED Synergetic Process. </span></p>
@@ -455,7 +549,195 @@ Exit</pre>
 <p><span lang="en">根據研究方法，我們展示瞭如何從設計師的深入訪談數據中建立協作設計過程。我們確定了過程元素，並使用它們構造了部分過程，並使用鑲嵌方法建立了詳細的協作設計過程。我們還引入了“過程塊”，並定義了一個或兩個交互塊作為一個階段。我們認為這種方法有利於確定最佳水平的實際設計過程。我們認為該方法適用於發現其他設計過程。我們的過程模型的形式可與其他基於階段的模型相比較（例如French，1998； Pahl等，2007）。我們從模型中發現，在階段之間很少發生反向迭代或反饋。這與現有的基於階段的工程設計過程模型的描述不同。在理想情況下，我們認為雙向迭代是可能的，但是實際上由於激烈的市場競爭，我們認為這種情況很少發生。</span></p>
 <p><span style="color: #ff0000;">Further studies with this method are required especially toward other project cases in other product domains. The companies in this study were all manufacturers of electronic products. Therefore, the result is limited to this product category. We need to test how the four collaborative design processes are applied in other companies. Conversely, it is worth studying cases of innovative product development and the processes applied.</span></p>
 <p><span lang="en">特別是針對其他產品領域中的其他項目案例，需要對該方法進行進一步的研究。本研究中的公司均為電子產品製造商。因此，結果僅限於此產品類別。我們需要測試這四個協作設計過程如何在其他公司中應用。相反，值得研究創新產品開發和應用過程的案例。</span></p>
-<h1>refer e-book</h1>
+<h3>DigitalProductCollaboration</h3>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">設計協調性更好的產品</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Create a Better Product With Design Collaboration — Mindset, Tools, Process</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">透過設計協調創作更好的場品 </span><span class="fontstyle0">— </span><span class="fontstyle1">心態、工具、過程</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Digital products are more complex today than ever before. Creating them requires<br/>multiple team members, each with their own set of skills and expertise. At Savvy, for<br/>example, our customers work closely with: a product manager, UX designer, visual<br/>designer, developer(s), content strategist, and a growth specialist.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">現今的數位產品比以往都還要複雜。創建他們需要更多的團隊。每位成員都需<br/>要擁有自己的技藝與專業知識。例如 </span><span class="fontstyle0">Savvy</span><span class="fontstyle1">，我們的顧客。需要與產品經理、<br/></span><span class="fontstyle0">UX </span><span class="fontstyle1">設計師、視覺設計師、開發人員、內容策略師還有增長專家密切配合。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">We use design collaboration to handle this complexity. Done right, design</span><br/><span style="color: #ff0000;">collaboration empowers each of those experts with the mindset, process, and tools</span><br/><span style="color: #ff0000;">to come together and build a better product faster.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">我們藉由設計協同來處理這種複雜性。正確的設計協同可以讓每一位專家擁有<br/>思維、流程和工具來快速的建立更好的產品。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">We wrote this resource to help other app creators adopt a collaboration culture and</span><br/><span style="color: #ff0000;">process. Read on to learn why design collaboration is important for creating</span><br/><span style="color: #ff0000;">compelling products and experiences. We'll also dive into the elements of a design</span><br/><span style="color: #ff0000;">collaboration mindset and culture, tools for effective design collaboration, and a</span><br/><span style="color: #ff0000;">real-world example of design collaboration at work.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">我們撰寫這篇資源是為了幫助其他 </span><span class="fontstyle0">APP </span><span class="fontstyle1">創作者採用文化偕同和流程。深入閱讀<br/>了解為何設計協同對於創作引人注目的產品和體驗來說非常重要</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000; background-color: #ffff00;">What is "Design" Collaboration?</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">什麼是</span><span class="fontstyle0">”</span><span class="fontstyle1">設計</span><span class="fontstyle0">”</span><span class="fontstyle1">協同</span><span class="fontstyle0">?</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle0" style="color: #ff0000;">Before we jump into it, we need to get on the same page about what design<br/>collaboration is... and is not. At its simplest, design collaboration is collaboration in a<br/>design-first environment. But, because of the nature of design, especially the design<br/>we do at Savvy, design collaboration tends to go beyond what people normally think<br/>of as collaboration.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">在直接跳入主題前，我們需要了解什麼是設計協同</span><span class="fontstyle0">…</span><span class="fontstyle1">什麼不是。簡單來說，設<br/>計協同就是在以設計為主的環境中進行協同合作。但是，因為設計的本質，特<br/>別是在與 </span><span class="fontstyle0">Savvy </span><span class="fontstyle1">合作的設計之中，設計協同往往會超出人們一般認為的合作範</span><br/><span class="fontstyle1">圍。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">While collaboration is generally defined as two or more people working together on<br/>the same task towards a common goal, design collaboration involves much more.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">協同一般被定義為兩個或更多的人一起為同樣的目標工作，然而設計協同所涉<br/>及的東西卻更多。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Design collaboration includes more people with different skillsets, tougher<br/>challenges, and bigger goals with farther-reaching impacts.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">設計協同包括了更多具有不同技能的人、更艱困的挑戰、更大的目標並產生更<br/>深遠的影響</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">You might think of collaboration as two people hanging a piece of art. It simply</span><br/><span style="color: #ff0000;">requires communication, teamwork, and four hands. Design collaboration is when a</span><br/><span style="color: #ff0000;">team of curators carefully design a visitor's experience. They select the art, choose</span><br/><span style="color: #ff0000;">where and how to hang it, which room it lives in (and the room's lighting, furniture),</span><br/><span style="color: #ff0000;">even the preceding rooms and the building as a whole.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">你可能會認為協同就是兩個人懸掛一件藝術品，只需要溝通、團隊工作、和四<br/>隻手而已。設計合作是指由策劃團隊精心為參觀者設計的體驗，他們挑取藝術<br/>品並挑選掛在什麼地方、如何掛、掛在哪個房間</span><span class="fontstyle0">(</span><span class="fontstyle1">以及房間的燈光和家具</span><span class="fontstyle0">) </span><span class="fontstyle1">，甚<br/>至是前一個房間和整棟建築物。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="background-color: #ffff00; color: #ff0000;">Why Design Collaboration is Important?</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">為什麼設計協同是重要的?</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">You can design a product without collaboration, but it takes a collaborative design<br/>process to make that product great. That's why design collaboration is so<br/>fundamental.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">你可以在沒有協同的情況下設計出一件產品，但透過一個合作的設計過程可以<br/>讓產品變的更加優秀，這就是為什麼設計協同是如此的重要。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">We don't just build apps for our customers. Savvy builds multi-platform experiences,</span><br/><span style="color: #ff0000;">complex internal systems, and in some cases, entire brands and businesses. To do so,</span><br/><span style="color: #ff0000;">we leverage expertise across several core disciplines: strategy, design, development,</span><br/><span style="color: #ff0000;">and growth. Each project involves many people, each with their own skillsets and</span><br/><span style="color: #ff0000;">specialties.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">我們並不只是為顧客構建應用程式， </span><span class="fontstyle0">Savvy </span><span class="fontstyle1">構建了多平台體驗、複雜的內部系<br/>統，並且在某些情況下，還可以構建整個品牌與業務，為此我們在戰略、設<br/>計、開發和成長等領域利用核心專業技術，每個項目都有許多人參加，每個人<br/>都有自己的技藝與專長。</span></p>
+<p><br/><span class="fontstyle0" style="color: #ff0000;">Design collaboration puts those minds together, combining their separate,<br/>specialized expertise to create solutions that tackle all aspects of a shared goal.<br/>Instead of coming at a problem from one angle, design collaboration places that<br/>problem in front of all experts, forcing them to consider new perspectives and<br/>possibilities.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">設計協同將這些人的思想概念結合在一起，將他們獨自的專業知識結合起來，<br/>創造出能夠解決共同目標所有方面問題的方案。設計協同不是從一個角度來解<br/>決一個問題，而是將所有問題放在專家面前，迫使他們考慮新的觀點與可能<br/>性。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">For example, we involve our developers early on in the design process to make sure<br/>we're accounting for technical opportunities and limitations as soon as possible. This<br/>allows us to take advantage of and push our technical capabilities while eliminating<br/>costly roadblocks further in the process. It also limits how much a single person can<br/>work in a silo, keeping the work in the open and the emphasis on the user needs and<br/>product goals.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">例如，我們在早期的設計過程就讓開發人員參與進來，確保盡快解決技術問題<br/>與侷限性。這使我們能夠利用在推動技術能力過程時，進一步消除昂貴的路<br/>障。這也同時限制一個人在總體的工作量，保持工廠的開放性，將重點放在用<br/>戶需求與產品目標上。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000; background-color: #ffff00;">Cultivating a Design Collaboration Mindset</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">培養設計協同的心態</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">The right mindset goes a long way in establishing effective collaboration in the<br/>design process. It lays the guidelines for who collaborates, how, and to what end.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">正確的心態能幫助在設計過程中建立有效的合作關係，它為由誰來合作、如何<br/>合作以及合作的目的制定了準則。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000; background-color: #ffff00;">COLLABORATION IS FOR EVERYONE</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">協同是人人都可以的。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Designers sometimes think that people who are not designers are not qualified to<br/>give good feedback. But great design is more than visuals. It encompasses everything<br/>about a product, from its branding to its engineering to its growth.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">設計師有時候會認為不是設計師的人是沒有資格給出好的反饋的。但是，好的<br/>設計是不僅僅有視覺效果而已的，它包含了一個產品的一切，從品牌到工程再<br/>到在到期發展的一切。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Design collaboration brings in many people, each with their own perspectives and</span><br/><span class="fontstyle0" style="color: #ff0000;">strengths. It gives everyone a voice. These fresh perspectives give designers more<br/>information. Perspectives equip designers to make the right decisions on choices<br/>that have lasting impacts on other design, development, and marketing options<br/>down the road.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">設計協同引進了許多人，每個人都有其自己的觀點與優勢，它使每個人都可以<br/>擁有發言權，這些創新的視角給了設計師更多的信息。觀點可以讓設計師能夠<br/>做出正確的決定，這些選擇會對以後的設計、開發與營銷產生持久的引響。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Collaboration with customers is as important as collaboration with other designers</span><br/><span style="color: #ff0000;">and team members. At Savvy, we keep our customer involved throughout the</span><br/><span style="color: #ff0000;">creation of their product. We take our time to explain options and have discussions</span><br/><span style="color: #ff0000;">with the customer to make sure we understand their thoughts.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">與客戶的合作和與其他設計師、團隊成員的合作同樣重要。在與 </span><span class="fontstyle0">Savvy </span><span class="fontstyle1">的合作<br/>中，我們讓客戶參予產品的製作過程，並花時間解釋所選方案，與客戶進行討<br/>論，以確保我們了解他們的想法。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">This enables us to get buy-in from customers early on and work from clear</span><br/><span style="color: #ff0000;">beginnings and ends. Larger reveals aren't big surprises, and no one gets to the point</span><br/><span style="color: #ff0000;">where they're seeing work for the first time.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">這樣一來，我們就可以確保客戶的買帳並使工作有始有終，較大的揭露並不是<br/>什麼太大的驚喜，沒有人會因為第一次看到工作而感到驚訝。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0">Customer collaboration means arriving at a more defined product sooner, without<br/>costly back-stepping and unnecessary meetings.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">客戶的合作意味著更早產生一個確定的產品，避免了昂貴的迴避與不必要的會<br/>議。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0">It's easy to get caught up in your role and ignore the big picture. By involving more<br/>people earlier on, you're fostering closer connections with teammates and<br/>cultivating a shared responsibility and interest in the success of the product. You're<br/>creating a more open and transparent process, as well a more connected and<br/>invested team.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">人們很容易沉浸在自己所扮演的角色中而忽略了大局觀，透過讓更多的人在早<br/>期參與進來，就能將團隊成員之間的聯繫培養的更緊密，並培養出責任感與對<br/>產品是否能成功的興趣。你正在創造一個更開放、更透明的過程，以及一個更<br/>有聯繫和投入的團體。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="background-color: #ffff00; color: #ff0000;">COLLABORATION IS CONTEXTUAL</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">協同是有背景的</span></p>
+<p><br/><span class="fontstyle0"><span style="color: #ff0000;">Customers come to us with complex challenges and goals. Not to mention, we</span><br/><span style="color: #ff0000;">continue to work with our customers for months, even years, and accumulate vast</span><br/><span style="color: #ff0000;">tomes of knowledge on past decisions, research, and other valuable context.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">客戶帶著複雜的挑戰與目標來尋找我們。更別提我們會持續與客戶合作數月甚<br/>至數年，累積了大量的知識，包含過去的決策、研究等其他有價值的背景。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">By adopting a context-first approach, you can make sure everyone is at the highest<br/>level of knowledge. This enables them to make the most informed decisions as they<br/>work on the product. To accomplish this, we keep everyone at Savvy updated on<br/>relevant information by bringing in all team members early, documenting and<br/>recording meetings, establishing some overlap, and treating the next team member<br/>in the process like a customer.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">透過適者生存的方法，確保每個人都處於最高的知識水平。使他們能夠在開發<br/>產品的過程中能夠做出最明確的決定，為了能夠做到這一點，我們透過提前召<br/>集所有團隊成員，紀錄和紀錄會議的內容，建立一些重和點，並將下一個團隊<br/>成員視為顧客，讓 </span><span class="fontstyle0">Savvy </span><span class="fontstyle1">團隊的每一個人都能及時了解相關資訊。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Context is just as important on a case-by-case collaborative basis. Follow these</span><br/><span style="color: #ff0000;">guidelines to keep context first in collaboration:</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">在個案合作的基礎上，情境同樣重要，遵循這些準則，在合作中要把情境放在<br/>首位。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Provide context before showing your work. Chances are if your work is on the screen<br/>while you're giving context, you've lost your audience's attention.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">在顯示您的工作之前提供上下文。在提供背景信息的情況下，如果您的作品出<br/>現在屏幕上，那麼您可能會失去聽眾的注意力。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Describe the problem you're trying to solve or goal you're trying to achieve.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">描述您要解決的問題或要達到的目標。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Present your work as it relates to the problem at hand. Explain your thinking and<br/>why you made certain decisions.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">介紹與當前問題相關的工作。說明您的想法以及做出某些決定的原因。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Be specific about what you want feedback on.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">請具體說明您要反饋的內容。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">COLLABORATION IS OPEN, HONEST, AND FEARLESS</span></p>
+<p><br/><span class="fontstyle1">合作是開放，誠實和無畏的</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">It isn't easy to put your work (and yourself) out there. Emotions can get in the way of<br/>providing open and honest feedback, especially when you're worried about hurting<br/>the other person's feelings.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">將您的工作（和您自己）放在那裡並不容易。情緒會阻礙您提供坦誠的反饋，<br/>尤其是當您擔心會傷害對方的感受時。</span></p>
+<p><span class="fontstyle1"><br/></span><span style="color: #ff0000;"><span class="fontstyle0">That doesn't mean there's no place for em</span><span class="fontstyle0">otion in collaboration. How something<br/>makes you feel is important in design. We think of and create solutions for people...<br/>people who are emotional, and who use emotions in their decisions. Leaving<br/>emotion out of the conversation might short-change a potential idea or solution. At<br/>best, having only a pragmatic discussion around facts and data won't provide the full<br/>picture. At worst, it may be a red herring or provide a false narrative.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">這並不意味著在協作中沒有情感的位置。在設計中，讓您感覺如何是很重要<br/>的。我們為人們思考並為他們創建解決方案，有情感並在決策中使用情感的<br/>人。在對話中留下的情感可能會縮短潛在的想法或解決方案。充其量，僅就事<br/>實和數據進行務實的討論將無法提供全面的信息。在最壞的情況下，它可能是<br/>掩人耳目或提供虛假的敘述。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">At Savvy, we empower our team to be "fearless" about receiving feedback. This<br/>means letting go of any anxieties about being judged for what we create. It also<br/>means understanding that we are stronger together and stand a greater chance of<br/>creating something great. In being fearless, we better trust and empower each other<br/>to give honest and thoughtful feedback.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">在與 </span><span class="fontstyle0">Savvy </span><span class="fontstyle1">的合作中，我們使我們的團隊對收到反饋感到</span><span class="fontstyle0">“</span><span class="fontstyle1">無所畏懼</span><span class="fontstyle0">”</span><span class="fontstyle1">。這意味<br/>著放開對我們所創造的東西進行判斷不會感到任何焦慮。這也意味著我們在一<br/>起將會更加強大，更有機會創造偉大的事物。在無所畏懼的情況下，我們會更<br/>好地相互信任和相互賦予能力，以提供誠實和周到的反饋。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Our team also believes in being fearless about providing feedback. This means</span><br/><span style="color: #ff0000;">understanding the problem that needs solving as well as the customer's brand and</span><br/><span style="color: #ff0000;">goals. It also means asking lots of questions either to uncover relevant thoughts or to</span><br/><span style="color: #ff0000;">help guide decisions.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">我們的團隊還信奉無所畏懼地提供反饋。這意味著能夠了解需要解決的問題以<br/>及客戶的品牌和目標。同時也意味著可以問很多問題，以發現相關的思想或幫<br/>助指導決策。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Try presenting feedback in an exploratory and guiding manner, with the intent of<br/>building up and improving the work rather than tearing it down.</span></p>
+<p><br/><span class="fontstyle1">嘗試以探索性和指導性的方式提出反饋意見，目的是建立和改進工作，而不是<br/>拆散工作。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Your feedback should be constructive. Instead of saying you don't like something,</span><br/><span style="color: #ff0000;">frame your feedback to point back to the problem you're trying to help solve.</span><br/><span style="color: #ff0000;">Provide actionable steps on improving the work or at the very least the reasoning</span><br/><span style="color: #ff0000;">behind your thinking. And don't forget to express what you like and why.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">您的反饋意見應具有建設性。與其說您不喜歡某些東西，不如說出您的反饋意<br/>見以指出您要幫助解決的問題。提供可行的步驟來改進工作，或者至少提供您<br/>思考背後的理由。並且不要忘了表達您喜歡什麼以及為什麼。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="background-color: #ffff00; color: #ff0000;">COLLABORATION IS MORE THAN NEW IDEAS</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">合作不僅僅是新的想法</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">It's one thing to be open and accepting of collaborative feedback, another to parse<br/>those thoughts and use them as catalysts to spark your own. This is a more advanced<br/>skill that develops over time. One way to practice this is to become a better listener.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">開放並接受協作反饋是一回事，解析這些想法並將其用來催生您自己的想法是<br/>另一回事。隨著時間的推移，這是一項更高級的技能。實踐方法將使你成為更<br/>好去聽取意見的人。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Often, during a conversation with others, we think more about what we are going to<br/>say next rather than what others are saying. This impacts the feedback process,<br/>especially in design, because we often know what we want to say before hearing<br/>another opinion or solution.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">通常，在與他人交談時，我們會更多地考慮接下來要說的內容，而不是別人在<br/>說什麼。這會影響反饋過程，尤其是在設計過程中，因為在聽到其他意見或解<br/>決方案之前，我們通常會知道我們要說的話。</span></p>
+<p><span style="color: #ff0000;"><span class="fontstyle1"><br/></span><span class="fontstyle0">When you choose to listen first and react second, it allows you to fully understand<br/>the feedback someone else is presenting and sets you up to go deeper — what is the<br/>perspective they're using and the place they're coming from? Chances are this is a<br/>perspective you didn't consider during the creation process. By listening to and<br/>understanding the context and reasoning behind the feedback you're receiving,<br/>you're opening yourself to more ways of looking at, thinking of, and experiencing<br/>your design. You can then test these new perspectives against the challenges, goals,<br/>and use cases you're designing for to see if they better suit the user.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">當您選擇先聆聽然後再做出反應時，它可以讓您完全理解其他人的反饋，並讓<br/>您更深入地了解自己 </span><span class="fontstyle0">— </span><span class="fontstyle1">他們使用的觀點是什麼以及來自何處？很有可能這是您<br/>在創建過程中未曾考慮過的觀點。通過聽取並理解收到反饋時背後的上下文和<br/>推理，您可以以更多的方式來審視，思考和體驗設計。然後，您可以針對要設</span><br/><span class="fontstyle1">計的挑戰，目標和用例子來測試這些新觀點，以查看它們是否更適合用戶。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">It's easier to be more receptive of feedback when all collaborators practice active<br/>listening. Ultimately, the skill of giving great feedback comes from learning how to<br/>receive it. As we make an effort to be better listeners, we also find ourselves<br/>becoming more humble and, in our opinion, better designers.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">當所有協作者都在積極聆聽時，更容易接受反饋。最終，提供良好反饋的技能<br/>來自於學習如何獲得反饋。當我們努力成為更好的聽眾時，我們也發現自己變<br/>得更加謙虛，並認為我們是更好的設計師。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000; background-color: #ffff00;">Finding and Using the Right Design Collaboration Tools</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">尋找和使用正確的設計協作工具</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">The right tools go a long way in reinforcing your team's design collaboration mindset.<br/>In this section, you'll learn what to look for in collaboration tools. We also<br/>recommend tools based on our own experiences.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">正確的工具在增強團隊的設計協作思維方面大有幫助。在本節中，您將學習在<br/>協作工具中尋找什麼。我們還根據自己的經驗推薦工具。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000; background-color: #ffff00;">SELECTING THE RIGHT TOOLS</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">選擇合適的工具</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Effective collaboration tools remove all barriers for collaborators to quickly and</span><br/><span style="color: #ff0000;">easily access and interact with the work. This keeps the focus on giving feedback.</span><br/><span style="color: #ff0000;">They also allow others to collaborate on a design without destroying the original.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">有效的協作工具消除了協作者想要快速輕鬆地訪問工作並與之交互時的所有障<br/>礙。這將重點放在提供反饋上。它們還允許其他人在不破壞原始設計的情況下<br/>進行協作。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">In the past, we used relied on tools that provided basic versioning control instead of<br/>true collaborative features. For example, a designer would save a Sketch file and<br/>upload it to Dropbox. Another team member would then download it, work on it,<br/>and re-upload it. There was no easy way to make changes while the file was in<br/>another's hands. We tried something similar with Github, a tool that proved great for<br/>managing codebases, but not so much with iterative design work. Needless to say,<br/>these version control processes made our collaboration more time consuming,<br/>confusing, and very un-collaborative.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">過去，我們依賴於提供基本版本控製而不是真正的協作功能的工具。例如，設<br/>計人員將保存一個 </span><span class="fontstyle0">Sketch </span><span class="fontstyle1">文件並將其上傳到 </span><span class="fontstyle0">Dropbox</span><span class="fontstyle1">。然後，另一個團隊成員<br/>下載它，進行處理，然後重新上傳。當文件在另一個人手中時，沒有辦法用簡</span><br/><span class="fontstyle1">單的方法來進行更改。我們使用 </span><span class="fontstyle0">Github </span><span class="fontstyle1">嘗試了類似的方法，該工具被證明非常<br/>適合管理代碼庫，但對於反覆設計的工作卻沒有太多幫助。不用說，這些版本<br/>控製過程使我們的協作更加耗時，混亂並且非常不協作。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Now we choose from a variety of more advanced tools depending on the type of<br/>collaboration we want to achieve.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">現在，我們根據要實現的協作類型從各種更高級的工具中進行選擇。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">FIGMA<br/>This is a collaboration-first, shared workspace tool. Figma works well for having<br/>multiple people in same area of the design file. You can watch teammates design or<br/>work together on the same design in real time.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">這是一個以協作為優先的共享工作區工具。 </span><span class="fontstyle0">Figma </span><span class="fontstyle1">非常適合在設計文件的同一<br/>區域中包含多個人。您可以時時觀看隊友的設計或在同一個設計上一起工作。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Benefits:</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">好處：</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Figma reduces the ability for someone to work in a silo.</span></span></p>
+<p><span class="fontstyle0"><br/>Figma </span><span class="fontstyle1">降低了某人在統合工作的時間。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">There's no need to add unnecessary polish or create static deliverables to enable<br/>collaboration. So you don't need to change your workflow to show off a design.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">無需添加不必要的修飾或創建可交付結果的靜態即可實現協作。因此，您無需<br/>更改工作流程即可展示設計。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">It's easy to see and interact with the work in its native environment and apply</span><br/><span style="color: #ff0000;">tweaks at will.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">可以輕鬆地在其本環境中查看並與之交互，並隨意進行調整。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">When to use: Flow docs, high-fidelity wireframes, spur-of-the-moment collaboration,<br/>and walking customers through a series of screens to explain and get feedback on<br/>design direction.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">使用時：流程文檔，高保真線框，即時協作，以及引導客戶瀏覽一系列屏幕，<br/>以解釋並獲得有關設計方向的反饋。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">MARVEL</span><br/><span class="fontstyle0" style="color: #ff0000;">While Figma tends to feel more free-form and flexible, Marvel allows for a more<br/>standardized form of collaboration. It also makes it easy on our customers to<br/>collaborate with us.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">雖然 </span><span class="fontstyle0">Figma </span><span class="fontstyle1">傾向於自由和靈活，但 </span><span class="fontstyle0">Marvel </span><span class="fontstyle1">允許採用更標準化的協作形式。這也<br/>使我們的客戶可以輕鬆地與我們合作。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Benefits:</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">好處：</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Marvel is a cleaner, more formalized and focused space, great for collaborating with<br/>non-design team members.</span></p>
+<p><span class="fontstyle0"><br/>Marvel </span><span class="fontstyle1">是一個更簡潔、規範和專注的空間，非常適合與非設計團隊成員進行協<br/>作。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">It removes all need for the customer to pay for an account or have a deep<br/>understanding of the tool to see the work.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">它消除了客戶為帳戶付款或對工具進行深入了解的所有需求。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Customers can download screens and see them in action on a device environment<br/>via the Marvel app.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">客戶可以下載 </span><span class="fontstyle0">app</span><span class="fontstyle1">，並通過 </span><span class="fontstyle0">Marvel </span><span class="fontstyle1">應用程序在設備環境中查看它們的運行情<br/>況。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">When to use: Presenting more finalized design work with customers and developers.<br/>(Learn about how Marvel compares with other prototyping tools.)</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">使用時：與客戶和開發人員一起呈現更多的最終設計工作。 （了解 </span><span class="fontstyle0">Marvel </span><span class="fontstyle1">如何<br/>與其他原型工具進行比較。）</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">OTHER COLLABORATION TOOLS</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">其他合作工具</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Zeplin is a useful hand-off tool that allows developers to dive into the nitty gritty<br/>specs of design work. (We talk more in-depth about Zeplin here.)</span></p>
+<p><span class="fontstyle0"><br/>Zeplin </span><span class="fontstyle1">是一個有用的傳遞工具，使開發人員可以深入研究設計工作的細節。<br/>（我們在這裡更深入地討論 </span><span class="fontstyle0">Zeplin</span><span class="fontstyle1">。）</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Quip is a great platform for brainstorming and product/process documentation. We<br/>use it to record and organize all of the context and knowledge that team members</span><br/><span class="fontstyle0"><span style="color: #ff0000;">need to know when working on a project. It's also useful for brainstorming new ideas</span><br/><span style="color: #ff0000;">that aren't visual-focused.</span></span></p>
+<p><span class="fontstyle0"><br/>Quip </span><span class="fontstyle1">是集思廣益在產品</span><span class="fontstyle0">/</span><span class="fontstyle1">流程文件的絕佳平台。我們使用它來記錄和組織團隊成<br/>員在項目上需要了解的所有環境和知識。對於集思廣益新思路而不是視覺關注<br/>的新想法也很有用。</span></p>
+<p><span class="fontstyle1"><br/></span><span style="color: #ff0000;"><span class="fontstyle0">Please note that there are many other tools out there that add similar benefits to<br/>collaboration as the ones listed above. This list represents the tools that have<br/>worked well for us in our day-to-day collabora</span><span class="fontstyle0">tion and is not indicative of all the<br/>options that might work well for your team.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">請注意，還有許多其他工具可以為協作增加與上面類似的好處。此列表代表了<br/>在我們日常合作中對我們有效的工具，但並不表示所有可能對您的團隊有效的<br/>選項。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Savvy's Design Collaboration Process in Practice</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">精明的設計合作過程在實踐中</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Now let's take the best practices and tools outlined above and show how they fit</span><br/><span style="color: #ff0000;">together in a real-life situation. We'll use the live drawing experience in the Press</span><br/><span style="color: #ff0000;">Play app to demonstrate the importance of design collaboration. This experience</span><br/><span style="color: #ff0000;">involved significant collaboration from a number of team members across</span><br/><span style="color: #ff0000;">disciplines, including a visual designer, UX designer, developer, product manager,</span><br/><span style="color: #ff0000;">and of course, the customer.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">現在，讓我們採用上面概述的最佳實踐和工具，並展示它們如何在現實生活中<br/>融合在一起。我們將使用 </span><span class="fontstyle0">Press Play </span><span class="fontstyle1">應用程序中的實際繪圖經驗來演示設計協作<br/>的重要性。這種經驗涉及多個學科領域的團隊成員之間的重大協作，其中包括<br/>視覺設計師， </span><span class="fontstyle0">UX </span><span class="fontstyle1">設計人員，開發人員，產品經理，當然還有客戶。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">THE CONTEXT AND CHALLENGE</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">語境與挑戰</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Press Play is a sweepstakes app that holds daily, weekly, and monthly drawings.</span><br/><span style="color: #ff0000;">Users earn tickets by watching ads and enter drawings by selecting five emojis.</span><br/><span style="color: #ff0000;">Winners are then rewarded based on how their choices match up with the drawing's</span><br/><span style="color: #ff0000;">randomly-selected emojis. This particular task had us creating a fun and exciting live</span><br/><span style="color: #ff0000;">experience for users awaiting the results of the live drawing.</span></span></p>
+<p><span class="fontstyle0"><br/>Press Play </span><span class="fontstyle1">是一個抽獎活動應用程序，可保存每日，每周和每月的圖紙。用戶通<br/>過觀看廣告賺取門票，並通過五個表情符號的選擇來輸入圖紙。然後，根據獲<br/>獎者的選擇與繪畫中隨機選擇的表情符號匹配的方式來獎勵獲獎者。這項特殊<br/>任務使我們為等待現場繪畫結果的用戶創造了一種有趣而激動人心的現場體<br/>驗。</span></p>
+<p><br/><span class="fontstyle0" style="color: #ff0000;">It was important for us to create a game-like animation for this experience. We<br/>especially wanted to evoke a sense of playfulness and anticipation on the screen<br/>where users go to see how their chosen emojis match up with those from the<br/>sweepstakes drawing.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">對於我們來說，為這種體驗創建類似遊戲的動畫非常重要。我們特別想在屏幕<br/>上喚起用戶的嬉戲感和期待感，讓用戶看到他們選擇的表情符號與抽獎活動圖<br/>上的表情符號相匹配。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">That said, we needed to be mindful of the level of complexity an animation requires</span><br/><span style="color: #ff0000;">and its impact on the overall product's timeline and cost. Our goal was to push the</span><br/><span style="color: #ff0000;">level of fidelity within a reasonable time without significantly impacting the project's</span><br/><span style="color: #ff0000;">budget.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">也就是說，我們需要注意動畫所需的複雜程度及其對整體產品時間表和成本的<br/>影響。我們的目標是在合理的時間內提高真實度，而又不顯著影響項目預算。</span></p>
+<p><span class="fontstyle0" style="color: #ff0000; background-color: #ffff00;">THE COLLABORATIVE PROCESS</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">合作過程</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Stage 1: Wireframes and Brainstorming</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">階段 </span><span class="fontstyle0">1</span><span class="fontstyle1">：線框和自由討論</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">First, a Savvy UX designer created Press Play's overall UX and wireframes,</span><br/><span style="color: #ff0000;">determining what screens were needed and the timing for each one. She also put</span><br/><span style="color: #ff0000;">together a rough concept (shown right) for the live drawing animation, expressing</span><br/><span style="color: #ff0000;">initial ideas based on customer's needs and the project's established UX.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">首先，一位精明的 </span><span class="fontstyle0">UX </span><span class="fontstyle1">設計師創建了 </span><span class="fontstyle0">Press Play </span><span class="fontstyle1">的整體 </span><span class="fontstyle0">UX </span><span class="fontstyle1">和線框，確定需要哪<br/>些屏幕以及每個屏幕的時間安排。她還為實時繪畫動畫整理了一個粗略的概念<br/>（如右方所示），根據客戶的需求和項目已建立的用戶體驗表達了初步的想<br/>法。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">She presented the wireframes and the rough animation to the product manager and</span><br/><span style="color: #ff0000;">visual designer. Then all three met with the customer so everyone would hear the</span><br/><span style="color: #ff0000;">feedback directly.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">她向產品經理和視覺設計師展示了線框和粗糙的動畫。然後這三個人都與客戶<br/>會面，因此每個人都可以直接聽到反饋。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Stage 2: Research and Context</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">第二階段：研究與背景</span></p>
+<p><br/><span class="fontstyle0"><span style="color: #ff0000;">The Savvy visual designer tasked with creating the actual live drawing animation</span><br/><span style="color: #ff0000;">came in with fresh eyes and without much prior knowledge of the Press Play</span><br/><span style="color: #ff0000;">product. To get up to speed, he talked in depth with the UX designer and product</span><br/><span style="color: #ff0000;">manager. He also dedicated additional research time to understand the overall</span><br/><span style="color: #ff0000;">product goals, challenges, and to familiarize himself with the work to date. As</span><br/><span style="color: #ff0000;">mentioned earlier, he was part of the wireframe presentation and present for the</span><br/><span style="color: #ff0000;">customer's feedback.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">精明的視覺設計師負責創建實際的繪畫動畫，他們的眼界較廣，而且對 </span><span class="fontstyle0">Press<br/>Play </span><span class="fontstyle1">產品沒有太多的了解。為了加快速度，他與 </span><span class="fontstyle0">UX </span><span class="fontstyle1">設計師和產品經理進行了<br/>深入交流。他還花費額外的研究時間來了解總體產品目標，挑戰並熟悉迄今為<br/>止的工作。如前所述，他展示線框演示的一部分，並向客戶提出反饋。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">With that context, he conducted some additional research more directly related to</span><br/><span style="color: #ff0000;">the task at hand. In doing so, he made sure he understood the live drawing</span><br/><span style="color: #ff0000;">experience requirements, goals, and challenges. He looked at other apps with similar</span><br/><span style="color: #ff0000;">experiences and fidelity and referenced the rough animation to know what exactly</span><br/><span style="color: #ff0000;">the final animation needed to show (in this case, the winning emojis and the user's</span><br/><span style="color: #ff0000;">emoji selections). Before getting too tied to a solution, he met with a Savvy iOS</span><br/><span style="color: #ff0000;">developer to understand technical constraints and considerations.</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">在這種情況下，他進行了一些與手頭任務直接相關的其他研究。通過這樣做，<br/>他確保自己了解現場繪畫體驗的要求、目標和挑戰。他查看了具有類似體驗和<br/>真實度的其他應用，並參考了粗糙的動畫以了解最終動畫到底需要顯示什麼<br/>（在這種情況下，是獲勝的表情符號和用戶的表情符號選擇）。在過於依賴解<br/>決方案之前，他會見了一位精明的 </span><span class="fontstyle0">iOS </span><span class="fontstyle1">開發人員，以了解技術限制和注意事<br/>項。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0"><span style="color: #ff0000;">Our visual designer and UX designer then brainstormed what was important for the</span><br/><span style="color: #ff0000;">visuals. They agreed that there needed to be a slow reveal to build up</span><br/><span style="color: #ff0000;">suspense/anticipation for the user</span></span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">然後，我們的視覺設計師和 </span><span class="fontstyle0">UX </span><span class="fontstyle1">設計師集思廣益，視覺效果非常重要。他們一<br/>致認為，需要慢慢進行透露，以便為用戶建立懸念</span><span class="fontstyle0">/</span><span class="fontstyle1">期待</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Stage 3: Iteration and Feedback</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">階段 </span><span class="fontstyle0">3</span><span class="fontstyle1">： 意見統整和反饋</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">As our visual designer worked through a number of different directions he tapped<br/>the UX designer to chat through his progress and designs in Figma. By talking<br/>through the work they spurred more ideas and iterations while making sure they<br/>were staying true to customer expectations. With more solid options at hand, he<br/>met once again with the iOS developer to make sure everything was in line from a<br/>technical perspective.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">當我們的視覺設計師沿多個不同方向工作時，他邀請了 </span><span class="fontstyle0">UX </span><span class="fontstyle1">設計師來聊聊他在</span><br/><span class="fontstyle0">Figma </span><span class="fontstyle1">中的進度和設計。通過討論工作，他們激發了更多的想法和迭代，同時<br/>確保它們符合客戶的期望。有了更多可靠的選擇，他再次與 </span><span class="fontstyle0">iOS </span><span class="fontstyle1">開發人員會<br/>面，以確保從技術角度來看一切都符合要求。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Stage 4: Customer Feedback and Development</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">階段 </span><span class="fontstyle0">4</span><span class="fontstyle1">：客戶的反饋和發展</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">When we landed on several, more finalized versions of the experience, the visual<br/>designer walked through them with the customer using Figma. The product manager<br/>and UX designer for Press Play provided feedback and guidance as well.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">當我們找到了幾種最終確定的體驗版本時，視覺設計師使用 </span><span class="fontstyle0">Figma </span><span class="fontstyle1">與客戶一起<br/>瀏覽了它們。 </span><span class="fontstyle0">Press Play </span><span class="fontstyle1">的產品經理和 </span><span class="fontstyle0">UX </span><span class="fontstyle1">設計師也提供了反饋和指導。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Once they all learned what piqued the customer's interest, the visual designer set off<br/>to maximize the visuals and make them ready for development. He continued to<br/>work with the iOS developer to get the most out of the concept on a technical level.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">一旦他們都了解了會引起客戶興趣的東西，視覺設計師便開始著手讓視覺效果<br/>最大化，並為開發做好準備。他繼續與 </span><span class="fontstyle0">iOS </span><span class="fontstyle1">開發人員合作，以在技術層面上充<br/>分利用該概念。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">THE END RESULT</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">最終結果</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">Press Play's live drawing animation is an example of design collaboration at work; a<br/>team of cross-discipline experts working together to solve a design and development<br/>challenge with bigger implications. Without design collaboration, we wouldn't have<br/>discovered the ideal intersection of user experience, visual, and technical.</span></p>
+<p><span class="fontstyle0"><br/>Press Play </span><span class="fontstyle1">的實際繪圖動畫是工作中設計協作的一個示例。一隊跨學科專家團<br/>隊，共同解決具有更大影響的設計和開發挑戰。沒有設計協作，我們將找不到<br/>用戶體驗，視覺和技術之間的理想交匯處。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">When the customer saw the animation alive in his app he called it "groundbreaking."</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">當客戶在他的應用程序中看到動畫是生動時，他稱其為</span><span class="fontstyle0">“</span><span class="fontstyle1">開創性的</span><span class="fontstyle0">”</span><span class="fontstyle1">。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">What’s more, the research, collaboration, and creation of this Press Play experience<br/>helped us discover a gap in the product’s user journey. Originally, the live drawing’s<br/>intent was to be a fun way to show the results to users. As we moved through the<br/>design process, we realized that if a user doesn’t watch the live drawing, and they<br/>lose, they don’t get to experience an end to their user journey for that drawing.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">此外，對這種 </span><span class="fontstyle0">Press Play </span><span class="fontstyle1">體驗的研究、協作和創造，幫助我們發現了產品用戶旅<br/>程中的空白。最初，實際繪圖的目的是將結果顯示給用戶的一種有趣的方式。</span><br/><span class="fontstyle1">在設計過程中，我們意識到，如果用戶不因為觀看實際圖形而迷失了方向，那<br/>麼他們就不會體驗到該圖形的用戶旅程。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">From that discovery, we decided to improve the app in a couple of other places as<br/>well. We added a results/live drawing element to the Winner’s Circle and a win-lose<br/>history section to the User Details side of the app. In the end, design collaboration<br/>empowered us to realize this unfulfilled need in the user experience.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">基於這一發現，我們決定在其他兩個地方也改進該應用程序。我們在</span><span class="fontstyle0">“</span><span class="fontstyle1">獲勝者圈<br/>子</span><span class="fontstyle0">”</span><span class="fontstyle1">中添加了一個結果</span><span class="fontstyle0">/</span><span class="fontstyle1">實際繪圖元素，並在應用程序的</span><span class="fontstyle0">“</span><span class="fontstyle1">用戶詳細信息</span><span class="fontstyle0">”</span><span class="fontstyle1">端添加<br/>了</span><span class="fontstyle0">“</span><span class="fontstyle1">輸贏歷史記錄</span><span class="fontstyle0">”</span><span class="fontstyle1">部分。最後，設計協作使我們能夠實現用戶體驗中這未滿足<br/>的需求。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000; background-color: #ffff00;">Concluding Note</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">結論說明</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">It takes design collaboration to tackle the complex, crucial problems that come along<br/>with building great products and experiences. By leveraging the specialized expertise<br/>of multiple team members across disciplines, design collaboration makes sure teams<br/>meet challenges from all perspectives and come to better solutions. With the right<br/>mindset, tools, and process, design collaboration empowers teams to go deeper with<br/>creative thinking and iteration.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">它需要設計協調來處理構建出色的產品和體驗所伴隨的複雜並關鍵的問題。通<br/>過利用跨學科的多個團隊成員的專業知識，設計協作可確保團隊從各個角度應<br/>對挑戰並尋求更好的解決方案。通過正確的思維方式、工具和流程，設計協調<br/>能使團隊能夠通過創造性思維和更深入迭代。</span></p>
+<p><span class="fontstyle1"><br/></span><span class="fontstyle0" style="color: #ff0000;">We hope this guide gives you a good foundation from which you can build your own<br/>effective design collaboration process. You can learn more about design and product<br/>strategy on the Savvy blog, and feel free to contact us for help on the Savvy Apps<br/>website.</span></p>
+<p><span class="fontstyle0"><br/></span><span class="fontstyle1">我們希望本指南為您提供一個良好的基礎，您可以以此為基礎建立自己的有效<br/>設計協作流程。您可以在 </span><span class="fontstyle0">Savvy </span><span class="fontstyle1">博客上了解有關設計和產品策略的更多信息，<br/>也可以隨時在 </span><span class="fontstyle0">Savvy Apps </span><span class="fontstyle1">網站上與我們聯繫以獲取幫助。</span></p><h3>MechanicalDesignProcess</h3>
+<h3>Keyboard control car</h3>
+<h4></h4>
+<h1>CoppeliaSim</h1>
 <h2>Simulation</h2>
 <p><span style="color: #ff0000;"><strong>Simulation</strong></span></p>
 <p><strong>模擬</strong></p>

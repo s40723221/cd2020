@@ -24,6 +24,9 @@
 <v t="leo.20200404162608.1"><vh>week1-5</vh>
 <v t="leo.20200404162608.2"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200405164145.1"><vh>meeting1</vh>
+<v t="leo.20200405164145.2"><vh>封面投影片內容</vh></v>
+</v>
 <v t="leo.20200404161545.1"><vh>assignment1</vh>
 <v t="leo.20200404161545.2"><vh>封面投影片內容</vh></v>
 </v>
@@ -33,14 +36,14 @@
 <v t="leo.20200404162443.1"><vh>four wheel car</vh>
 <v t="leo.20200404162443.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20200405164145.1"><vh>meeting1</vh>
-<v t="leo.20200405164145.2"><vh>封面投影片內容</vh></v>
-</v>
 <v t="leo.20200406182356.1"><vh>meeting2</vh>
 <v t="leo.20200406182356.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20200430150257.1"><vh>assignment2</vh>
 <v t="leo.20200430150257.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200508003829.1"><vh>meeting3</vh>
+<v t="leo.20200508003829.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
@@ -465,5 +468,17 @@ vertical: body pane on the botton</t>
 
 
 </t>
+<t tx="leo.20200508003829.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200508003829.2">## meeting3 video
+
+&lt;iframe width="704" height="358" src="https://www.youtube.com/embed/jr4IxIwdHLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 </tnodes>
 </leo_file>

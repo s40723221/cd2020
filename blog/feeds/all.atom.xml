@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>40723221協同產品設計實習</title><link href="./" rel="alternate"></link><link href=".%5Cfeeds/all.atom.xml" rel="self"></link><id>./</id><updated>2020-04-06T00:00:00+08:00</updated><entry><title>week6 meeting2</title><link href=".%5Cweek6%20meeting2.html" rel="alternate"></link><published>2020-04-06T00:00:00+08:00</published><updated>2020-04-06T00:00:00+08:00</updated><author><name>邱正宇</name></author><id>tag:None,2020-04-06:.\week6 meeting2.html</id><summary type="html">&lt;h2&gt;Week6 meeting2 video:&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>40723221協同產品設計實習</title><link href="https://s40723221.github.io/cd2020/blog/" rel="alternate"></link><link href="https://s40723221.github.io/cd2020/blog/feeds/all.atom.xml" rel="self"></link><id>https://s40723221.github.io/cd2020/blog/</id><updated>2020-05-08T00:00:00+08:00</updated><entry><title>week10 meeting3</title><link href="https://s40723221.github.io/cd2020/blog/week10%20meeting3.html" rel="alternate"></link><published>2020-05-08T00:00:00+08:00</published><updated>2020-05-08T00:00:00+08:00</updated><author><name>邱正宇</name></author><id>tag:s40723221.github.io,2020-05-08:/cd2020/blog/week10 meeting3.html</id><summary type="html">&lt;h2&gt;Week10 meeting3 video:&lt;/h2&gt;
+&lt;p&gt;&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/jr4IxIwdHLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h2&gt;分工內容:&lt;/h2&gt;
+&lt;p&gt;topic2:&lt;/p&gt;
+&lt;p&gt;coppeliasim:40723221&lt;/p&gt;
+&lt;p&gt;MSModelingAndTFApproaches.pdf. 207頁:7人&lt;/p&gt;
+&lt;p&gt;40723249&lt;/p&gt;
+&lt;p&gt;40623117&lt;/p&gt;
+&lt;p&gt;40723221&lt;/p&gt;
+&lt;p&gt;40723228&lt;/p&gt;
+&lt;p&gt;40723236&lt;/p&gt;
+&lt;p&gt;40723237&lt;/p&gt;
+&lt;p&gt;40723243&lt;/p&gt;
+&lt;p&gt;MechatronicDesignCases.pdf. 46頁:2人&lt;/p&gt;
+&lt;p&gt;40723222&lt;/p&gt;
+&lt;p&gt;40723244&lt;/p&gt;
+&lt;p&gt;topic3:&lt;/p&gt;
+&lt;p&gt;MechaFutureAndChallenges.pdf. 38頁:2人&lt;/p&gt;
+&lt;p&gt;40623252&lt;/p&gt;
+&lt;p&gt;40523253&lt;/p&gt;
+&lt;p&gt;MechaEducFutureNeed.pdf. 20頁:1人&lt;/p&gt;
+&lt;p&gt;40723240&lt;/p&gt;
+&lt;h2&gt;進程說明:&lt;/h2&gt;
+&lt;p&gt;1.分配topic2及topic3之內容以四本原文書下去做分配&lt;/p&gt;
+&lt;p&gt;2.google用戶設置參考一下參考資料後照著做一遍&lt;/p&gt;
+&lt;p&gt;3.coppeliaSim之教程必須要熟悉和了解，各自參考官方之教學對coppeliaSim做配置上的理解&lt;/p&gt;
+&lt;h2&gt;參考資料:&lt;/h2&gt;
+&lt;p&gt;CMS:http://mde.tw/cd2020pj1 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Week10 meeting3 video:&lt;/h2&gt;
+&lt;p&gt;&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/jr4IxIwdHLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h2&gt;分工內容:&lt;/h2&gt;
+&lt;p&gt;topic2:&lt;/p&gt;
+&lt;p&gt;coppeliasim:40723221&lt;/p&gt;
+&lt;p&gt;MSModelingAndTFApproaches.pdf. 207頁:7人&lt;/p&gt;
+&lt;p&gt;40723249&lt;/p&gt;
+&lt;p&gt;40623117&lt;/p&gt;
+&lt;p&gt;40723221&lt;/p&gt;
+&lt;p&gt;40723228&lt;/p&gt;
+&lt;p&gt;40723236&lt;/p&gt;
+&lt;p&gt;40723237&lt;/p&gt;
+&lt;p&gt;40723243&lt;/p&gt;
+&lt;p&gt;MechatronicDesignCases.pdf. 46頁:2人&lt;/p&gt;
+&lt;p&gt;40723222&lt;/p&gt;
+&lt;p&gt;40723244&lt;/p&gt;
+&lt;p&gt;topic3:&lt;/p&gt;
+&lt;p&gt;MechaFutureAndChallenges.pdf. 38頁:2人&lt;/p&gt;
+&lt;p&gt;40623252&lt;/p&gt;
+&lt;p&gt;40523253&lt;/p&gt;
+&lt;p&gt;MechaEducFutureNeed.pdf. 20頁:1人&lt;/p&gt;
+&lt;p&gt;40723240&lt;/p&gt;
+&lt;h2&gt;進程說明:&lt;/h2&gt;
+&lt;p&gt;1.分配topic2及topic3之內容以四本原文書下去做分配&lt;/p&gt;
+&lt;p&gt;2.google用戶設置參考一下參考資料後照著做一遍&lt;/p&gt;
+&lt;p&gt;3.coppeliaSim之教程必須要熟悉和了解，各自參考官方之教學對coppeliaSim做配置上的理解&lt;/p&gt;
+&lt;h2&gt;參考資料:&lt;/h2&gt;
+&lt;p&gt;CMS:http://mde.tw/cd2020pj1/content/CMS.html
+google用戶設置影片:https://drive.google.com/file/d/1G4MzXUIbNRK7z2XdjtxXzhX51zHHwq85/view?usp=sharing&lt;/p&gt;</content><category term="Misc"></category><category term="2018FallCP"></category></entry><entry><title>week6 meeting2</title><link href="https://s40723221.github.io/cd2020/blog/week6%20meeting2.html" rel="alternate"></link><published>2020-04-06T00:00:00+08:00</published><updated>2020-04-06T00:00:00+08:00</updated><author><name>邱正宇</name></author><id>tag:s40723221.github.io,2020-04-06:/cd2020/blog/week6 meeting2.html</id><content type="html">&lt;h2&gt;Week6 meeting2 video:&lt;/h2&gt;
 &lt;p&gt;&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/HXS95dlMSv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;h2&gt;分工內容:&lt;/h2&gt;
 &lt;p&gt;topic0:
@@ -25,33 +80,7 @@
 &lt;iframe width="556" height="310" src="https://www.youtube.com/embed/kerPUu4UY1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;V-REP tutorial 影片:&lt;/p&gt;
-&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/CXGJmwHt81g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</summary><content type="html">&lt;h2&gt;Week6 meeting2 video:&lt;/h2&gt;
-&lt;p&gt;&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/HXS95dlMSv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;h2&gt;分工內容:&lt;/h2&gt;
-&lt;p&gt;topic0:
-40723237
-40723221
-40723222
-40723228
-40723243
-40723244
-40723236
-40623117&lt;/p&gt;
-&lt;p&gt;topic1:
-40723221
-40723222
-40623252
-40523253
-40723249
-40732331
-40723240
-40723237&lt;/p&gt;
-&lt;h2&gt;4輪車參考影片:&lt;/h2&gt;
-&lt;p&gt;四輪車馬達驅動設定影片:&lt;/p&gt;
-&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/kerPUu4UY1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;V-REP tutorial 影片:&lt;/p&gt;
-&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/CXGJmwHt81g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="2018FallCP"></category></entry><entry><title>week2 meeting</title><link href=".%5Cweek2%20meeting.html" rel="alternate"></link><published>2020-03-16T00:00:00+08:00</published><updated>2020-03-16T00:00:00+08:00</updated><author><name>邱正宇</name></author><id>tag:None,2020-03-16:.\week2 meeting.html</id><summary type="html">&lt;h2&gt;Week2 meeting video:&lt;/h2&gt;
+&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/CXGJmwHt81g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="Misc"></category><category term="2018FallCP"></category></entry><entry><title>week2 meeting</title><link href="https://s40723221.github.io/cd2020/blog/week2%20meeting.html" rel="alternate"></link><published>2020-03-16T00:00:00+08:00</published><updated>2020-03-16T00:00:00+08:00</updated><author><name>邱正宇</name></author><id>tag:s40723221.github.io,2020-03-16:/cd2020/blog/week2 meeting.html</id><summary type="html">&lt;h2&gt;Week2 meeting video:&lt;/h2&gt;
 &lt;p&gt;&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/HXS95dlMSv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;h2&gt;分工內容:&lt;/h2&gt;
 &lt;p&gt;40523253:亂數分組程式&lt;/p&gt;
@@ -97,4 +126,4 @@
 5.git pull request每個人都要會之後要更改東西比較方便
 6.不會做的可以去看我的網站我會盡可能提早更新，再不行就到gitter上面提問可以在這邊提問 gitter:https://gitter.im/mdecourse/cd2020
 7.2020年3月26日到期assignment 1的pdf繳交請在時間內上傳到自己倉儲的download上
-8.pdf上寫上進度，之後打分數依照pdf打分&lt;/p&gt;</content><category term="2018FallCP"></category></entry></feed>
+8.pdf上寫上進度，之後打分數依照pdf打分&lt;/p&gt;</content><category term="Misc"></category><category term="2018FallCP"></category></entry></feed>

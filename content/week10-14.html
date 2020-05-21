@@ -212,6 +212,33 @@ img.add_border {
 <p>20.成功後sdc.ttt檔案中之四輪車因該會以繞圈運行。</p>
 <p><span style="color: #ff0000;">操作影片:</span></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/h-c43PHpAwY" width="560"></iframe></p>
+<hr/>
+<h4>week12 meeting </h4>
+<p><span style="color: #ff0000;">開會影片:</span></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/FTxEnqCzvxA" width="560"></iframe></p>
+<p><span style="color: #000000;">1.提醒各組員必須執行assignment3並且在下禮拜繳交</span></p>
+<p><span style="color: #000000;">2.ubnutu對外網絡連線</span></p>
+<p><strong><span style="color: #0000ff;">week12</span></strong></p>
+<h4><span color="#0000ff" style="color: #0000ff;"><b>ubnutu對外連線</b></span></h4>
+<p><span color="#0000ff" style="color: #000000;">1.設定ipv6及主機網絡nat working</span></p>
+<p><span color="#0000ff" style="color: #000000;">2.開啟ubnutu後開啟Lxtermialermial並且輸入cd /etc</span></p>
+<p><span color="#0000ff" style="color: #000000;">3.按照路徑進入cd apt &gt; cd apt.conf.d</span></p>
+<p><span color="#0000ff" style="color: #000000;">4.pt &gt; cd apt.conf.d</span></p>
+<p>5.輸入sudo vi proxy.conf輸入密碼kmol202011並且以i鍵進入編輯模式</p>
+<p>6.輸入Acquire::http::proxy "http://[2001:288:6004:17::53]:3128";</p>
+<p>7.按下esc並且使用:wq來儲存，再用sudo apt update apt update來更新apt</p>
+<p>8.ifconfig&gt;sudo apt install net-tools，cd etc/netplan</p>
+<p>9.輸入sudo vi 00-installer-config.yaml並且按照影片中的方式更改縮排</p>
+<p>10.輸入ping6 2001:288:6004:17::254對外部網路測試是否可以連線</p>
+<p>11.新增埠號</p>
+<p>12.輸入ifconfig 來查詢在ipv6下的guest</p>
+<p>13.輸入sudo vi wsgi.py wsgi.py將近端的host更改成::</p>
+<p>14.輸入python3 wsgi.py</p>
+<p>15.用平常開啟近端的方式https://[::1]:18443若要從後門啟動的話加一個/alogin</p>
+<p>16.打開leo新增ttt檔案的上傳設定</p>
+<p>17.測試是否可以上傳</p>
+<p><span style="color: #ff0000;"><strong>操作影片:</strong></span></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Zy3C8D8TeIg" width="560"></iframe></p>
 <br />week6-9 << <a href='week6-9.html'>Previous</a> <a href='week15-18.html'>Next</a> >> week15-18</div>
         
     <!-- footer -->

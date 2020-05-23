@@ -45,6 +45,15 @@
 <v t="leo.20200508003829.1"><vh>meeting3</vh>
 <v t="leo.20200508003829.2"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200523181428.1"><vh>assignment3</vh>
+<v t="leo.20200523181428.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200523182049.1"><vh>ubnutu</vh>
+<v t="leo.20200523182049.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200523182217.1"><vh>ubnutu2</vh>
+<v t="leo.20200523182217.2"><vh>封面投影片內容</vh></v>
+</v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
@@ -480,5 +489,54 @@ vertical: body pane on the botton</t>
 <t tx="leo.20200508003829.2">## meeting3 video
 
 &lt;iframe width="704" height="358" src="https://www.youtube.com/embed/jr4IxIwdHLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200523181428.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200523181428.2">## assignment3
+
+&lt;small&gt;
+[w10-w14內容](https://s40723221.github.io/cd2020/content/week10-14.html)
+&lt;/small&gt;
+
+* [assignment3 pdf](https://github.com/s40723221/cd2020/blob/master/downloads/assignment3.pdf)
+
+* 1.[MechaEducFutureNeed](https://s40723221.github.io/cd2020/downloads/MechaEducFutureNeed.pdf)
+
+* 2.[MechatronicDesignCases](https://s40723221.github.io/cd2020/downloads/MechatronicDesignCases.pdf)
+
+* 3.[MechaFutureAndChallenges](https://s40723221.github.io/cd2020/downloads/MechaFutureAndChallenges.pdf)
+</t>
+<t tx="leo.20200523182049.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200523182049.2">## ubnutu連線(ipv6)
+
+&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/Zy3C8D8TeIg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200523182217.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200523182217.2">## ubnutu連線(ipv4)
+
+&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/JA60oH-EVFg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
 </tnodes>
 </leo_file>

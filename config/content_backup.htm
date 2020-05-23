@@ -378,7 +378,12 @@ end</pre>
 <p><span color="#000000" style="color: #000000;">2.連接後到obs去設定攝像頭</span></p>
 <p><span color="#000000" style="color: #000000;"><img alt="" height="411" src="/images/obs cut.PNG" width="310"/></span></p>
 <p><span color="#000000" style="color: #000000;">3.結束後即可開始使用手機攝像頭</span></p>
-<h2>Linux指令</h2>
+<p><span color="#000000" style="color: #ff0000;"><span>ssh 設定問題</span></span></p>
+<p><span color="#000000" style="color: #000000;"><span><img alt="" height="569" src="/images/ssh bug.PNG" width="789"/></span></span></p>
+<p><span color="#000000" style="color: #000000;"><span>1.下載此putty登陸檔:<a href="https://s40723221.github.io/cd2020/downloads/putty_home.reg">https://s40723221.github.io/cd2020/downloads/putty_home.reg</a></span></span></p>
+<p><span color="#000000" style="color: #000000;">2.下載後點兩下該登陸檔</span></p>
+<p><span color="#000000" style="color: #000000;">3.開啟putty並且load github.com</span></p>
+<p><span color="#000000" style="color: #000000;">4.設定proxy和鑰匙後重新push因該會成功</span></p><h2>Linux指令</h2>
 <p><span style="background-color: #ffff00;">mkdir</span> <span>建立子目錄</span></p>
 <p><span style="background-color: #ffff00;">umount</span> <span>卸下已掛上的檔案系統</span></p>
 <p><span style="background-color: #ffff00;">cd</span> <span>轉移目錄</span></p>
@@ -970,7 +975,20 @@ end</pre>
 <p><span style="color: #ff0000;"><span class="fontstyle0"><span style="color: #0000ff;"><a href="https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm" style="color: #0000ff;">https://www.coppeliarobotics.com/helpFiles/en/shapeDynamicsProperties.htm</a></span>(</span><span class="fontstyle1">動<br/>力學設定官方簡介</span><span class="fontstyle0">)<br/></span><span class="fontstyle0"><span style="color: #0000ff;"><a href="https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm" style="color: #0000ff;">https://www.coppeliarobotics.com/helpFiles/en/childScripts.htm</a></span>(</span><span class="fontstyle1">關於非線性子程<br/>式和線性子程式的官方簡介</span><span class="fontstyle0">)<br/></span><span class="fontstyle0"><span style="color: #0000ff;"><a href="https://github.com/s40723221/cd2020/tree/master/downloads" style="color: #0000ff;">https://github.com/s40723221/cd2020/tree/master/downloads</a></span>(</span><span class="fontstyle1">在我的 </span><span class="fontstyle0">downaloads<br/></span><span class="fontstyle1">下可以找到有關的內容和範例</span><span class="fontstyle0">)</span> <br/> </span></p>
 <p><span style="color: #ff0000;"> <span class="fontstyle0">結論</span><span class="fontstyle1">:</span><span style="color: #000000;"><span class="fontstyle0">在剛開始我們只學會如何將電機設定置輪軸，使整輛四輪可以順利的直行，對於動力學中的設定也就是 </span><span class="fontstyle1">show dynamic properties dialog </span><span class="fontstyle0">點進去後設定的</span><span class="fontstyle1">body is respondable </span><span class="fontstyle0">和 </span><span class="fontstyle1">body is dynamic </span><span class="fontstyle0">都必須要設定完整才可以使四輪車依照所想要的方式提供動態及物理碰撞，若要使四輪車可以依照所想要的方式運行，在下一部份使用鍵盤控制也不需從設定子程式開始，也就是從</span><span class="fontstyle1">(add &gt; associated&gt; non threaded)</span><span class="fontstyle0">開始，設定好子程式編輯器之後才可以點開子程式編輯器開始我們對於鍵盤前後左右的程式編輯，我們可以從程式中去選擇我們想要控制的馬達，以這個前後左右的四輪車為例，我們可以透過已經更名為 </span><span class="fontstyle1">left_m </span><span class="fontstyle0">和 </span><span class="fontstyle1">right_m</span><span class="fontstyle0">的兩顆電機馬達對其做轉速的控制，也就是我們在上面程式的圖式中看到的那一段程式碼，我們可以透過 </span><span class="fontstyle1">syscall_init </span><span class="fontstyle0">來對我們的馬達做控制，完成以上的步驟後就可以以鍵盤控制其前四輪車做前後左右的控制了。</span> </span><br/> </span></p>
 <h2>assignment3</h2>
-<h3>MechaEducFutureNeed</h3>
+<p><a href="https://s40723221.github.io/cd2020/downloads/assignment3.pdf">assignment3pdf報告</a></p>
+<p>assignment3所要解決的項目:</p>
+<p><span>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using </span><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a><span><span> </span>or<span> </span></span><a href="https://cyberbotics.com/">Webots</a><span><span> </span>and<span> </span></span><a href="https://www.onshape.com/">Onshape</a><span>.</span></p>
+<p>topic2:</p>
+<p>Mechatronic Systems</p>
+<p>Mathematical Modeling</p>
+<p>Transfer Function Approaches</p>
+<p>Balancing Robot Control</p>
+<p>Magnetic Levitation System</p>
+<p>topic3:</p>
+<p>Mechatronic Futures</p>
+<p>Mechatronics Disrupted</p>
+<p>Challenges in Mechatronics</p>
+<p><span>Education to meet future need</span></p><h3>MechaEducFutureNeed</h3>
 <p>pdf連結:<a href="https://s40723221.github.io/cd2020/downloads/MechaEducFutureNeed.pdf">MechaEducFutureNeed</a></p>
 <h3>MechatronicDesignCases</h3>
 <p><span>pdf連結:<a href="https://s40723221.github.io/cd2020/downloads/MechatronicDesignCases.pdf">MechatronicDesignCases</a></span></p>

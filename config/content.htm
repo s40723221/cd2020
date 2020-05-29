@@ -330,7 +330,7 @@ end</pre>
 <p><span color="#0000ff" style="color: #0000ff;"><span style="color: #000000;"><img alt="" height="202" src="/images/p number.PNG" width="584"/></span></span></p>
 <p><span color="#0000ff" style="color: #000000;">2.登入ubnutu密碼一樣是kmol2020</span></p>
 <p><span color="#0000ff" style="color: #000000;">3.開啟Lxterminal並且輸入ifconfig並且輸入sudo apt install net-tools輸入密碼為kmol2020</span></p>
-<p><span color="#0000ff" style="color: #000000;">4.輸入ping6 127.0.0.1測試看看是否能夠通</span></p>
+<p><span color="#0000ff" style="color: #000000;">4.輸入ping 127.0.0.1測試看看是否能夠通</span></p>
 <p><span color="#0000ff" style="color: #000000;">5.輸入進入cd2020pj1資料夾中並且git pull</span></p>
 <p><span color="#0000ff" style="color: #000000;">6.輸入sudo vi wsgi.py並且按下i編輯內容對host編輯設置為10.0.2.4</span></p>
 <p><span color="#0000ff" style="color: #000000;">7.按下esc並且輸入:wq來存取</span></p>
@@ -343,6 +343,11 @@ end</pre>
 <p><span color="#0000ff" style="color: #0000ff;"><b><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JA60oH-EVFg" width="560"></iframe></b></span></p>
 <hr/>
 <p><span color="#0000ff" style="color: #0000ff;"><span>week13</span></span></p>
+<h4>week13 meeting </h4>
+<p><span style="color: #ff0000;">開會影片:</span></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/TBn09TLJ3HQ" width="560"></iframe><span style="background-color: #0000ff; color: #ffffff;"><strong><span style="background-color: #ffffff; color: #0000ff;"></span></strong></span></p>
+<p>1.提醒各組員倉儲提交進度要補上</p>
+<p>2.filezilla設定教學操作影片在底下</p>
 <h4><span style="background-color: #0000ff; color: #ffffff;"><strong><span style="background-color: #ffffff; color: #0000ff;">IPV6下伺服器連線設定</span></strong><span style="background-color: #0000ff;"></span></span></h4>
 <p><span style="background-color: #0000ff; color: #000000;"><span style="background-color: #ffffff;">1.</span></span>先設定好網路連線下的host ip( ip的設定方式可以在cd2020pj1倉儲下的downaloads中找到)</p>
 <p>2.設定網路的<span>ipv6</span>位置設定</p>
@@ -358,6 +363,22 @@ end</pre>
 <p><span>Xming</span>下載連結<span>: <a href="https://sourceforge.net/projects/xming/">https://sourceforge.net/projects/xming/</a></span></p>
 <p><strong><span style="color: #ff0000;">操作影片:</span></strong></p>
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Tre6-KEm2fQ" width="560"></iframe></span></p>
+<h4><span style="background-color: #0000ff; color: #ffffff;"><strong><span style="background-color: #ffffff; color: #0000ff;">IPV4下伺服器連線設定</span></strong></span></h4>
+<p><span style="background-color: #0000ff; color: #000000;"><span style="background-color: #ffffff;">1.</span></span><span>ipv4</span>伺服器設定教學</p>
+<p>2.先去找到家用的網路<span>ip因該會在windows設定底下&gt;網路及網際網路&gt;檢視你的網路內容下</span></p>
+<p><span>3.</span>去<span>ubnutu</span>設定主機<span>ip為自己家裡的ip</span></p>
+<p><span>4.</span>設定<span>putty</span>和<span>x11</span></p>
+<p><span>5.</span>開啟虛擬主機</p>
+<p><span>6.</span>跟著路徑進入注意這裡<span>git pull<span style="color: #000000; background-color: #ffff00;">(</span></span><span style="color: #000000; background-color: #ffff00;">若失敗可以使用git reset  --hard在git pull)</span></p>
+<p><span style="color: #000000; background-color: #ffffff;">7.</span>跟著路徑進入<span>cmsimde</span></p>
+<p><span>8.用vi wsgi.py編輯host為客體ip</span></p>
+<p><span>9.</span>輸入兩次密碼<span>kmol2020後開啟xming並且輸入xterm&amp;打開xming介面</span></p>
+<p><span>10.在xming介面下跟著路徑進入到cmsimde然後打開python3 wsgi.py</span></p>
+<p><span>11.輸入網址https://[10.1.1.101(這裡是自家ip]:17443<span style="background-color: #ffff00;">(記得要將[]拿掉)</span></span></p>
+<p><span>12.成功後再來是新增ttt檔案的部分</span></p>
+<p><span>13.一樣在Nav上打入allowExt按下下面視窗中的最後一個檔案就可以找到ttt檔案新增的位置了</span></p>
+<p><span><strong><span style="color: #ff0000;">操作影片:</span></strong></span></p>
+<p><span><strong><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JZJUUYyi9zI" width="560"></iframe></strong></span></p>
 <h4><strong><span style="color: #0000ff;">filezilla設定</span></strong></h4>
 <p>filezilla下載(可攜):<a href="https://portableapps.com/apps/internet/filezilla_portable">https://portableapps.com/apps/internet/filezilla_portable</a>設定<span>putty</span></p>
 <p>1.設定<span>putty</span></p>
@@ -391,7 +412,10 @@ end</pre>
 <p><span style="color: #000000;">詳細內容:<a href="https://s40723221.github.io/cd2020/content/week10-14.html" style="color: #000000;">https://s40723221.github.io/cd2020/content/week10-14.html</a></span></p>
 <p><span style="color: #ff0000;">開會影片:</span></p>
 <p><span style="color: #ff0000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/FTxEnqCzvxA" width="560"></iframe></span></p>
-<h1>Note</h1>
+<h4>week13 meeting </h4>
+<p><span>詳細內容:</span><a href="https://s40723221.github.io/cd2020/content/week10-14.html" style="color: #000000;">https://s40723221.github.io/cd2020/content/week10-14.html</a></p>
+<p><span style="color: #ff0000;">開會影片:</span></p>
+<p><span style="color: #ff0000;"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/TBn09TLJ3HQ" width="560"></iframe></span></p><h1>Note</h1>
 <h2>Q&amp;A</h2>
 <p><span style="color: #ff0000;">PY3.8.2更新後出現之LEO無法開啟問題與解決方法。</span></p>
 <p><img alt="" height="221" src="/images/LEO.png" width="292"/></p>

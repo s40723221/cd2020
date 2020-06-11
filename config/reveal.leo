@@ -36,11 +36,17 @@
 <v t="leo.20200404162443.1"><vh>four wheel car</vh>
 <v t="leo.20200404162443.2"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200611191445.1"><vh>week6-9</vh>
+<v t="leo.20200611191445.2"><vh>封面投影片內容</vh></v>
+</v>
 <v t="leo.20200406182356.1"><vh>meeting2</vh>
 <v t="leo.20200406182356.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20200430150257.1"><vh>assignment2</vh>
 <v t="leo.20200430150257.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611191810.1"><vh>week10-14</vh>
+<v t="leo.20200611191810.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20200508003829.1"><vh>meeting3</vh>
 <v t="leo.20200508003829.2"><vh>封面投影片內容</vh></v>
@@ -51,8 +57,23 @@
 <v t="leo.20200523182049.1"><vh>ubnutu</vh>
 <v t="leo.20200523182049.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20200523182217.1"><vh>ubnutu2</vh>
+<v t="leo.20200611190810.1"><vh>ubnutu2</vh>
+<v t="leo.20200611190810.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200523182217.1"><vh>ubnutu3</vh>
 <v t="leo.20200523182217.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611191153.1"><vh>ubnutu4</vh>
+<v t="leo.20200611191153.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611191231.1"><vh>filezilla</vh>
+<v t="leo.20200611191231.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611192319.1"><vh>meeting</vh>
+<v t="leo.20200611192319.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20200611192722.1"><vh>FINALPROJECT</vh>
+<v t="leo.20200611192722.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
@@ -534,9 +555,134 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200523182217.2">## ubnutu連線(ipv4)
+<t tx="leo.20200523182217.2">## ubnutu遠端控制伺服器連線(ipv4)
+
+&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/JZJUUYyi9zI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200611190810.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611190810.2">## ubnutu連線(ipv4)
 
 &lt;iframe width="556" height="310" src="https://www.youtube.com/embed/JA60oH-EVFg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200611191153.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611191153.2">## ubnutu遠端控制伺服器連線(ipv6)
+
+&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/Tre6-KEm2fQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200611191231.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611191231.2">## filezilla設定
+
+&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/WHbKHmvPtlo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200611191445.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611191445.2">## week6-9
+
+&lt;small&gt;
+[w6-w9內容](https://s40723221.github.io/cd2020/content/week6-9.html)
+&lt;/small&gt;
+
+* week6:進行分工內容的討論和開會，對v-rep的馬達設定及操控講解
+
+* week7:對四輪車導入鍵盤控制
+
+* week8:安裝numpy、opencv、imutils
+
+* week9:對leo的bug進行更正並且更新至新版本
+</t>
+<t tx="leo.20200611191810.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611191810.2">## week10-14
+
+&lt;small&gt;
+[w10-w14內容](https://s40723221.github.io/cd2020/content/week10-14.html)
+&lt;/small&gt;
+
+* week10:建立google用戶登陸，並且開會及對ubnutu進行環境設定
+
+* week11:新增ssh的設定流程並且嘗試對四輪車進行控制
+
+* week12:ipv6及ipv4連線測試
+
+* week13:ipv6及ipv4伺服器遠端連線測試
+
+* week14:對ubnutu連線所產生的bug進行處理</t>
+<t tx="leo.20200611192319.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611192319.2">## 開會紀錄及QandA
+
+&lt;small&gt;
+[開會內容](https://s40723221.github.io/cd2020/content/live%20meeting.html)
+&lt;/small&gt;
+
+&lt;small&gt;
+[QandA](https://s40723221.github.io/cd2020/content/Q&amp;A.html)
+&lt;/small&gt;</t>
+<t tx="leo.20200611192722.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200611192722.2">## Finalproject
+
+
+[Finalproject](https://github.com/s40723221/cd2020/blob/master/downloads/Finalproject.pdf)
+
+* [assignment1 pdf](https://s40723221.github.io/cd2020/downloads/assignment1.pdf)
+
+* [assignment2 pdf](https://github.com/s40723221/cd2020/blob/master/downloads/assignment%202.pdf)
+
+* [assignment3 pdf](https://github.com/s40723221/cd2020/blob/master/downloads/assignment3.pdf)
+
 </t>
 </tnodes>
 </leo_file>

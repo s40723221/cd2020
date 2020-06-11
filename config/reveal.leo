@@ -662,6 +662,10 @@ vertical: body pane on the botton</t>
 
 &lt;small&gt;
 [QandA](https://s40723221.github.io/cd2020/content/Q&amp;A.html)
+&lt;/small&gt;
+
+&lt;small&gt;
+[simulation car mechanism](https://s40723221.github.io/cd2020/content/simulation%20car%20mechanism.html)
 &lt;/small&gt;</t>
 <t tx="leo.20200611192722.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;

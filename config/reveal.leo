@@ -654,19 +654,13 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200611192319.2">## 開會紀錄及QandA
+<t tx="leo.20200611192319.2">## 開會紀錄及QandA與四輪車模擬
 
-&lt;small&gt;
 [開會內容](https://s40723221.github.io/cd2020/content/live%20meeting.html)
-&lt;/small&gt;
 
-&lt;small&gt;
 [QandA](https://s40723221.github.io/cd2020/content/Q&amp;A.html)
-&lt;/small&gt;
 
-&lt;small&gt;
-[simulation car mechanism](https://s40723221.github.io/cd2020/content/simulation%20car%20mechanism.html)
-&lt;/small&gt;</t>
+[simulation car mechanism](https://s40723221.github.io/cd2020/content/simulation%20car%C2%A0mechanism.html)</t>
 <t tx="leo.20200611192722.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others

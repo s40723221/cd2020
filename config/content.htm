@@ -425,7 +425,16 @@ end</pre>
 <p><span color="#000000" style="color: #000000;">1.上周對於遠端連線之網路問題</span></p>
 <p><span color="#000000" style="color: #000000;">2.debug的解決方式及圖片</span></p>
 <p><span color="#000000" style="color: #000000;">3.遠端連線ipv6及ipv4的設定流程</span></p>
-<h2>live meeting</h2>
+<p><strong><span color="#000000" style="color: #0000ff;">week16</span></strong></p>
+<p><span style="color: #ff0000;"><span color="#0000ff" style="color: #0000ff;"><b>個人網站對外連線設定:</b></span></span></p>
+<p><span style="color: #000000;"><span color="#000000"><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/FKB28YKTBDw" width="560"></iframe></span></span></p>
+<p><span style="color: #000000;"><span color="#000000">操作步驟:</span></span></p>
+<p><span style="color: #000000;"><span color="#000000">1.開啟ubuntu</span></span></p>
+<p><span style="color: #000000;"><span color="#000000">2.git clone 自己倉儲後，下git submodule init .和git submodule update抓回cmsimde模組</span></span></p>
+<p><span style="color: #000000;"><span color="#000000">3.ifconfig複製ip並且開啟vi wsgi.py 將ip貼上</span></span></p>
+<p><span style="color: #000000;"><span color="#000000">4.將proxy關閉、設定網路中的ipv6位置，並且設定好ubnutu中的ipv6設定</span></span></p>
+<p><span style="color: #000000;"><span color="#000000">5.進入cmsimde後開啟python3 wsgi.py</span></span></p>
+<p><span style="color: #000000;"><span color="#000000">6.輸入網址https://[2001:288:6004:17:2020:2:0:7221]:19443 (自己的</span></span><span style="color: #000000;"><span color="#000000">ip)</span></span></p><h2>live meeting</h2>
 <h4>assignment1 meeting</h4>
 <p>詳細內容:<a href="https://s40723221.github.io/cd2020/content/week1-5.html">https://s40723221.github.io/cd2020/content/week1-5.html</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HXS95dlMSv8" width="560"></iframe></p>
@@ -1285,7 +1294,7 @@ end</pre>
 <p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle5">使用某些對象作為參數啟動控制器應用程序<br/>（ </span><span class="fontstyle3">bubbleRobClient_b0RemoteApi</span><span class="fontstyle5">）。基於對象 </span><span class="fontstyle3">B0 </span><span class="fontstyle5">的遠程 </span><span class="fontstyle3">API </span><span class="fontstyle5">的服<br/>務器功能由對象 </span><span class="fontstyle3">b0RemoteApiServer </span><span class="fontstyle5">提供。作為另一個示例，鏈接<br/>到場景控制的 </span><span class="fontstyle3">ViaRos.ttt </span><span class="fontstyle5">中的機器人的子腳本具有以下主要任務：<br/>檢查是否已加載 </span><span class="fontstyle3">CoppeliaSim </span><span class="fontstyle5">的 </span><span class="fontstyle3">ROS </span><span class="fontstyle5">接口使用某些主題名稱或對象<br/>作為參數啟動控制器應用程序（ </span><span class="fontstyle3">rosBubbleRob</span><span class="fontstyle5">）</span></span></p>
 <p><span class="fontstyle0"><span class="fontstyle5"><br/></span><span style="color: #ff0000;"><span class="fontstyle3">Yet, as another example, the child script linked to the<br/>robot in scene </span><span class="fontstyle3">controlledViaTcp.ttt </span><span class="fontstyle3">has following main<br/>tasks:<br/></span><span class="fontstyle3">Search for a free socket connection port</span></span><br/><span style="color: #ff0000;"><span class="fontstyle3">Launch the controller application (</span><span class="fontstyle3">bubbleRobServer</span><span class="fontstyle3">) with the<br/>chosen connection port as argument<br/>Locally connect to the controller application<br/>At each simulation pass, send the sensor values to the controller,<br/>and read the desired motor values from the controller<br/>At each simulation pass, apply the desired motor values to the<br/>robot's joints </span><span class="fontstyle3">Run the simulations, and copy-and-paste the robot: you<br/>will see that the duplicated robots will directly be operational, since their attached child scripts are in charge of launching new instances of their respective external applications, or calling the appropriate plugin functions.</span></span></span></p>
 <p><span class="fontstyle0"><span class="fontstyle3"><br/></span><span class="fontstyle5">然而，作為另一個示例，鏈接到場景控制的 </span><span class="fontstyle3">ViaTcp.ttt </span><span class="fontstyle5">中的機器人的<br/>子腳本具有以下主要任務：搜索空閒的套接字連接端口使用所選的<br/>連接端口作為參數啟動控制器應用程序（ </span><span class="fontstyle3">bubbleRobServer</span><span class="fontstyle5">）本地連<br/>接到控制器應用程序在每次仿真過程中，將傳感器值發送到控制<br/>器，並從控制器讀取所需的電機值在每次模擬過程中，將所需的電<br/>機值應用於機器人的關節運行模擬，然後復制並粘貼機器人：您將<br/>看到重複的機器人將直接運行，因為它們附加的子腳本負責啟動各<br/>自外部應用程序的新實例或調用適當的插件功能。</span> <br/> </span></p>
-<h2><span class="fontstyle0">simulation car mechanism</span></h2>
+<h2>simulation car mechanism</h2>
 <p><strong><span class="fontstyle0" style="background-color: #ffff00;">v-rep四輪車可轉向機構(尚未加入彈簧)</span></strong></p>
 <p><strong><a href="https://github.com/s40723221/cd2020/blob/master/downloads/4%20wheel%20car%20steering%20mechanism.ttt">ttt檔案</a></strong></p>
 <p><span class="fontstyle0"><img alt="" height="305" src="/images/car first.PNG" width="498"/></span></p>

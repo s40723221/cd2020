@@ -75,6 +75,9 @@
 <v t="leo.20200611192722.1"><vh>FINALPROJECT</vh>
 <v t="leo.20200611192722.2"><vh>封面投影片內容</vh></v>
 </v>
+<v t="leo.20200701161637.1"><vh>FINALPROJECT2</vh>
+<v t="leo.20200701161637.2"><vh>封面投影片內容</vh></v>
+</v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
@@ -680,6 +683,21 @@ vertical: body pane on the botton</t>
 * [assignment2 pdf](https://github.com/s40723221/cd2020/blob/master/downloads/assignment%202.pdf)
 
 * [assignment3 pdf](https://github.com/s40723221/cd2020/blob/master/downloads/assignment3.pdf)
+
+</t>
+<t tx="leo.20200701161637.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200701161637.2">## Final video
+
+&lt;iframe width="556" height="310" src="https://www.youtube.com/embed/UoukOkhMdBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
 
 </t>
 </tnodes>
